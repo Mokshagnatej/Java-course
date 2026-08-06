@@ -22,8 +22,22 @@ Here's a peek at some of the things you'll find in this project:
 
 *   **`startingstructure.java`**: My very first "Hello, World!" in Java.
 *   **`variables/variables.java`**: Getting to know variables and data types.
-*   **`arthmetic/OrderDemo.java`**: A deep dive into the order of operations.
 *   **`ifstatements/ifstatement.java`**: Making decisions with if-statements.
+
+### 🔣 Operators
+
+*   **`Operators/arithmeticoperator.java`**: A deep dive into arithmetic operators.
+*   **`Operators/augmentedassigment.java`**: Understanding augmented assignment operators.
+*   **`Operators/increment.java`**: Learning about increment and decrement operators.
+*   **`Operators/logicaloperators.java`**: Exploring logical operators.
+*   **`Operators/Relationaloperator.java`**: Working with relational operators.
+*   **`OrderDemo.java`**: Demonstrates the order of operations.
+
+### 🔄 Type Conversions
+
+*   **`Typeconvesions/byteconversion.java`**: Understanding byte conversions.
+*   **`Typeconvesions/Floatconversion.java`**: Working with float conversions.
+*   **`Typeconvesions/Typepromotions.java`**: Learning about type promotions in expressions.
 
 ### 🔣 Math and Numbers
 
