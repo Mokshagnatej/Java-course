@@ -1,4 +1,4 @@
-package arthmetic;
+package Operators;
 
 public class increment {
     public static void main (String[] agrs){
