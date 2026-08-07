@@ -7,7 +7,7 @@ public class Relationaloperator{
         //boolean result = a==b;
         //boolean result = a!=b;
         //boolean result = a<=b;
-        //boolean result = a>=b;
+        boolean result = a>=b;
         System.out.println(result);
     }
 }
