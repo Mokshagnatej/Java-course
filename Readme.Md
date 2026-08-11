@@ -16,46 +16,51 @@ Each of the `.java` files in the `src` directory is a self-contained program. To
 
 ## What's Inside? 🗂️
 
-Here's a peek at some of the things you'll find in this project:
+The source code is now organized into topic-based folders under `src` so it is easier to browse and learn from.
 
-### 🔢 Core Concepts
+### 📚 Basics
 
-*   **`startingstructure.java`**: My very first "Hello, World!" in Java.
-*   **`variables/variables.java`**: Getting to know variables and data types.
+*   **`src/basics/startingstructure.java`**: My first Java program.
+*   **`src/basics/scanner.java`**: Taking user input from the console.
+*   **`src/basics/OrderDemo.java`**: Demonstrates the order of operations.
+
+### 🔢 Variables
+
+*   **`src/variables/variables.java`**: Getting to know variables and data types.
 
 ### 🔣 Operators
 
-*   **`Operators/arithmeticoperator.java`**: A deep dive into arithmetic operators.
-*   **`Operators/augmentedassigment.java`**: Understanding augmented assignment operators.
-*   **`Operators/increment.java`**: Learning about increment and decrement operators.
-*   **`Operators/logicaloperators.java`**: Exploring logical operators.
-*   **`Operators/Relationaloperator.java`**: Working with relational operators.
-*   **`OrderDemo.java`**: Demonstrates the order of operations.
+*   **`src/Operators/arithmeticoperator.java`**: A deep dive into arithmetic operators.
+*   **`src/Operators/augmentedassigment.java`**: Understanding augmented assignment operators.
+*   **`src/Operators/increment.java`**: Learning about increment and decrement operators.
+*   **`src/Operators/logicaloperator.java`**: Exploring logical operators.
+*   **`src/Operators/Relationaloperator.java`**: Working with relational operators.
 
 ### 🔄 Type Conversions
 
-*   **`Typeconvesions/byteconversion.java`**: Understanding byte conversions.
-*   **`Typeconvesions/Floatconversion.java`**: Working with float conversions.
-*   **`Typeconvesions/Typepromotions.java`**: Learning about type promotions in expressions.
+*   **`src/type_conversions/byteconversion.java`**: Understanding byte conversions.
+*   **`src/type_conversions/Floatconversion.java`**: Working with float conversions.
+*   **`src/type_conversions/Typepromotions.java`**: Learning about type promotions in expressions.
 
-### 🔣 Math and Numbers
+### 🔣 Math and Random Numbers
 
-*   **`mathjava/math.java`**: Exploring the `Math` class.
-*   **`Randomclass/randomnumbers.java`**: Generating random numbers.
+*   **`src/math_and_random/math.java`**: Exploring the `Math` class.
+*   **`src/math_and_random/randomnumbers.java`**: Generating random numbers.
 
 ### ⌨️ Input and Output
 
-*   **`scanner.java`**: Taking user input from the console.
+*   **`src/input_output/ScannerInput.java`**: A simple console-based input example.
 
 ### 🔀 Conditional Statements
 
-*   **`ifstatements/ifstatement.java`**: Making decisions with if-statements.
-*   **`conditional_statement/Ternary_operator.java`**: A look at the ternary operator.
+*   **`src/conditional_statements/ifstatement.java`**: Making decisions with if-statements.
+*   **`src/conditional_statements/Ternary_operator.java`**: A look at the ternary operator.
+*   **`src/conditional_statements/switch_operator.java`**: Using `switch` statements.
 
-### 🛒 Mini-Projects
+### 🛒 Practice Programs
 
-*   **`programs/calculaterectangle.java`**: A simple program to calculate the area of a rectangle.
-*   **`programs/shoppingcart.java`**: A basic shopping cart application.
+*   **`src/practice_programs/calculaterectangle.java`**: A simple program to calculate the area of a rectangle.
+*   **`src/practice_programs/shoppingcart.java`**: A basic shopping cart application.
 
 ---
 

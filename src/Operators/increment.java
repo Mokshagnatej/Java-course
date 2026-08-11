@@ -1,4 +1,4 @@
-package Operators;
+package operators;
 
 public class increment {
     public static void main (String[] agrs){
