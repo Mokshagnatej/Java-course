@@ -22,7 +22,6 @@ Here's a peek at some of the things you'll find in this project:
 
 *   **`startingstructure.java`**: My very first "Hello, World!" in Java.
 *   **`variables/variables.java`**: Getting to know variables and data types.
-*   **`ifstatements/ifstatement.java`**: Making decisions with if-statements.
 
 ### 🔣 Operators
 
@@ -47,6 +46,11 @@ Here's a peek at some of the things you'll find in this project:
 ### ⌨️ Input and Output
 
 *   **`scanner.java`**: Taking user input from the console.
+
+### 🔀 Conditional Statements
+
+*   **`ifstatements/ifstatement.java`**: Making decisions with if-statements.
+*   **`conditional_statement/Ternary_operator.java`**: A look at the ternary operator.
 
 ### 🛒 Mini-Projects
 
