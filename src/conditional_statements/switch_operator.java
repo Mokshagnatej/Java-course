@@ -1,8 +1,7 @@
 package conditional_statements;
-
 public class switch_operator {
     public static void main(String[] args) {
-        int n = 4;
+        int n = 3;
 
         switch (n) {
             case 1:
@@ -26,6 +25,10 @@ public class switch_operator {
             case 7:
                 System.out.println("Sunday");
                 break;
+            default:
+                System.out.println("Invalid day");
+                break;
         }
+
     }
 }
