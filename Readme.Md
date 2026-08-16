@@ -20,53 +20,53 @@ The source code is thoughtfully organized into topic-based folders under `src` t
 
 ### 📚 Basics
 
-*   **`src/basics/startingstructure.java`**: My very first "Hello, World!" in Java—the traditional start to any programming journey.
-*   **`src/basics/scanner.java`**: A look at how to take user input from the console.
-*   **`src/basics/OrderDemo.java`**: An exploration of how Java prioritizes operations (like multiplication before addition).
+*   [**`src/basics/startingstructure.java`**](src/basics/startingstructure.java): My very first "Hello, World!" in Java—the traditional start to any programming journey.
+*   [**`src/basics/scanner.java`**](src/basics/scanner.java): A look at how to take user input from the console.
+*   [**`src/basics/OrderDemo.java`**](src/basics/OrderDemo.java): An exploration of how Java prioritizes operations (like multiplication before addition).
 
 ### 🔢 Variables
 
-*   **`src/variables/variables.java`**: A primer on variables and the different data types available in Java.
+*   [**`src/variables/variables.java`**](src/variables/variables.java): A primer on variables and the different data types available in Java.
 
 ### 🔣 Operators
 
-*   **`src/Operators/arithmeticoperator.java`**: A deep dive into arithmetic operators like `+`, `-`, `*`, and `/`.
-*   **`src/Operators/augmentedassigment.java`**: Understanding shorthand operators like `+=` and `-=`.
-*   **`src/Operators/increment.java`**: Learning about the `++` and `--` operators.
-*   **`src/Operators/logicaloperator.java`**: Exploring logical operators like `&&` (AND), `||` (OR), and `!` (NOT).
-*   **`src/Operators/Relationaloperator.java`**: Working with operators that compare values, such as `==` (equal to) and `!=` (not equal to).
+*   [**`src/Operators/arithmeticoperator.java`**](src/Operators/arithmeticoperator.java): A deep dive into arithmetic operators like `+`, `-`, `*`, and `/`.
+*   [**`src/Operators/augmentedassigment.java`**](src/Operators/augmentedassigment.java): Understanding shorthand operators like `+=` and `-=`.
+*   [**`src/Operators/increment.java`**](src/Operators/increment.java): Learning about the `++` and `--` operators.
+*   [**`src/Operators/logicaloperator.java`**](src/Operators/logicaloperator.java): Exploring logical operators like `&&` (AND), `||` (OR), and `!` (NOT).
+*   [**`src/Operators/Relationaloperator.java`**](src/Operators/Relationaloperator.java): Working with operators that compare values, such as `==` (equal to) and `!=` (not equal to).
 
 ### 🔄 Type Conversions
 
-*   **`src/type_conversions/byteconversion.java`**: Understanding how to convert between different data types, with a focus on bytes.
-*   **`src/type_conversions/Floatconversion.java`**: Working with floating-point number conversions.
-*   **`src/type_conversions/Typepromotions.java`**: Learning how Java automatically promotes data types in expressions.
+*   [**`src/type_conversions/byteconversion.java`**](src/type_conversions/byteconversion.java): Understanding how to convert between different data types, with a focus on bytes.
+*   [**`src/type_conversions/Floatconversion.java`**](src/type_conversions/Floatconversion.java): Working with floating-point number conversions.
+*   [**`src/type_conversions/Typepromotions.java`**](src/type_conversions/Typepromotions.java): Learning how Java automatically promotes data types in expressions.
 
 ### 🔣 Math and Random Numbers
 
-*   **`src/math_and_random/math.java`**: Exploring the powerful built-in `Math` class for common mathematical functions.
-*   **`src/math_and_random/randomnumbers.java`**: A guide to generating random numbers in Java.
+*   [**`src/math_and_random/math.java`**](src/math_and_random/math.java): Exploring the powerful built-in `Math` class for common mathematical functions.
+*   [**`src/math_and_random/randomnumbers.java`**](src/math_and_random/randomnumbers.java): A guide to generating random numbers in Java.
 
 ### ⌨️ Input and Output
 
-*   **`src/input_output/ScannerInput.java`**: A simple, clean example of handling console input.
+*   [**`src/input_output/ScannerInput.java`**](src/input_output/ScannerInput.java): A simple, clean example of handling console input.
 
 ### 🔀 Conditional Statements
 
-*   **`src/conditional_statements/ifstatement.java`**: Making decisions in your code with `if-else` statements.
-*   **`src/conditional_statements/Ternary_operator.java`**: A look at the shorthand `? :` operator for simple `if-else` logic.
-*   **`src/conditional_statements/switch_operator.java`**: Using `switch` statements to handle multiple possible conditions.
+*   [**`src/conditional_statements/ifstatement.java`**](src/conditional_statements/ifstatement.java): Making decisions in your code with `if-else` statements.
+*   [**`src/conditional_statements/Ternary_operator.java`**](src/conditional_statements/Ternary_operator.java): A look at the shorthand `? :` operator for simple `if-else` logic.
+*   [**`src/conditional_statements/switch_operator.java`**](src/conditional_statements/switch_operator.java): Using `switch` statements to handle multiple possible conditions.
 
 ### 🔁 Loops
 
-*   **`src/Loops/For_loop.java`**: A guide to the `for` loop, perfect for when you know how many times you want to repeat an action.
-*   **`src/Loops/while_loop.java`**: An introduction to the `while` loop, which continues as long as a condition is true.
-*   **`src/Loops/Do_while_loop.java`**: Exploring the `do-while` loop, which always runs at least once.
+*   [**`src/Loops/For_loop.java`**](src/Loops/For_loop.java): A guide to the `for` loop, perfect for when you know how many times you want to repeat an action.
+*   [**`src/Loops/while_loop.java`**](src/Loops/while_loop.java): An introduction to the `while` loop, which continues as long as a condition is true.
+*   [**`src/Loops/Do_while_loop.java`**](src/Loops/Do_while_loop.java): Exploring the `do-while` loop, which always runs at least once.
 
 ### 🛒 Practice Programs
 
-*   **`src/practice_programs/calculaterectangle.java`**: A simple, practical program to calculate the area of a rectangle.
-*   **`src/practice_programs/shoppingcart.java`**: A basic but fun shopping cart application to tie multiple concepts together.
+*   [**`src/practice_programs/calculaterectangle.java`**](src/practice_programs/calculaterectangle.java): A simple, practical program to calculate the area of a rectangle.
+*   [**`src/practice_programs/shoppingcart.java`**](src/practice_programs/shoppingcart.java): A basic but fun shopping cart application to tie multiple concepts together.
 
 ---
 
