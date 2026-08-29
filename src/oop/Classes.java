@@ -1,7 +1,9 @@
+package oop;
+
 /**
  * ============================================================================
  * TOPIC: Object-Oriented Programming (OOP) — Classes, Objects & Methods
- * FILE: classes.java
+ * FILE: Classes.java
  * ============================================================================
  *
  * 🎯 GOAL / PROBLEM STATEMENT:
@@ -29,13 +31,13 @@
  * ```
  *
  * 🔍 LINE-BY-LINE BREAKDOWN:
- * - `class calculator`: Blueprint containing the `add` method.
+ * - `class Calculator`: Blueprint containing the `add` method.
  * - `public double add(double n1, double n2)`:
  *     • `public`: Accessible by caller.
  *     • `double`: Returns a double-precision float to the caller.
  *     • `double n1, double n2`: Parameter variables holding inputs.
- * - `calculator cal = new calculator();`:
- *     • `new calculator()`: Allocates memory on the Heap for a new object.
+ * - `Calculator cal = new Calculator();`:
+ *     • `new Calculator()`: Allocates memory on the Heap for a new object.
  *     • `cal`: Reference variable on the Stack pointing to the new object.
  * - `cal.add(num1, num2)`: Jumps to `add()` method, passes values, returns sum.
  *
@@ -52,29 +54,34 @@
  */
 
 // 1. Blueprint Class
-class calculator {
+class Calculator {
 
     // Method definition: Takes two double arguments, returns their sum
     public double add(double n1, double n2) {
         double r = n1 + n2;
         return r; // Sends value back to caller
     }
+
+    public double multiply(double n1, double n2) {
+        return n1 * n2;
+    }
 }
 
 // 2. Driver / Runner Class containing the main method
-public class classes {
+public class Classes {
 
     public static void main(String[] args) {
         double num1 = 782.3;
         double num2 = 324.2;
 
         // Instantiate object from blueprint
-        calculator cal = new calculator();
+        Calculator cal = new Calculator();
 
         // Invoke method on object and capture returned value
         double result = cal.add(num1, num2);
-
-        // Display result
         System.out.println("Result of addition via Calculator object: " + result);
+
+        double product = cal.multiply(10.5, 4.0);
+        System.out.println("Result of multiplication via Calculator object: " + product);
     }
 }
