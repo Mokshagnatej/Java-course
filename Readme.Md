@@ -1,4 +1,4 @@
-# ☕ Java Mastery & Core Fundamentals — Complete Revision Guide
+# ☕ Java Mastery & Core Fundamentals — Complete Logic & Revision Guide
 
 [![Java](https://img.shields.io/badge/Java-17%2B%20%7C%2021%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-blue?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/)
@@ -6,64 +6,82 @@
 [![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Pure%20JDK)-orange?style=for-the-badge)](https://github.com/)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)](LICENSE)
 
-> A structured, hands-on repository containing focused Java examples, core concept explanations, mental models, common pitfalls, and practical mini-projects designed for rapid revision, exam prep, and technical interview readiness.
+> **Learn Java logic, build from scratch, and revise anytime with ease.** A structured, hands-on repository containing focused Java examples, in-depth line-by-line breakdowns, mental models, memory diagrams, dry-run tables, and practical mini-projects designed for long-term retention and rapid exam / interview preparation.
 
 ---
 
 ## 📑 Table of Contents
 
-- [🎯 Overview & Objectives](#-overview--objectives)
+- [🎯 How to Use This Repository for Easy Learning](#-how-to-use-this-repository-for-easy-learning)
+- [🧩 The 4-Step Logic-Building Framework](#-the-4-step-logic-building-framework)
 - [🗺️ Visual Learning Roadmap](#️-visual-learning-roadmap)
-- [⚡ Quick Start & Execution Guide](#-quick-start--execution-guide)
-  - [Prerequisites](#prerequisites)
-  - [Compiling & Running via CLI](#compiling--running-via-cli)
-  - [Running via IDE](#running-via-ide)
-- [📂 Repository Structure & Code Map](#-repository-structure--code-map)
-- [🧠 Core Java Concepts & Mental Models](#-core-java-concepts--mental-models)
-  - [1. Program Anatomy & `main` Method](#1-program-anatomy--main-method)
-  - [2. Data Types & Memory Sizes](#2-data-types--memory-sizes)
-  - [3. Type Conversions & Promotion Rules](#3-type-conversions--promotion-rules)
-  - [4. Operators & Precedence (PEMDAS / BODMAS)](#4-operators--precedence-pemdas--bodmas)
+- [⚡ Quick Start & Execution Commands](#-quick-start--execution-commands)
+- [📂 Complete Module Index & Code Map](#-complete-module-index--code-map)
+- [🧠 Core Mental Models & Memory Diagrams](#-core-mental-models--memory-diagrams)
+  - [1. Program Anatomy & JVM Execution Flow](#1-program-anatomy--jvm-execution-flow)
+  - [2. Primitives vs. References (Stack vs Heap)](#2-primitives-vs-references-stack-vs-heap)
+  - [3. Type Conversions & Automatic Promotion Matrix](#3-type-conversions--automatic-promotion-matrix)
+  - [4. Operator Precedence & Evaluation Rules](#4-operator-precedence--evaluation-rules)
   - [5. Prefix vs. Postfix Increment (`++i` vs `i++`)](#5-prefix-vs-postfix-increment-i-vs-i)
-  - [6. Control Flow & Decision Making](#6-control-flow--decision-making)
-  - [7. Looping Constructs & Execution Flow](#7-looping-constructs--execution-flow)
-  - [8. User Input & The Scanner Gotcha](#8-user-input--the-scanner-gotcha)
-  - [9. Math & Random Utilities](#9-math--random-utilities)
-  - [10. OOP Kickstart: Classes & Methods](#10-oop-kickstart-classes--methods)
-- [🛠️ Practice Mini-Projects](#️-practice-mini-projects)
-- [⚠️ Common Pitfalls & Traps (Interview FAQ)](#️-common-pitfalls--traps-interview-faq)
+  - [6. Control Flow & Decision Trees](#6-control-flow--decision-trees)
+  - [7. Looping Constructs & Execution Guarantees](#7-looping-constructs--execution-guarantees)
+  - [8. Terminal I/O & The Scanner Buffer Gotcha](#8-terminal-io--the-scanner-buffer-gotcha)
+  - [9. Math & Random Standard Utilities](#9-math--random-standard-utilities)
+  - [10. OOP Kickstart: Classes, Objects & Methods](#10-oop-kickstart-classes-objects--methods)
+- [🛠️ Practical Mini-Projects](#️-practical-mini-projects)
+- [⚠️ Top Common Pitfalls & Traps (Interview FAQ)](#️-top-common-pitfalls--traps-interview-faq)
 - [⏱️ 10-Minute Rapid Revision Checklist](#️-10-minute-rapid-revision-checklist)
-- [🚀 Future Roadmap](#-future-roadmap)
-- [🤝 Contributing & License](#-contributing--license)
 
 ---
 
-## 🎯 Overview & Objectives
+## 🎯 How to Use This Repository for Easy Learning
 
-Learning Java requires building a rock-solid mental model of:
-1. How source code compiles into **bytecode** (`.class`) and runs on the **JVM** (Java Virtual Machine).
-2. How memory is allocated for **primitives** vs **reference objects**.
-3. How type promotions, operator precedence, and conditional branches execute deterministically.
+If you are coming back to this repository after a few days or weeks, here is the fastest way to refresh your memory:
 
-This repository breaks down Java syntax and semantics into **atomic, single-concept files** with clear real-world examples and interactive practice programs.
+1. **Pick the topic** from the [Roadmap](#️-visual-learning-roadmap) or [Module Index](#-complete-module-index--code-map).
+2. **Open the Module Guide (`README.md`)** inside that module folder for diagrams, analogies, and gotchas.
+3. **Open the `.java` source code**: Every Java file contains:
+   - **Goal & Problem Statement**: What we are building.
+   - **Mental Model**: How to think about the problem.
+   - **Line-by-Line Breakdown**: Exactly what each line does in the JVM and memory.
+   - **Dry Run Trace Table**: Traces variable values step-by-step.
+4. **Run the program** using the single-line command provided in the table.
+
+---
+
+## 🧩 The 4-Step Logic-Building Framework
+
+When solving any programming problem or building a project, follow this 4-step thinking blueprint:
+
+```mermaid
+flowchart TD
+    S1["1. Understand Inputs & Outputs\nWhat data comes in? What must be calculated & displayed?"] --> S2["2. Choose Proper Data Types\nint for counts, double for decimals, boolean for flags, String for text"]
+    S2 --> S3["3. Develop Core Formula & Control Flow\nEquations, condition checks (if/switch), and loop boundaries (for/while)"]
+    S3 --> S4["4. Dry Run & Assemble Code\nTrace variables step-by-step on paper before running in the IDE"]
+
+    style S1 fill:#E1F5FE,stroke:#03A9F4,stroke-width:2px
+    style S2 fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px
+    style S3 fill:#C8E6C9,stroke:#4CAF50,stroke-width:2px
+    style S4 fill:#E8EAF6,stroke:#3F51B5,stroke-width:2px
+```
 
 ---
 
 ## 🗺️ Visual Learning Roadmap
 
-Follow this recommended progression to master foundational Java:
+Follow this progressive learning sequence to master core Java fundamentals:
 
 ```mermaid
 flowchart TD
-    A["1. Starting Structure & Anatomy\n(class, main method, stdout)"] --> B["2. Variables & Data Types\n(primitives, sizes, Strings)"]
-    B --> C["3. Type Promotions & Casting\n(widening vs narrowing)"]
-    C --> D["4. Operators & Precedence\n(arithmetic, increment, logical)"]
-    D --> E["5. User Input / Output\n(Scanner, formatted output)"]
-    E --> F["6. Conditionals & Branching\n(if-else, switch, ternary)"]
-    F --> G["7. Loops & Iteration\n(for, while, do-while)"]
-    G --> H["8. Standard Utilities\n(Math, Random)"]
-    H --> I["9. Object-Oriented Basics\n(classes, objects, methods)"]
-    I --> J["10. Integrated Practice Programs\n(shopping cart, area calculator)"]
+    A["01. Basics & Anatomy\n(class, main method, JVM, BODMAS)"] --> B["02. Variables & Data Types\n(primitives, sizes, Stack vs Heap)"]
+    B --> C["03. Type Conversions\n(widening vs narrowing, byte overflow)"]
+    C --> D["04. Operators & Precedence\n(arithmetic, increment ++i/i++, logical && ||)"]
+    D --> E["05. Terminal Input / Output\n(Scanner, tokens, buffer flush)"]
+    E --> F["06. Decision Branching\n(if-else, switch, ternary)"]
+    F --> G["07. Loops & Iteration\n(for, while, do-while)"]
+    G --> H["08. Built-in Utilities\n(Math API, java.util.Random)"]
+    H --> I["09. Object-Oriented Kickstart\n(Classes, Objects, Methods)"]
+    I --> J["10. Integrated Mini-Projects\n(Shopping cart, geometry, tables)"]
 
     style A fill:#4CAF50,stroke:#388E3C,stroke-width:2px,color:#fff
     style B fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
@@ -79,412 +97,219 @@ flowchart TD
 
 ---
 
-## ⚡ Quick Start & Execution Guide
+## ⚡ Quick Start & Execution Commands
 
-### Prerequisites
-
-Ensure you have a Java Development Kit (JDK 17 or newer recommended) installed:
-
+### 1. Compile All Files at Once:
 ```bash
-# Check compiler and runtime version
-javac -version
-java -version
-```
-
----
-
-### Compiling & Running via CLI
-
-From the project root directory, use `javac` with the `-d` (destination directory) flag to properly preserve package hierarchies in the `out/` folder:
-
-#### 1. Compile All Files at Once:
-```bash
-# Compile entire source tree to out/
+# Compile entire source tree into out/ directory
 javac -d out $(find src -name "*.java")
 ```
 
-#### 2. Run Any Specific Example:
-
+### 2. Run Any Program Directly:
 ```bash
-# Run Basics: Starting Structure (Default package)
-java -cp out startingstructure
+# Run Module 01: Basics
+java -cp out basics.startingstructure
+java -cp out basics.OrderDemo
+java -cp out basics.scanner
 
-# Run Variables
+# Run Module 02: Variables
 java -cp out variables.variables
 
-# Run Operators (Increment / Decrement)
-java -cp out operators.increment
+# Run Module 03: Type Conversions
+java -cp out type_conversions.Typepromotions
+java -cp out type_conversions.Floatconversion
+java -cp out type_conversions.byteconversion
 
-# Run Conditionals (Switch Statement)
+# Run Module 04: Operators
+java -cp out operators.arithmeticoperator
+java -cp out operators.increment
+java -cp out operators.augmentedassigment
+java -cp out operators.Relationaloperator
+java -cp out operators.logicaloperator
+
+# Run Module 05: Input / Output
+java -cp out input_output.ScannerInput
+
+# Run Module 06: Conditionals
+java -cp out conditional_statements.ifstatement
+java -cp out conditional_statements.ifelse_statement
+java -cp out conditional_statements.if_else_if
+java -cp out conditional_statements.Ternary_operator
 java -cp out conditional_statements.switch_operator
 
-# Run Loops (Do-While Loop)
+# Run Module 07: Loops
+java -cp out Loops.For_loop
+java -cp out Loops.while_loop
 java -cp out Loops.Do_while_loop
 
-# Run Type Promotion
-java -cp out type_conversions.Typepromotions
+# Run Module 08: Math & Random
+java -cp out math_and_random.math
+java -cp out math_and_random.randomnumbers
 
-# Run Object-Oriented Classes
+# Run Module 09: OOP
+java -cp out oop.Classes
 java -cp out classes
 
-# Run Practice Program: Shopping Cart (Interactive)
+# Run Module 10: Practice Projects
 java -cp out practice_programs.shoppingcart
+java -cp out practice_programs.calculaterectangle
+java -cp out practice_programs.for_loop
 ```
 
 ---
 
-### Running via IDE
+## 📂 Complete Module Index & Code Map
 
-- **IntelliJ IDEA** (Recommended):
-  1. Open the project folder (`File` → `Open...` → select `Java course`).
-  2. Mark `src` as the **Sources Root** (Right-click `src` → `Mark Directory as` → `Sources Root`).
-  3. Click the green **▶ Run** button beside the `main` method of any file.
-
-- **VS Code**:
-  1. Install the **Extension Pack for Java** by Microsoft.
-  2. Open any `.java` file and click **Run | Debug** above `public static void main`.
-
----
-
-## 📂 Repository Structure & Code Map
-
-Here is the complete mapping of every file in the repository, organized by topic:
-
-| Module / Topic | File Path | Key Concepts Covered | Quick Run Command |
-| :--- | :--- | :--- | :--- |
-| **Basics** | [`src/basics/startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/startingstructure.java) | Class declaration, `main()` signature, `System.out.println` | `java -cp out startingstructure` |
-| **Basics** | [`src/basics/OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/OrderDemo.java) | Operator precedence, BODMAS/PEMDAS execution order | `java -cp out OrderDemo` |
-| **Basics** | [`src/basics/scanner.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/scanner.java) | Basic `Scanner` initialization and reading input | `java -cp out scanner` |
-| **Variables** | [`src/variables/variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/variables/variables.java) | `int`, `double`, `Boolean`, `String`, concatenation | `java -cp out variables.variables` |
-| **Type Conversions** | [`src/type_conversions/Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Typepromotions.java) | Byte multiplication promotion to `int` in expressions | `java -cp out type_conversions.Typepromotions` |
-| **Type Conversions** | [`src/type_conversions/byteconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/byteconversion.java) | Explicit narrowing casting and integer overflow | `java -cp out type_conversions.byteconversion` |
-| **Type Conversions** | [`src/type_conversions/Floatconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Floatconversion.java) | Floating point representations and type conversion | `java -cp out type_conversions.Floatconversion` |
-| **Operators** | [`src/Operators/arithmeticoperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/arithmeticoperator.java) | Basic math operators (`+`, `-`, `*`, `/`, `%`) | `java -cp out operators.arithmeticoperator` |
-| **Operators** | [`src/Operators/increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/increment.java) | Increment `++` and decrement `--` behavior | `java -cp out operators.increment` |
-| **Operators** | [`src/Operators/augmentedassigment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/augmentedassigment.java) | Compound assignments (`+=`, `-=`, `*=`, `/=`) | `java -cp out operators.augmentedassigment` |
-| **Operators** | [`src/Operators/Relationaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/Relationaloperator.java) | Comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`) | `java -cp out operators.Relationaloperator` |
-| **Operators** | [`src/Operators/logicaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/logicaloperator.java) | Logical AND (`&&`), OR (`\|\|`), NOT (`!`) | `java -cp out operators.logicaloperator` |
-| **Conditionals** | [`src/conditional_statements/ifstatement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifstatement.java) | Simple `if` branch evaluation | `java -cp out conditional_statements.ifstatement` |
-| **Conditionals** | [`src/conditional_statements/ifelse_statement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifelse_statement.java) | Two-way decision branching (`if-else`) | `java -cp out conditional_statements.ifelse_statement` |
-| **Conditionals** | [`src/conditional_statements/if_else_if.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/if_else_if.java) | Multi-way ladder (`if-else-if-else`) | `java -cp out conditional_statements.if_else_if` |
-| **Conditionals** | [`src/conditional_statements/Ternary_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/Ternary_operator.java) | Inline conditional expression `condition ? val1 : val2` | `java -cp out conditional_statements.Ternary_operator` |
-| **Conditionals** | [`src/conditional_statements/switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/switch_operator.java) | `switch` statement with cases, `break`, and `default` | `java -cp out conditional_statements.switch_operator` |
-| **Loops** | [`src/Loops/For_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/For_loop.java) | Standard counting loop `for(init; cond; update)` | `java -cp out Loops.For_loop` |
-| **Loops** | [`src/Loops/while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/while_loop.java) | Pre-condition iteration loop | `java -cp out Loops.while_loop` |
-| **Loops** | [`src/Loops/Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/Do_while_loop.java) | Post-condition loop (guaranteed at least 1 run) | `java -cp out Loops.Do_while_loop` |
-| **Input / Output** | [`src/input_output/ScannerInput.java`](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/ScannerInput.java) | Multi-type terminal input (`nextLine`, `nextInt`, `nextDouble`) | `java -cp out input_output.ScannerInput` |
-| **Math & Random** | [`src/math_and_random/math.java`](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/math.java) | Constants `Math.PI`, `Math.E`, and mathematical functions | `java -cp out math_and_random.math` |
-| **Math & Random** | [`src/math_and_random/randomnumbers.java`](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/randomnumbers.java) | `java.util.Random`, bounded integers `nextInt(min, max)` | `java -cp out randomnumbers` |
-| **OOP & Classes** | [`src/classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/classes.java) | Class blueprints, instantiation (`new`), method calling | `java -cp out classes` |
-| **Practice** | [`src/practice_programs/shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/shoppingcart.java) | Interactive cart calculation with currency formatting | `java -cp out practice_programs.shoppingcart` |
-| **Practice** | [`src/practice_programs/calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/calculaterectangle.java) | Rectangle area geometry computation with user input | `java -cp out practice_programs.calculaterectangle` |
-| **Practice** | [`src/practice_programs/for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/for_loop.java) | Loop-based algorithms and accumulation | `java -cp out practice_programs.for_loop` |
-
----
-
-## 🧠 Core Java Concepts & Mental Models
-
-### 1. Program Anatomy & `main` Method
-
-Every standalone executable Java program starts with a class and the entry-point method:
-
-```java
-public class StartingStructure {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-
-#### Breakdown of the `main` signature:
-- **`public`**: Access modifier making the method callable by the JVM from anywhere.
-- **`static`**: Allows the JVM to invoke the method without instantiating an object of the class.
-- **`void`**: Return type indicating the method does not return any value.
-- **`main`**: The exact method identifier searched for by the JVM runtime launcher.
-- **`String[] args`**: Array of command-line arguments passed to the application at launch.
-
----
-
-### 2. Data Types & Memory Sizes
-
-Java is a **statically-typed** and **strongly-typed** language.
-
-| Type | Category | Size | Default Value | Example Value Range |
+| Module / Topic | Guide Link | Source File | Core Concepts & Logic | Quick Run Command |
 | :--- | :--- | :--- | :--- | :--- |
-| `byte` | Primitive (Integer) | 8 bits (1 byte) | `0` | `-128` to `127` |
-| `short` | Primitive (Integer) | 16 bits (2 bytes) | `0` | `-32,768` to `32,767` |
-| `int` | Primitive (Integer) | 32 bits (4 bytes) | `0` | `-2^31` to `2^31 - 1` |
-| `long` | Primitive (Integer) | 64 bits (8 bytes) | `0L` | `-2^63` to `2^63 - 1` (suffix `L`) |
-| `float` | Primitive (Floating) | 32 bits (4 bytes) | `0.0f` | ~`1.4e-45` to `3.4e+38` (suffix `f`) |
-| `double` | Primitive (Floating) | 64 bits (8 bytes) | `0.0d` | ~`4.9e-324` to `1.7e+308` |
-| `char` | Primitive (Unicode) | 16 bits (2 bytes) | `'\u0000'` | `'A'`, `'₹'`, `'\u0041'` |
-| `boolean` | Primitive (Logical) | 1 bit (JVM dependent) | `false` | `true` or `false` |
-| `String` | **Reference Type** | Object reference + heap | `null` | `"Hello"`, `"Java"` |
+| **01. Basics** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/basics/README.md) | [`startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/startingstructure.java) | `class`, `public static void main`, `System.out.println` | `java -cp out basics.startingstructure` |
+| **01. Basics** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/basics/README.md) | [`OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/OrderDemo.java) | Operator precedence, BODMAS/PEMDAS, integer division | `java -cp out basics.OrderDemo` |
+| **01. Basics** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/basics/README.md) | [`scanner.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/scanner.java) | `Scanner` setup, terminal reading, buffer management | `java -cp out basics.scanner` |
+| **02. Variables** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/variables/README.md) | [`variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/variables/variables.java) | `int`, `double`, `Boolean`, `String`, concatenation `+` | `java -cp out variables.variables` |
+| **03. Conversions** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/README.md) | [`Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Typepromotions.java) | Byte multiplication promotion to `int` in expressions | `java -cp out type_conversions.Typepromotions` |
+| **03. Conversions** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/README.md) | [`Floatconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Floatconversion.java) | Narrowing `(int)` cast & decimal truncation | `java -cp out type_conversions.Floatconversion` |
+| **03. Conversions** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/README.md) | [`byteconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/byteconversion.java) | Explicit casting & 8-bit two's complement overflow wrap | `java -cp out type_conversions.byteconversion` |
+| **04. Operators** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`arithmeticoperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/arithmeticoperator.java) | Arithmetic (`+`, `-`, `*`, `/`, `%`), quotient vs remainder | `java -cp out operators.arithmeticoperator` |
+| **04. Operators** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/increment.java) | Postfix (`i++`) vs Prefix (`++i`) assignment timing | `java -cp out operators.increment` |
+| **04. Operators** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`augmentedassigment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/augmentedassigment.java) | Compound updates (`+=`, `-=`, `*=`, `/=`, `%=`) & implicit cast | `java -cp out operators.augmentedassigment` |
+| **04. Operators** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`Relationaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/Relationaloperator.java) | Comparison boolean results (`<`, `>`, `==`, `!=`, `<=`, `>=`) | `java -cp out operators.Relationaloperator` |
+| **04. Operators** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`logicaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/logicaloperator.java) | Logical AND (`&&`), OR (`\|\|`), NOT (`!`), short-circuiting | `java -cp out operators.logicaloperator` |
+| **05. Input / Output** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/README.md) | [`ScannerInput.java`](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/ScannerInput.java) | Multi-type interactive input flow & memory cleanup | `java -cp out input_output.ScannerInput` |
+| **06. Conditionals** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`ifstatement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifstatement.java) | Interactive input validation, `isEmpty()`, age branching | `java -cp out conditional_statements.ifstatement` |
+| **06. Conditionals** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`ifelse_statement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifelse_statement.java) | Two-way decision branching (`if - else`) | `java -cp out conditional_statements.ifelse_statement` |
+| **06. Conditionals** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`if_else_if.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/if_else_if.java) | Multi-condition ladder vs independent `if` statements | `java -cp out conditional_statements.if_else_if` |
+| **06. Conditionals** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`Ternary_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/Ternary_operator.java) | Inline conditional expression `(cond) ? val1 : val2` | `java -cp out conditional_statements.Ternary_operator` |
+| **06. Conditionals** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/switch_operator.java) | Classic `switch` with `break` vs modern Java 14+ arrow switch | `java -cp out conditional_statements.switch_operator` |
+| **07. Loops** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/README.md) | [`For_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/For_loop.java) | Counting `for` loop & nested schedule loop traversal | `java -cp out Loops.For_loop` |
+| **07. Loops** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/README.md) | [`while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/while_loop.java) | Pre-condition iteration & loop counter management | `java -cp out Loops.while_loop` |
+| **07. Loops** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/README.md) | [`Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/Do_while_loop.java) | Post-condition loop guaranteed to execute at least once | `java -cp out Loops.Do_while_loop` |
+| **08. Math & Random**| [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/README.md) | [`math.java`](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/math.java) | `Math.PI`, `Math.E`, `sqrt`, `pow`, `abs`, `round`, `ceil` | `java -cp out math_and_random.math` |
+| **08. Math & Random**| [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/README.md) | [`randomnumbers.java`](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/randomnumbers.java) | `Random.nextInt(origin, bound)`, dice rolls, booleans | `java -cp out math_and_random.randomnumbers` |
+| **09. OOP** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/oop/README.md) | [`Classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/oop/Classes.java) | Blueprint `class`, object instantiation `new`, method calls | `java -cp out oop.Classes` |
+| **09. OOP** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/oop/README.md) | [`classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/classes.java) | Single-file OOP class and driver runner | `java -cp out classes` |
+| **10. Practice** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/README.md) | [`shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/shoppingcart.java) | Interactive retail billing simulation with currency formatting | `java -cp out practice_programs.shoppingcart` |
+| **10. Practice** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/README.md) | [`calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/calculaterectangle.java) | Rectangle geometry computation ($Area = w \times h$) | `java -cp out practice_programs.calculaterectangle` |
+| **10. Practice** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/README.md) | [`for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/for_loop.java) | Dynamic multiplication table generator (Table of 17) | `java -cp out practice_programs.for_loop` |
 
 ---
 
-### 3. Type Conversions & Promotion Rules
+## 🧠 Core Mental Models & Memory Diagrams
 
-Java supports two types of conversions:
-
+### 1. Program Anatomy & JVM Execution Flow
 ```mermaid
-graph LR
-    subgraph Widening["Widening (Automatic / Implicit) - No Data Loss"]
-        byte --> short --> int --> long --> float --> double
-        char --> int
+flowchart LR
+    SRC["App.java\n(Source Code)"] -->|javac| BYTE["App.class\n(Bytecode)"]
+    BYTE -->|JVM ClassLoader| MEM["JVM Runtime Memory"]
+    MEM -->|Execution Engine (JIT)| CPU["Native CPU Machine Code"]
+
+    style SRC fill:#E8F5E9,stroke:#4CAF50
+    style BYTE fill:#E3F2FD,stroke:#2196F3
+    style MEM fill:#FFF8E1,stroke:#FFC107
+    style CPU fill:#FFEBEE,stroke:#F44336
+```
+
+### 2. Primitives vs. References (Stack vs Heap)
+```mermaid
+flowchart LR
+    subgraph STACK_FRAME["Stack Memory (Local Scopes & Frames)"]
+        S1["int age = 20"]
+        S2["double price = 99.9"]
+        S3["Calculator calRef ───►"]
+        S4["String nameRef ──────►"]
     end
-    subgraph Narrowing["Narrowing (Explicit Cast) - Potential Data Loss"]
-        double --> float --> long --> int --> short --> byte
+    subgraph HEAP_SPACE["Heap Memory (Dynamic Object Instances)"]
+        H1["Calculator Instance\nMethods: add(), multiply()"]
+        H2["String Literal: 'sai'\n(String Constant Pool)"]
     end
+    S3 --> H1
+    S4 --> H2
+
+    style STACK_FRAME fill:#E8EAF6,stroke:#3F51B5
+    style HEAP_SPACE fill:#FFF3E0,stroke:#FF9800
 ```
 
-#### The Arithmetic Promotion Rule:
-When evaluating arithmetic expressions containing types smaller than `int` (`byte`, `short`, `char`), Java **automatically promotes them to `int`**:
+### 3. Type Conversions & Automatic Promotion Matrix
+- **Widening (Implicit)**: `byte` -> `short` -> `int` -> `long` -> `float` -> `double`
+- **Narrowing (Explicit)**: `double` -> `float` -> `long` -> `int` -> `short` -> `byte` (Truncates or wraps!)
+- **Arithmetic Promotion**: Any `byte`, `short`, or `char` in an expression automatically becomes `int`.
 
-```java
-byte a = 10;
-byte b = 30;
-
-// ❌ Compilation Error: Type mismatch: cannot convert from int to byte
-// byte c = a * b; 
-
-// ✅ Correct (store in int):
-int result = a * b; 
-
-// ✅ Correct (explicit cast back to byte):
-byte c = (byte)(a * b);
-```
+### 4. Operator Precedence & Evaluation Rules
+1. `()` Parentheses (Highest)
+2. `++`, `--` Postfix / Prefix
+3. `*`, `/`, `%` Multiplicative (Left-to-Right)
+4. `+`, `-` Additive (Left-to-Right)
+5. `<`, `>`, `<=`, `>=` Relational
+6. `==`, `!=` Equality
+7. `&&` Logical AND
+8. `||` Logical OR
+9. `? :` Ternary
+10. `=`, `+=`, `-=` Assignment (Lowest)
 
 ---
 
-### 4. Operators & Precedence (PEMDAS / BODMAS)
+## 🛠️ Practical Mini-Projects
 
-In arithmetic expressions, Java evaluates operations according to strict precedence rules:
-1. **P**arentheses `()`
-2. **E**xponents / Postfix & Prefix (`++`, `--`)
-3. **M**ultiplication `*`, **D**ivision `/`, **M**odulo `%` (Left-to-Right)
-4. **A**ddition `+`, **S**ubtraction `-` (Left-to-Right)
+The repository contains three complete, real-world mini-applications combining all concepts:
 
-```java
-// Expression evaluation trace:
-double result = 10 + 3 * 2 / (8 - 3);
-// 1. (8 - 3) = 5
-// 2. 3 * 2 = 6
-// 3. 6 / 5 = 1  (Integer division!)
-// 4. 10 + 1 = 11.0
-System.out.println(result); // Outputs: 11.0
-```
+### 1. 🛒 Interactive Shopping Cart ([`shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/shoppingcart.java))
+- Reads item name, unit price, and quantity.
+- Calculates bill using $\text{Total} = \text{Price} \times \text{Quantity}$.
+- Prints formatted receipt using Unicode currency symbol `₹`.
 
-> [!NOTE]
-> Integer division truncates the decimal portion! `6 / 5` produces `1`, not `1.2`. To preserve decimals, ensure at least one operand is a `double`: `6.0 / 5` produces `1.2`.
+### 2. 📐 Geometry Rectangle Engine ([`calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/calculaterectangle.java))
+- Prompts for dimensions ($w$, $h$).
+- Calculates Area ($w \times h$) and Perimeter ($2 \times (w + h)$).
+- Formats floating-point output with `printf`.
+
+### 3. 🔢 Dynamic Multiplication Table ([`for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/for_loop.java))
+- Uses a counting loop to generate the mathematical table of 17 from 1 to 10 with aligned column formatting.
 
 ---
 
-### 5. Prefix vs. Postfix Increment (`++i` vs `i++`)
-
-Understanding increment behavior is a favorite interview topic:
-
-```java
-int a = 5;
-int b = 5;
-
-int post = a++; // 1. Assigns current value of 'a' (5) to 'post'
-                // 2. Increments 'a' to 6
-                // Result: post = 5, a = 6
-
-int pre = ++b;  // 1. Increments 'b' to 6
-                // 2. Assigns new value of 'b' (6) to 'pre'
-                // Result: pre = 6, b = 6
-```
-
----
-
-### 6. Control Flow & Decision Making
-
-Java provides three primary decision constructs:
-
-#### A. `if` / `else if` / `else` Ladder
-```java
-int score = 85;
-if (score >= 90) {
-    System.out.println("Grade: A");
-} else if (score >= 80) {
-    System.out.println("Grade: B");
-} else {
-    System.out.println("Grade: C");
-}
-```
-
-#### B. Ternary Operator (`? :`)
-A compact shorthand for simple two-way assignments:
-```java
-int age = 18;
-String status = (age >= 18) ? "Adult" : "Minor";
-```
-
-#### C. `switch` Statement
-Ideal for discrete value matching (`int`, `char`, `String`, `enum`):
-```java
-int dayNumber = 3;
-switch (dayNumber) {
-    case 1 -> System.out.println("Monday");
-    case 2 -> System.out.println("Tuesday");
-    case 3 -> System.out.println("Wednesday");
-    default -> System.out.println("Invalid day");
-}
-```
-
----
-
-### 7. Looping Constructs & Execution Flow
-
-| Loop Type | Check Timing | Minimum Runs | Best Used When |
-| :--- | :--- | :--- | :--- |
-| `for` loop | Pre-check | 0 | Number of iterations is known in advance |
-| `while` loop | Pre-check | 0 | Iterating until a boolean condition turns false |
-| `do-while` loop | **Post-check** | **1** | Body must execute at least once (e.g. menus) |
-
-```java
-// do-while executes even if condition is initially false:
-int i = 6;
-do {
-    System.out.println(i); // Prints 6
-    i++;
-} while (i <= 5);
-```
-
----
-
-### 8. User Input & The Scanner Gotcha
-
-When reading user input using `java.util.Scanner`, mixing number readers with `nextLine()` can lead to unexpected skips:
-
-```java
-Scanner scanner = new Scanner(System.in);
-
-System.out.print("Enter your age: ");
-int age = scanner.nextInt(); 
-// ⚠️ Trap: nextInt() consumes the integer but leaves the '\n' (Enter) in buffer!
-
-// If you immediately call nextLine(), it will consume the leftover newline!
-// scanner.nextLine(); // 💡 Solution: Consume leftover newline buffer
-
-System.out.print("Enter your full name: ");
-String name = scanner.nextLine();
-
-scanner.close();
-```
-
----
-
-### 9. Math & Random Utilities
-
-The standard library offers built-in tools for calculations and pseudo-random numbers:
-
-```java
-// Math Constants & Methods
-double pi = Math.PI;
-double root = Math.sqrt(64.0);     // 8.0
-double power = Math.pow(2, 5);     // 32.0
-int max = Math.max(15, 42);        // 42
-
-// Generating Bounded Random Integers (Java 17+)
-Random random = new Random();
-int diceRoll = random.nextInt(1, 7); // Generates 1 to 6 inclusive
-```
-
----
-
-### 10. OOP Kickstart: Classes & Methods
-
-Java is an object-oriented language where **classes** act as blueprints and **objects** are runtime instances:
-
-```java
-// Blueprint Class
-class Calculator {
-    // Method with parameters and a return value
-    public double add(double n1, double n2) {
-        return n1 + n2;
-    }
-}
-
-// Driver Class
-public class Classes {
-    public static void main(String[] args) {
-        // Instantiate an object using 'new'
-        Calculator cal = new Calculator();
-        
-        // Invoke method on object
-        double sum = cal.add(10.5, 20.25);
-        System.out.println("Result: " + sum); // 30.75
-    }
-}
-```
-
----
-
-## 🛠️ Practice Mini-Projects
-
-This repository includes real-world mini-applications combining multiple concepts:
-
-### 1. Interactive Shopping Cart (`shoppingcart.java`)
-- **Concepts**: `Scanner`, `float`, `char` (currency symbol `₹`), arithmetic calculation, string formatting.
-- **Workflow**: Prompts for item name, price per unit, and quantity; calculates and outputs the final bill.
-
-### 2. Geometry Area Calculator (`calculaterectangle.java`)
-- **Concepts**: `Scanner`, `double` precision, formula application ($Area = width \times height$).
-- **Workflow**: Reads dimensions from standard input and displays computed area with units.
-
----
-
-## ⚠️ Common Pitfalls & Traps (Interview FAQ)
+## ⚠️ Top Common Pitfalls & Traps (Interview FAQ)
 
 > [!WARNING]
 > ### 1. String Equality: `==` vs `.equals()`
-> - `==` tests **reference identity** (whether both point to the exact same memory address).
-> - `.equals()` tests **value equality** (whether characters inside the strings match).
+> - `==` compares **memory addresses / reference identity**.
+> - `.equals()` compares **actual character content**.
 > ```java
 > String s1 = new String("Java");
 > String s2 = new String("Java");
-> System.out.println(s1 == s2);      // false (different objects in heap)
-> System.out.println(s1.equals(s2));  // true  (same character content)
+> System.out.println(s1 == s2);      // false (different heap objects)
+> System.out.println(s1.equals(s2));  // true  (same characters)
 > ```
 
 > [!NOTE]
-> ### 2. Integer Overflow
-> Primitives wrap around on overflow:
+> ### 2. Integer Division Truncation
+> Dividing two integers truncates the decimal portion:
 > ```java
-> byte b = 127;
-> b++; 
-> System.out.println(b); // -128 (wrapped around!)
+> double result = 5 / 2;    // Result is 2.0 (NOT 2.5!)
+> double correct = 5.0 / 2; // Result is 2.5 (because 5.0 is double)
 > ```
 
-> [!TIP]
-> ### 3. Floating Point Inexactness
-> Avoid using `float` or `double` for high-precision financial computations. Use `java.math.BigDecimal` instead.
+> [!IMPORTANT]
+> ### 3. Scanner Newline Skip Bug
+> Calling `nextInt()` or `nextDouble()` leaves a `\n` in the input buffer:
+> ```java
+> int age = scanner.nextInt();
+> scanner.nextLine(); // MUST flush leftover newline before reading text!
+> String name = scanner.nextLine();
+> ```
 
 ---
 
 ## ⏱️ 10-Minute Rapid Revision Checklist
 
-Before your test or interview, quickly review these 6 core anchors:
+Before your test or technical interview, quickly review these 8 core anchors:
 
-- [ ] **Class Structure**: [`src/basics/startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/startingstructure.java)
-- [ ] **Variable Declarations**: [`src/variables/variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/variables/variables.java)
-- [ ] **Increment & Precedence**: [`src/Operators/increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/increment.java) & [`src/basics/OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/OrderDemo.java)
+- [ ] **Main Method Signature**: [`src/basics/startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/startingstructure.java)
+- [ ] **Primitive Types & Sizes**: [`src/variables/variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/variables/variables.java)
 - [ ] **Type Promotion Rules**: [`src/type_conversions/Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Typepromotions.java)
-- [ ] **Branching Logic**: [`src/conditional_statements/switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/switch_operator.java)
-- [ ] **Loop Guarantees**: [`src/Loops/Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/Do_while_loop.java)
-
----
-
-## 🚀 Future Roadmap
-
-- [ ] **OOP Deep Dive**: Inheritance, Polymorphism, Abstract Classes & Interfaces.
-- [ ] **Arrays & Collections**: `ArrayList`, `HashMap`, `HashSet`, and Iterators.
-- [ ] **Exception Handling**: `try-catch-finally`, custom exceptions, `throws`.
-- [ ] **String Manipulation**: `StringBuilder`, `StringBuffer`, regex pattern matching.
-- [ ] **Java 8+ Modern Features**: Lambdas, Streams API, `Optional`, Records.
+- [ ] **Increment Prefix vs Postfix**: [`src/Operators/increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/increment.java)
+- [ ] **Order of Evaluation**: [`src/basics/OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/OrderDemo.java)
+- [ ] **Switch Fall-Through & Arrow Syntax**: [`src/conditional_statements/switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/switch_operator.java)
+- [ ] **Do-While Minimum Execution**: [`src/Loops/Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/Do_while_loop.java)
+- [ ] **OOP Blueprint & Object Instantiation**: [`src/oop/Classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/oop/Classes.java)
 
 ---
 
@@ -493,7 +318,7 @@ Before your test or interview, quickly review these 6 core anchors:
 ### How to Contribute
 1. Fork the repository.
 2. Create a feature branch (`git checkout -b feature/new-example`).
-3. Commit your changes with clear messages (`git commit -m "Add Exception handling example"`).
+3. Commit your changes (`git commit -m "Add new example with line-by-line guide"`).
 4. Push to the branch (`git push origin feature/new-example`).
 5. Open a Pull Request.
 
