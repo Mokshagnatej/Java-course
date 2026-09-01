@@ -1,5 +1,4 @@
-
-
+// Jagged array
 public class jagged_array {
     public static void main(String[]args){
         int nums [][] = new int[3] [];
