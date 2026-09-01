@@ -12,7 +12,7 @@ public class multi_dimensional_array {
         //Enhanced for loop
         for(int n[] : nums ){
             for(int m:n){
-                System.out.print(m + " ");
+                System.out.print(m + "");
             }
             System.out.println();
         }
