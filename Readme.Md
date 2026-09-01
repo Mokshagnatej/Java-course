@@ -106,7 +106,7 @@ flowchart TD
     F --> G["07. Loops & Iteration\n(for, while, do-while, break, continue)"]
     G --> H["08. Built-in Utilities\n(Math API, java.util.Random)"]
     H --> I["09. OOP Kickstart\n(Classes, Objects, Stack vs Heap)"]
-    I --> J["10. Arrays & Collections\n(1D, 2D matrix, jagged arrays, for-each)"]
+    I --> J["10. Arrays & Collections\n(1D, 2D matrix, 3D cubes, jagged arrays, for-each)"]
     J --> K["11. Methods & Overloading\n(void, return, parameters, signatures)"]
     K --> L["12. Integrated Practice Projects\n(Shopping cart, geometry, tables)"]
 
@@ -189,6 +189,7 @@ java -cp out practice_programs.for_loop
 java -cp out Arrays.demo_array
 java -cp out Arrays.array_of_elments
 java -cp out Arrays.multi_dimensional_array
+java -cp out Arrays.three_dimensional_array
 java -cp out Arrays.jagged_array
 
 # Module 12: Methods
@@ -214,8 +215,8 @@ Click on any **Module Guide** for full explanations, analogies, diagrams, and go
 | **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`arithmeticoperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/arithmeticoperator.java) | Arithmetic (`+`, `-`, `*`, `/`, `%`), quotient vs remainder | `java -cp out operators.arithmeticoperator` |
 | **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/increment.java) | Postfix (`i++`) vs Prefix (`++i`) assignment timing | `java -cp out operators.increment` |
 | **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`augmentedassigment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/augmentedassigment.java) | Compound updates (`+=`, `-=`, `*=`, `/=`, `%=`) & implicit cast | `java -cp out operators.augmentedassigment` |
-| **04** | **Operators** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`Relationaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/Relationaloperator.java) | Comparison boolean results (`<`, `>`, `==`, `!=`, `<=`, `>=`) | `java -cp out operators.Relationaloperator` |
-| **04** | **Operators** | [📖 Module Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`logicaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/logicaloperator.java) | Logical AND (`&&`), OR (`\|\|`), NOT (`!`), short-circuiting | `java -cp out operators.logicaloperator` |
+| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`Relationaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/Relationaloperator.java) | Comparison boolean results (`<`, `>`, `==`, `!=`, `<=`, `>=`) | `java -cp out operators.Relationaloperator` |
+| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`logicaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/logicaloperator.java) | Logical AND (`&&`), OR (`\|\|`), NOT (`!`), short-circuiting | `java -cp out operators.logicaloperator` |
 | **05** | **Input/Output**| [📖 Module 05 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/README.md) | [`ScannerInput.java`](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/ScannerInput.java) | Multi-type interactive input flow & memory cleanup | `java -cp out input_output.ScannerInput` |
 | **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`ifstatement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifstatement.java) | Interactive input validation, `isEmpty()`, age branching | `java -cp out conditional_statements.ifstatement` |
 | **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`ifelse_statement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifelse_statement.java) | Two-way decision branching (`if - else`) | `java -cp out conditional_statements.ifelse_statement` |
@@ -236,6 +237,7 @@ Click on any **Module Guide** for full explanations, analogies, diagrams, and go
 | **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`demo_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/demo_array.java) | Inline array initialization, index-based access | `java -cp out Arrays.demo_array` |
 | **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`array_of_elments.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/array_of_elments.java) | `new int[4]` allocation, manual element assignment, `for` loop | `java -cp out Arrays.array_of_elments` |
 | **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`multi_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/multi_dimensional_array.java) | 2D `int[3][4]` grid, `Math.random()` fill, enhanced for-each | `java -cp out Arrays.multi_dimensional_array` |
+| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`three_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/three_dimensional_array.java) | 3D `int[3][4][5]` layered array, 3-level nested loops | `java -cp out Arrays.three_dimensional_array` |
 | **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`jagged_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/jagged_array.java) | Jagged `int[3][]` with irregular rows (3, 6, 4), `.length` bounds | `java -cp out Arrays.jagged_array` |
 | **12** | **Methods** | [📖 Module 12 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/methods/README.md) | [`Demo_class.java`](file:///Users/honeyreddy/Documents/Java%20course/src/methods/Demo_class.java) | `void` vs return methods, conditional returns, method calls | `java -cp out methods.Demo_class` |
 | **12** | **Methods** | [📖 Module 12 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/methods/README.md) | [`MethodOverloading.java`](file:///Users/honeyreddy/Documents/Java%20course/src/methods/MethodOverloading.java) | Compile-time polymorphism with overloaded parameter lists | `java -cp out methods.MethodOverloading` |
@@ -333,6 +335,7 @@ String name = scanner.nextLine(); // Read text safely
 ### 11. Array Data Structures & Heap Storage
 - **1D Array**: `int[] nums = new int[4];` $\rightarrow$ contiguous Heap block of 4 integers.
 - **2D Array (Matrix)**: `int[][] grid = new int[3][4];` $\rightarrow$ array of array references.
+- **3D Array (Cube)**: `int[][][] cube = new int[3][4][5];` $\rightarrow$ array of 2D matrices.
 - **Jagged Array**: `int[][] jagged = new int[3][];` $\rightarrow$ rows with different lengths (`jagged[0] = new int[3];`).
 
 ### 12. Method Invocation & Call Stack Frames

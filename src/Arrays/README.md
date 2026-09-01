@@ -1,21 +1,25 @@
 # 📊 Module 11: Arrays & Data Collections
 
-> **Mastering Fixed-Size Data Structures in Java.** Learn how to store, access, and traverse collections of elements using single-dimensional, multi-dimensional, and jagged arrays.
+> **Mastering Fixed-Size Data Structures in Java.** Learn how to store, access, and traverse collections of elements using single-dimensional (1D), two-dimensional (2D grids), three-dimensional (3D cubes), and jagged arrays.
 
 ---
 
 ## 📑 Table of Contents
 1. [What You'll Learn](#1-what-youll-learn)
-2. [Core Concept: What is an Array?](#2-core-concept-what-is-an-array)
-3. [Real-World Analogy](#3-real-world-analogy)
-4. [Array Declaration & Initialization](#4-array-declaration--initialization)
-5. [Memory Layout: Arrays on the Heap](#5-memory-layout-arrays-on-the-heap)
-6. [Traversing Arrays: Standard vs Enhanced For Loop](#6-traversing-arrays-standard-vs-enhanced-for-loop)
-7. [Multi-Dimensional Arrays (2D Grids)](#7-multi-dimensional-arrays-2d-grids)
-8. [Jagged Arrays (Irregular Rows)](#8-jagged-arrays-irregular-rows)
-9. [Array Selection Decision Tree](#9-array-selection-decision-tree)
-10. [Line-by-Line File Guides](#10-line-by-line-file-guides)
-11. [Common Pitfalls & Traps](#11-common-pitfalls--traps)
+2. [Keywords & Definitions Glossary](#2-keywords--definitions-glossary)
+3. [How I Code & What is the Use (Mental Model)](#3-how-i-code--what-is-the-use-mental-model)
+4. [Core Concept: What is an Array?](#4-core-concept-what-is-an-array)
+5. [Real-World Analogy](#5-real-world-analogy)
+6. [Array Declaration & Initialization](#6-array-declaration--initialization)
+7. [Memory Layout: Arrays on the Heap](#7-memory-layout-arrays-on-the-heap)
+8. [Traversing Arrays: Standard vs Enhanced For Loop](#8-traversing-arrays-standard-vs-enhanced-for-loop)
+9. [Multi-Dimensional Arrays (2D Grids)](#9-multi-dimensional-arrays-2d-grids)
+10. [Three-Dimensional Arrays (3D Cubes / Layers)](#10-three-dimensional-arrays-3d-cubes--layers)
+11. [Jagged Arrays (Irregular Rows)](#11-jagged-arrays-irregular-rows)
+12. [Array Selection Decision Tree](#12-array-selection-decision-tree)
+13. [Line-by-Line File Guides](#13-line-by-line-file-guides)
+14. [Dry-Run & Tracing Exercises](#14-dry-run--tracing-exercises)
+15. [Common Pitfalls & Traps](#15-common-pitfalls--traps)
 
 ---
 
@@ -24,15 +28,45 @@
 After completing this module, you will be able to:
 
 - [ ] Declare and initialize arrays using both literal syntax and `new` keyword
-- [ ] Access and modify elements using zero-based indexing
+- [ ] Access and modify elements using zero-based indexing (`nums[0]`)
 - [ ] Traverse arrays with standard `for` loops and enhanced `for-each` loops
-- [ ] Create and populate 2D (multi-dimensional) arrays for grid/matrix data
+- [ ] Create and populate 2D (matrix) and 3D (multi-layered) arrays
 - [ ] Build jagged arrays where each row has a different number of columns
-- [ ] Avoid `ArrayIndexOutOfBoundsException` and other common array errors
+- [ ] Safely navigate array boundaries using the `.length` property
+- [ ] Avoid `ArrayIndexOutOfBoundsException` and other runtime array bugs
 
 ---
 
-## 2. Core Concept: What is an Array?
+## 2. Keywords & Definitions Glossary
+
+| Keyword / Property | Category | Definition & Meaning | Code Syntax Example |
+| :--- | :--- | :--- | :--- |
+| `[]` | Operator | Array index operator / type suffix declaring an array structure. | `int[] nums;` or `nums[0]` |
+| `new` | Memory Operator | Allocates fixed block of memory on the **Heap** for array elements. | `new int[5];` |
+| `.length` | Read-only Field | Returns the total capacity (number of slots) in the array. | `for (int i = 0; i < arr.length; i++)` |
+| `for-each` | Loop Construct | Enhanced loop that iterates over every item in an array without manual indexing. | `for (int val : nums)` |
+| `int[][]` | Type | 2-dimensional array; an array of 1D array references (grid/matrix). | `int[][] grid = new int[3][4];` |
+| `int[][][]` | Type | 3-dimensional array; an array of 2D arrays (layers $\times$ rows $\times$ cols). | `int[][][] cube = new int[3][4][5];` |
+
+---
+
+## 3. How I Code & What is the Use (Mental Model)
+
+### What is the Use?
+When you have 100 student test scores, you don't want to create 100 individual variables (`score1`, `score2`, ..., `score100`). An **array** lets you store all 100 scores in a single indexed collection: `int[] scores = new int[100];`.
+
+### How to Think & Code with Arrays:
+1. **Choose Dimension**:
+   - Simple list? $\rightarrow$ 1D Array (`int[]`)
+   - Table / Grid / Coordinates ($x, y$)? $\rightarrow$ 2D Array (`int[][]`)
+   - 3D Space / Video Frames / Layers? $\rightarrow$ 3D Array (`int[][][]`)
+   - Irregular row lengths (e.g. months with different days)? $\rightarrow$ Jagged Array (`int[][]`)
+2. **Allocate & Size**: Remember that Java arrays are **fixed-size**. Sizing happens at creation.
+3. **Loop & Process**: Use `.length` for the upper limit, always stopping at `i < array.length` (since indices run from `0` to `length - 1`).
+
+---
+
+## 4. Core Concept: What is an Array?
 
 An **array** is a fixed-size, ordered container that stores multiple values of the **same data type** under a single variable name. Each value is stored at a numbered position called an **index**, starting from `0`.
 
@@ -46,17 +80,9 @@ System.out.println(scores[4]); // 88 (last element)
 System.out.println(scores.length); // 5 (total number of elements)
 ```
 
-### Key Properties:
-| Property | Detail |
-| :--- | :--- |
-| **Fixed Size** | Once created, the length cannot change. Use `ArrayList` for dynamic sizing. |
-| **Zero-Indexed** | First element is at index `0`, last at index `length - 1`. |
-| **Homogeneous** | All elements must be the same type (`int[]`, `String[]`, etc.). |
-| **Reference Type** | The array variable on the Stack stores a pointer to the actual data on the Heap. |
-
 ---
 
-## 3. Real-World Analogy
+## 5. Real-World Analogy
 
 Think of an array like a **row of numbered lockers in a school**:
 
@@ -68,19 +94,17 @@ Think of an array like a **row of numbered lockers in a school**:
 - The **locker row** is the array itself.
 - Each **locker number** is the index.
 - The **contents inside** each locker is the stored value.
-- You can **directly open any locker** by its number (random access — instant, no searching required).
+- You can **directly open any locker** by its number (instant $O(1)$ random access).
 - The **total number of lockers** is fixed when the row is built (`scores.length`).
 
 ---
 
-## 4. Array Declaration & Initialization
+## 6. Array Declaration & Initialization
 
-Java supports two ways to create arrays:
-
-### Method 1: Inline Literal Initialization (when you know values at compile time)
+### Method 1: Inline Literal Initialization (when values are known upfront)
 ```java
 int[] nums = { 1, 2, 3, 4, 5, 7 };
-// Array is created with 6 elements, sized and filled immediately
+// Creates array with 6 elements, sized and filled immediately
 ```
 
 ### Method 2: `new` Keyword with Manual Assignment (when values come later)
@@ -97,7 +121,7 @@ nums[3] = 13;             // [18, 32, 42, 13]
 
 ---
 
-## 5. Memory Layout: Arrays on the Heap
+## 7. Memory Layout: Arrays on the Heap
 
 Arrays are **reference types** in Java. The variable on the Stack holds a pointer to the actual array object allocated on the Heap.
 
@@ -115,61 +139,30 @@ flowchart LR
     style HEAP fill:#FFF3E0,stroke:#FF9800
 ```
 
-### What happens with two references?
-```java
-int[] a = { 10, 20, 30 };
-int[] b = a;     // b now points to the SAME array object!
-b[0] = 999;
-System.out.println(a[0]); // 999! (both variables share the same Heap object)
-```
-
 ---
 
-## 6. Traversing Arrays: Standard vs Enhanced For Loop
+## 8. Traversing Arrays: Standard vs Enhanced For Loop
 
-### Standard `for` Loop (gives you the index):
+### Standard `for` Loop (gives you the index `i`):
 ```java
 int[] nums = { 18, 32, 42, 13 };
 for (int i = 0; i < nums.length; i++) {
     System.out.println("Index " + i + ": " + nums[i]);
 }
 ```
-**Output:**
-```
-Index 0: 18
-Index 1: 32
-Index 2: 42
-Index 3: 13
-```
 
-### Enhanced `for-each` Loop (simpler syntax, no index):
+### Enhanced `for-each` Loop (cleaner syntax, read-only traversal):
 ```java
 for (int value : nums) {
     System.out.println(value);
 }
 ```
-**Output:**
-```
-18
-32
-42
-13
-```
-
-### When to Use Which?
-
-| Feature | Standard `for` | Enhanced `for-each` |
-| :--- | :--- | :--- |
-| **Access to index** | ✅ Yes (`i` is available) | ❌ No |
-| **Modify elements** | ✅ Yes (`nums[i] = newVal`) | ❌ No (read-only copy) |
-| **Simpler syntax** | ❌ More verbose | ✅ Cleaner |
-| **Best for** | Index-dependent operations, modifications | Simple read-only traversal |
 
 ---
 
-## 7. Multi-Dimensional Arrays (2D Grids)
+## 9. Multi-Dimensional Arrays (2D Grids)
 
-A 2D array is an **array of arrays** — think of it as a table with rows and columns.
+A 2D array is an **array of arrays** — like a spreadsheet with rows and columns.
 
 ```java
 int[][] matrix = new int[3][4]; // 3 rows, 4 columns
@@ -193,19 +186,39 @@ flowchart TD
     style GRID fill:#E3F2FD,stroke:#2196F3
 ```
 
-### Traversing with Enhanced For-Each:
+---
+
+## 10. Three-Dimensional Arrays (3D Cubes / Layers)
+
+A 3D array adds a third dimension: **Layers $\times$ Rows $\times$ Columns**.
+
 ```java
-for (int[] row : matrix) {       // Each 'row' is a 1D array
-    for (int value : row) {       // Each 'value' is an int
-        System.out.print(value + " ");
+int[][][] cube = new int[3][4][5]; // 3 layers, 4 rows per layer, 5 columns per row
+
+// Nested loop traversal across all 3 dimensions:
+for (int i = 0; i < cube.length; i++) {              // Layers (3)
+    for (int j = 0; j < cube[i].length; j++) {       // Rows (4)
+        for (int k = 0; k < cube[i][j].length; k++) { // Columns (5)
+            cube[i][j][k] = (int)(Math.random() * 10);
+        }
     }
-    System.out.println();
 }
+```
+
+```mermaid
+flowchart TD
+    subgraph CUBE["3D Array: int[3][4][5]"]
+        L0["Layer 0: 4 rows × 5 cols grid"]
+        L1["Layer 1: 4 rows × 5 cols grid"]
+        L2["Layer 2: 4 rows × 5 cols grid"]
+    end
+
+    style CUBE fill:#EDE7F6,stroke:#512DA8
 ```
 
 ---
 
-## 8. Jagged Arrays (Irregular Rows)
+## 11. Jagged Arrays (Irregular Rows)
 
 A jagged array is a 2D array where **each row can have a different number of columns**:
 
@@ -227,50 +240,43 @@ flowchart TD
     style JAGGED fill:#FFF3E0,stroke:#FF9800
 ```
 
-### Safe Traversal with `.length`:
-```java
-for (int i = 0; i < nums.length; i++) {          // nums.length = 3 (rows)
-    for (int j = 0; j < nums[i].length; j++) {   // nums[i].length varies per row!
-        System.out.print(nums[i][j] + " ");
-    }
-    System.out.println();
-}
-```
-
-> [!IMPORTANT]
-> Always use `nums[i].length` (not a hardcoded column count) when iterating jagged arrays. Each row has its own independent length.
-
 ---
 
-## 9. Array Selection Decision Tree
+## 12. Array Selection Decision Tree
 
 ```mermaid
 graph TD
-    Q1{"Do you need a fixed-size collection of same-type elements?"}
+    Q1{"Do you need a fixed-size collection of elements?"}
     Q1 -- Yes --> Q2{"How many dimensions?"}
     Q1 -- No --> LIST["Use ArrayList (dynamic size)"]
     Q2 -- "1D (simple list)" --> ARR1D["Use int[] or Type[]"]
     Q2 -- "2D (table/grid)" --> Q3{"Same number of columns in every row?"}
-    Q3 -- Yes --> ARR2D["Use int[][] with fixed columns\nnew int[rows][cols]"]
+    Q2 -- "3D (layers/cube)" --> ARR3D["Use int[][][]"]
+    Q3 -- Yes --> ARR2D["Use int[][] fixed columns\nnew int[rows][cols]"]
     Q3 -- No --> JAGGED["Use Jagged Array\nnew int[rows][]"]
 
     style Q1 fill:#FFF9C4,stroke:#FBC02D
     style ARR1D fill:#C8E6C9,stroke:#4CAF50
     style ARR2D fill:#C8E6C9,stroke:#4CAF50
+    style ARR3D fill:#C8E6C9,stroke:#4CAF50
     style JAGGED fill:#C8E6C9,stroke:#4CAF50
-    style LIST fill:#E3F2FD,stroke:#2196F3
 ```
 
 ---
 
-## 10. Line-by-Line File Guides
+## 13. Line-by-Line File Guides
 
-| File | Concepts Covered | Expected Output | Command to Run |
+| File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
 | [`demo_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/demo_array.java) | Inline array initialization, index-based access (`nums[3]`) | `4` | `java -cp out Arrays.demo_array` |
 | [`array_of_elments.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/array_of_elments.java) | `new int[4]` allocation, manual element assignment, `for` loop traversal | `18`<br>`32`<br>`42`<br>`13` | `java -cp out Arrays.array_of_elments` |
 | [`multi_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/multi_dimensional_array.java) | 2D `int[3][4]` grid, `Math.random()` fill, enhanced for-each & standard nested loops | 3×4 grid of random numbers (0–99) | `java -cp out Arrays.multi_dimensional_array` |
-| [`jagged_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/jagged_array.java) | Jagged `int[3][]` with varying row sizes (3, 6, 4), `.length` for safe bounds | 3 rows of random digits with different lengths | `java -cp out Arrays.jagged_array` |
+| [`three_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/three_dimensional_array.java) | 3D `int[3][4][5]` layered array, 3-level nested loops, layer-by-layer matrix printing | 3 separate 4×5 grids of random digits | `java -cp out Arrays.three_dimensional_array` |
+| [`jagged_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/jagged_array.java) | Jagged `int[3][]` with varying row sizes (3, 6, 4), `.length` for safe bounds | 3 rows of random digits with different column lengths | `java -cp out Arrays.jagged_array` |
+
+---
+
+## 14. Dry-Run & Tracing Exercises
 
 ### Dry-Run Trace: `demo_array.java`
 
@@ -296,26 +302,22 @@ System.out.println(nums[3]);
 
 ---
 
-## 11. Common Pitfalls & Traps
+## 15. Common Pitfalls & Traps
 
 > [!CAUTION]
 > ### 1. `ArrayIndexOutOfBoundsException`
-> Accessing an index ≥ `array.length` or < `0` throws a runtime exception:
+> Accessing an index $\ge \text{length}$ or $< 0$ throws a runtime exception:
 > ```java
 > int[] nums = { 10, 20, 30 };
 > System.out.println(nums[3]); // 💥 Exception! Valid indices are 0, 1, 2
-> System.out.println(nums[-1]); // 💥 Exception! No negative indices in Java
 > ```
 
 > [!WARNING]
 > ### 2. Array Length is `.length` (a field), NOT `.length()` (a method)
 > ```java
 > int[] nums = { 1, 2, 3 };
-> nums.length    // ✅ Correct (no parentheses — it's a field)
-> nums.length()  // ❌ Compile error! Arrays don't have a length() method
->
-> String s = "hello";
-> s.length()     // ✅ Correct for Strings (it IS a method)
+> nums.length    // ✅ Correct (field, no parentheses)
+> nums.length()  // ❌ Compile error!
 > ```
 
 > [!WARNING]
