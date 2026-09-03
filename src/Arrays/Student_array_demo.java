@@ -28,7 +28,7 @@ public class Student_array_demo {
         students[2] = s3;
 
         for(int i =0;i<students.length;i++){
-            System.out.println(students[i].rollno +" "+ students[i].name +" "+  students[i].marks);
+            System.out.println(students[i].rollno +"."+ students[i].name +" :"+  students[i].marks);
         }
     }
 }
