@@ -1,6 +1,8 @@
-# 🔀 Module 06: Decision Making & Flow Control
+# 🔀 Module 07: Decision Making & Flow Control
 
 > **Mastering Branching, Conditional Logic & Decision Trees in Java.** Learn how to make your code think, evaluate conditions, and branch into different paths using `if`, `if-else`, `if-else-if`, `switch`, and the ternary operator `? :`.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Math & Random](../math_and_random/README.md) &nbsp;|&nbsp; [➡️ Next: Loops](../loops/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -176,11 +178,11 @@ flowchart LR
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`ifstatement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/ifstatement.java) | Interactive input checks, `isEmpty()`, age ranges, booleans | Evaluates user input: prints name greeting, age group, student status | `java -cp out beginner.conditional_statements.ifstatement` |
-| [`ifelse_statement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/ifelse_statement.java) | Binary comparison between two numbers | Compares two variables, prints which is greater | `java -cp out beginner.conditional_statements.ifelse_statement` |
-| [`if_else_if.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/if_else_if.java) | Chained ladders vs separate independent ifs | Prints category based on tiered conditions | `java -cp out beginner.conditional_statements.if_else_if` |
-| [`Ternary_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/Ternary_operator.java) | Inline conditional expression & even/odd parity | Evaluates parity or scores with `? :` inline | `java -cp out beginner.conditional_statements.Ternary_operator` |
-| [`switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/switch_operator.java) | Discrete value matching, break behavior & arrow switch | `--- 1. Traditional Switch Statement ---`<br>`Wednesday`<br>`--- 2. Modern Enhanced Arrow Switch ---`<br>`Wednesday` | `java -cp out beginner.conditional_statements.switch_operator` |
+| [`ifstatement.java`](./ifstatement.java) | Interactive input checks, `isEmpty()`, age ranges, booleans | Evaluates user input: prints name greeting, age group, student status | `java -cp out beginner.conditional_statements.ifstatement` |
+| [`ifelse_statement.java`](./ifelse_statement.java) | Binary comparison between two numbers | Compares two variables, prints which is greater | `java -cp out beginner.conditional_statements.ifelse_statement` |
+| [`if_else_if.java`](./if_else_if.java) | Chained ladders vs separate independent ifs | Prints category based on tiered conditions | `java -cp out beginner.conditional_statements.if_else_if` |
+| [`Ternary_operator.java`](./Ternary_operator.java) | Inline conditional expression & even/odd parity | Evaluates parity or scores with `? :` inline | `java -cp out beginner.conditional_statements.Ternary_operator` |
+| [`switch_operator.java`](./switch_operator.java) | Discrete value matching, break behavior & arrow switch | `--- 1. Traditional Switch Statement ---`<br>`Wednesday`<br>`--- 2. Modern Enhanced Arrow Switch ---`<br>`Wednesday` | `java -cp out beginner.conditional_statements.switch_operator` |
 
 ---
 
@@ -231,3 +233,12 @@ flowchart LR
 > ### 3. Independent `if`s vs `else if` Ladder
 > - **Separate `if` statements**: Every single condition is evaluated independently.
 > - **`else if` ladder**: As soon as ONE condition matches, the rest are skipped!
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Math & Random](../math_and_random/README.md) | [Loops ➡️](../loops/README.md) | [📁 `conditional_statements/`](./) |
+

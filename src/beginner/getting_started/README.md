@@ -2,6 +2,8 @@
 
 > **Welcome to Java Fundamentals!** This guide is designed to give you a deep, crystal-clear understanding of how Java programs are structured, compiled, and executed.
 
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [➡️ Next: Variables](../variables/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
+
 ---
 
 ## 📑 Table of Contents
@@ -197,9 +199,9 @@ String name = scanner.nextLine(); // Now correctly waits for user input!
 
 | File | Primary Goal | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/startingstructure.java) | Learn `main()` method signature & `System.out.println` | `jaffa is good boy`<br>`really as a very great person!` | `java -cp out beginner.getting_started.startingstructure` |
-| [`OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/OrderDemo.java) | Evaluate complex arithmetic with precedence & integer division | `The result is: 11.0` | `java -cp out beginner.operators.OrderDemo` |
-| [`scanner.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/input_output/scanner.java) | Read multiple data types with Scanner & manage input streams | `Enter your name: ` *(waits)*<br>`Enter your age: ` *(waits)*<br>`Your height (in feet): ` *(waits)*<br>`The person name is John, age is 25 years, and height is 5.9 feet.` | `java -cp out beginner.input_output.scanner` |
+| [`startingstructure.java`](./startingstructure.java) | Learn `main()` method signature & `System.out.println` | `jaffa is good boy`<br>`really as a very great person!` | `java -cp out beginner.getting_started.startingstructure` |
+| [`OrderDemo.java`](../operators/OrderDemo.java) | Evaluate complex arithmetic with precedence & integer division | `The result is: 11.0` | `java -cp out beginner.operators.OrderDemo` |
+| [`scanner.java`](../input_output/scanner.java) | Read multiple data types with Scanner & manage input streams | `Enter your name: ` *(waits)*<br>`Enter your age: ` *(waits)*<br>`Your height (in feet): ` *(waits)*<br>`The person name is John, age is 25 years, and height is 5.9 feet.` | `java -cp out beginner.input_output.scanner` |
 
 ---
 
@@ -283,3 +285,12 @@ System.out.println(mystery);
 > In Java, the **public class name** must exactly match the **file name** (including case):
 > - File: `OrderDemo.java` → Class: `public class OrderDemo` ✅
 > - File: `orderdemo.java` → Class: `public class OrderDemo` ❌
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | *(First Module)* | [Variables ➡️](../variables/README.md) | [📁 `getting_started/`](./) |
+

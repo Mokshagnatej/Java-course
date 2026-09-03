@@ -1,6 +1,8 @@
-# ⚡ Module 04: Java Operators & Expressions
+# ⚡ Module 05: Java Operators & Expressions
 
 > **Mastering Operators, Precedence & Logical Reasoning in Java.** Learn how Java processes arithmetic, comparisons, compound operations, and boolean logic — the building blocks of every decision and calculation.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Type Conversion](../type_conversion/README.md) &nbsp;|&nbsp; [➡️ Next: Math & Random](../math_and_random/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -255,11 +257,11 @@ flowchart LR
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`arithmeticoperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/arithmeticoperator.java) | `+`, `-`, `*`, `/`, `%` with integer and decimal values | Quotient and remainder results | `java -cp out beginner.operators.arithmeticoperator` |
-| [`increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/increment.java) | `++` and `--` prefix vs postfix evaluation | Shows different values for `x++` vs `++x` | `java -cp out beginner.operators.increment` |
-| [`augmentedassigment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/augmentedassigment.java) | Compound updates (`+=`, `*=`) & implicit casting | Progressive updates to a variable | `java -cp out beginner.operators.augmentedassigment` |
-| [`Relationaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/Relationaloperator.java) | Comparison boolean results (`<`, `>`, `==`, `!=`) | `true` / `false` for each comparison | `java -cp out beginner.operators.Relationaloperator` |
-| [`logicaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/logicaloperator.java) | Boolean combinations (`&&`, `\|\|`, `!`) & short-circuit | Truth table results for combined conditions | `java -cp out beginner.operators.logicaloperator` |
+| [`arithmeticoperator.java`](./arithmeticoperator.java) | `+`, `-`, `*`, `/`, `%` with integer and decimal values | Quotient and remainder results | `java -cp out beginner.operators.arithmeticoperator` |
+| [`increment.java`](./increment.java) | `++` and `--` prefix vs postfix evaluation | Shows different values for `x++` vs `++x` | `java -cp out beginner.operators.increment` |
+| [`augmentedassigment.java`](./augmentedassigment.java) | Compound updates (`+=`, `*=`) & implicit casting | Progressive updates to a variable | `java -cp out beginner.operators.augmentedassigment` |
+| [`Relationaloperator.java`](./Relationaloperator.java) | Comparison boolean results (`<`, `>`, `==`, `!=`) | `true` / `false` for each comparison | `java -cp out beginner.operators.Relationaloperator` |
+| [`logicaloperator.java`](./logicaloperator.java) | Boolean combinations (`&&`, `\|\|`, `!`) & short-circuit | Truth table results for combined conditions | `java -cp out beginner.operators.logicaloperator` |
 
 ### Dry-Run Trace: `increment.java`
 
@@ -335,3 +337,12 @@ x %= 5;   // x = 6 % 5 = 1
 > int x = 5;       // Assigns 5 to x
 > if (x == 5) ...  // Checks if x equals 5
 > ```
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Type Conversion](../type_conversion/README.md) | [Math & Random ➡️](../math_and_random/README.md) | [📁 `operators/`](./) |
+

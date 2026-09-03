@@ -1,6 +1,8 @@
-# 🔁 Module 07: Loops & Iteration
+# 🔁 Module 08: Loops & Iteration
 
 > **Mastering Iteration, Repetition & Loop Traversal in Java.** Learn how to automate repetitive tasks deterministically and efficiently using `for`, `while`, and `do-while` loops, plus loop control with `break` and `continue`.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Conditionals](../conditional_statements/README.md) &nbsp;|&nbsp; [➡️ Next: Practice Projects](../../intermediate/practice_projects/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -163,9 +165,9 @@ for (int i = 1; i <= 5; i++) {
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`For_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/For_loop.java) | Standard `for(init; cond; update)` & nested task loops | Prints counting iterations and nested schedules | `java -cp out beginner.loops.For_loop` |
-| [`while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/while_loop.java) | Pre-condition loop, inner token generation, manual `i++` | Prints loop counts and nested inner statements | `java -cp out beginner.loops.while_loop` |
-| [`Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/Do_while_loop.java) | Post-condition loop with guaranteed minimum 1 execution | Executes at least once even if condition starts false | `java -cp out beginner.loops.Do_while_loop` |
+| [`For_loop.java`](./For_loop.java) | Standard `for(init; cond; update)` & nested task loops | Prints counting iterations and nested schedules | `java -cp out beginner.loops.For_loop` |
+| [`while_loop.java`](./while_loop.java) | Pre-condition loop, inner token generation, manual `i++` | Prints loop counts and nested inner statements | `java -cp out beginner.loops.while_loop` |
+| [`Do_while_loop.java`](./Do_while_loop.java) | Post-condition loop with guaranteed minimum 1 execution | Executes at least once even if condition starts false | `java -cp out beginner.loops.Do_while_loop` |
 
 ---
 
@@ -208,3 +210,12 @@ for (int i = 1; i <= 5; i++) {
 > ### 3. Off-by-One Errors
 > - `i < 5` runs for `i = 0, 1, 2, 3, 4` (exactly **5 times**)
 > - `i <= 5` starting at 0 runs for `i = 0, 1, 2, 3, 4, 5` (exactly **6 times**)
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Conditionals](../conditional_statements/README.md) | [Practice Projects ➡️](../../intermediate/practice_projects/README.md) | [📁 `loops/`](./) |
+

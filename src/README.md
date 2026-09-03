@@ -2,6 +2,8 @@
 
 > **The Engine Room of the Java Course.** Structured into a 3-tier progressive learning architecture: **Beginner**, **Intermediate**, and **Advanced**.
 
+> ⚡ **Fast Access**: [🏠 Main Course README](../Readme.Md) &nbsp;|&nbsp; [📑 Module Directory](../Readme.Md#-fast-access-navigation--all-module-readmes) &nbsp;|&nbsp; [⚡ Quick Start & Run Commands](../Readme.Md#-quick-start--execution-commands)
+
 ---
 
 ## 📑 3-Tier Progressive Architecture
@@ -21,14 +23,14 @@ Foundational building blocks of the Java language.
 
 | Module | Directory | Topics Covered | Guide Link |
 | :--- | :--- | :--- | :--- |
-| **01. Getting Started** | [`src/beginner/getting_started/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/) | `class`, `main()`, JVM execution flow, basic print | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/README.md) |
-| **02. Input & Output** | [`src/beginner/input_output/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/input_output/) | `Scanner`, token parsing, buffer flushing, `printf` | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/input_output/README.md) |
-| **03. Variables & Types** | [`src/beginner/variables/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/variables/) | 8 primitives, sizes, String concatenation | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/variables/README.md) |
-| **04. Type Conversion** | [`src/beginner/type_conversion/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/) | Widening, narrowing `(int)`, expression promotion, overflow | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/README.md) |
-| **05. Operators** | [`src/beginner/operators/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/) | Arithmetic, `++i` vs `i++`, relational, logical `&&`/`\|\|`, OrderDemo | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/README.md) |
-| **06. Math & Random** | [`src/beginner/math_and_random/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/) | `Math.pow`, `sqrt`, rounding, `java.util.Random` | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/README.md) |
-| **07. Conditionals** | [`src/beginner/conditional_statements/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/) | `if`, `else if`, switch, ternary `? :`, arrow switch | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/README.md) |
-| **08. Loops** | [`src/beginner/loops/`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/) | `for`, `while`, `do-while`, `break`, `continue` | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/README.md) |
+| **01. Getting Started** | [`beginner/getting_started/`](beginner/getting_started/) | `class`, `main()`, JVM execution flow, basic print | [📖 Guide](beginner/getting_started/README.md) |
+| **02. Input & Output** | [`beginner/input_output/`](beginner/input_output/) | `Scanner`, token parsing, buffer flushing, `printf` | [📖 Guide](beginner/input_output/README.md) |
+| **03. Variables & Types** | [`beginner/variables/`](beginner/variables/) | 8 primitives, sizes, String concatenation | [📖 Guide](beginner/variables/README.md) |
+| **04. Type Conversion** | [`beginner/type_conversion/`](beginner/type_conversion/) | Widening, narrowing `(int)`, expression promotion, overflow | [📖 Guide](beginner/type_conversion/README.md) |
+| **05. Operators** | [`beginner/operators/`](beginner/operators/) | Arithmetic, `++i` vs `i++`, relational, logical `&&`/`\|\|`, OrderDemo | [📖 Guide](beginner/operators/README.md) |
+| **06. Math & Random** | [`beginner/math_and_random/`](beginner/math_and_random/) | `Math.pow`, `sqrt`, rounding, `java.util.Random` | [📖 Guide](beginner/math_and_random/README.md) |
+| **07. Conditionals** | [`beginner/conditional_statements/`](beginner/conditional_statements/) | `if`, `else if`, switch, ternary `? :`, arrow switch | [📖 Guide](beginner/conditional_statements/README.md) |
+| **08. Loops** | [`beginner/loops/`](beginner/loops/) | `for`, `while`, `do-while`, `break`, `continue` | [📖 Guide](beginner/loops/README.md) |
 
 ---
 
@@ -38,11 +40,11 @@ Practical projects, linear memory data structures, and procedural abstractions.
 
 | Module | Directory | Topics Covered | Guide Link |
 | :--- | :--- | :--- | :--- |
-| **01. Practice Projects** | [`src/intermediate/practice_projects/`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/) | Shopping cart simulation, rectangle geometry, multiplication tables | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/README.md) |
-| **02. Arrays** | [`src/intermediate/arrays/`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/) | 1D, 2D matrix, 3D cubes, jagged arrays, student object array | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/README.md) |
-| **03. Methods** | [`src/intermediate/methods/`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/) | Method definitions, returns, parameter passing, overloading | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/README.md) |
-| **04. Strings** | [`src/intermediate/strings/`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/strings/) | String constant pool, immutability, `StringBuilder` *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/strings/README.md) |
-| **05. Exception Handling** | [`src/intermediate/exception_handling/`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/exception_handling/) | `try-catch-finally`, checked/unchecked exceptions *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/exception_handling/README.md) |
+| **09. Practice Projects** | [`intermediate/practice_projects/`](intermediate/practice_projects/) | Shopping cart simulation, rectangle geometry, multiplication tables | [📖 Guide](intermediate/practice_projects/README.md) |
+| **10. Arrays** | [`intermediate/arrays/`](intermediate/arrays/) | 1D, 2D matrix, 3D cubes, jagged arrays, student object array | [📖 Guide](intermediate/arrays/README.md) |
+| **11. Methods** | [`intermediate/methods/`](intermediate/methods/) | Method definitions, returns, parameter passing, overloading | [📖 Guide](intermediate/methods/README.md) |
+| **12. Strings** | [`intermediate/strings/`](intermediate/strings/) | String constant pool, immutability, `StringBuilder` *(roadmap)* | [📖 Guide](intermediate/strings/README.md) |
+| **13. Exception Handling** | [`intermediate/exception_handling/`](intermediate/exception_handling/) | `try-catch-finally`, checked/unchecked exceptions *(roadmap)* | [📖 Guide](intermediate/exception_handling/README.md) |
 
 ---
 
@@ -52,13 +54,13 @@ Object-Oriented Programming deep-dive, enterprise patterns, and runtime memory a
 
 | Module | Directory | Topics Covered | Guide Link |
 | :--- | :--- | :--- | :--- |
-| **01. OOP Basics & Memory** | [`src/advanced/oop_basics/`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/) | `class`, `new`, instance methods, Heap allocation, Stack frames | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/README.md) |
-| **02. OOP Pillars** | [`src/advanced/oop_pillars/`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_pillars/) | Encapsulation, inheritance, polymorphism, abstraction *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_pillars/README.md) |
-| **03. Collections** | [`src/advanced/collections/`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/collections/) | `List`, `Set`, `Map`, `Queue`, iterators & Streams *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/collections/README.md) |
-| **04. Generics** | [`src/advanced/generics/`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/generics/) | Type parameters, bounded wildcards, type erasure *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/generics/README.md) |
-| **05. File I/O** | [`src/advanced/file_io/`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/file_io/) | Byte/character streams, NIO.2 `Files`, serialization *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/file_io/README.md) |
-| **06. Multithreading** | [`src/advanced/multithreading/`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/multithreading/) | `Thread`, `Runnable`, synchronization, `ExecutorService` *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/multithreading/README.md) |
-| **07. Capstone Projects** | [`src/advanced/advanced_projects/`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/advanced_projects/) | Real-world CLI engines and complete systems *(roadmap)* | [📖 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/advanced_projects/README.md) |
+| **14. OOP Basics & Memory** | [`advanced/oop_basics/`](advanced/oop_basics/) | `class`, `new`, instance methods, Heap allocation, Stack frames | [📖 Guide](advanced/oop_basics/README.md) |
+| **15. OOP Pillars** | [`advanced/oop_pillars/`](advanced/oop_pillars/) | Encapsulation, inheritance, polymorphism, abstraction *(roadmap)* | [📖 Guide](advanced/oop_pillars/README.md) |
+| **16. Collections** | [`advanced/collections/`](advanced/collections/) | `List`, `Set`, `Map`, `Queue`, iterators & Streams *(roadmap)* | [📖 Guide](advanced/collections/README.md) |
+| **17. Generics** | [`advanced/generics/`](advanced/generics/) | Type parameters, bounded wildcards, type erasure *(roadmap)* | [📖 Guide](advanced/generics/README.md) |
+| **18. File I/O** | [`advanced/file_io/`](advanced/file_io/) | Byte/character streams, NIO.2 `Files`, serialization *(roadmap)* | [📖 Guide](advanced/file_io/README.md) |
+| **19. Multithreading** | [`advanced/multithreading/`](advanced/multithreading/) | `Thread`, `Runnable`, synchronization, `ExecutorService` *(roadmap)* | [📖 Guide](advanced/multithreading/README.md) |
+| **20. Capstone Projects** | [`advanced/advanced_projects/`](advanced/advanced_projects/) | Real-world CLI engines and complete systems *(roadmap)* | [📖 Guide](advanced/advanced_projects/README.md) |
 
 ---
 
@@ -86,3 +88,12 @@ java -cp out intermediate.practice_projects.shoppingcart
 java -cp out advanced.oop_basics.Classes
 java -cp out advanced.oop_basics.Stack_Heap_data
 ```
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 🟢 Beginner Modules | 🟡 Intermediate Modules | 🔴 Advanced Modules |
+| :---: | :---: | :---: | :---: |
+| [Main Readme](../Readme.Md) | [Getting Started](beginner/getting_started/README.md)<br>[Input / Output](beginner/input_output/README.md)<br>[Variables](beginner/variables/README.md)<br>[Conversions](beginner/type_conversion/README.md)<br>[Operators](beginner/operators/README.md)<br>[Math & Random](beginner/math_and_random/README.md)<br>[Conditionals](beginner/conditional_statements/README.md)<br>[Loops](beginner/loops/README.md) | [Practice Projects](intermediate/practice_projects/README.md)<br>[Arrays](intermediate/arrays/README.md)<br>[Methods](intermediate/methods/README.md)<br>[Strings](intermediate/strings/README.md)<br>[Exceptions](intermediate/exception_handling/README.md) | [OOP Basics](advanced/oop_basics/README.md)<br>[OOP Pillars](advanced/oop_pillars/README.md)<br>[Collections](advanced/collections/README.md)<br>[Generics](advanced/generics/README.md)<br>[File I/O](advanced/file_io/README.md)<br>[Multithreading](advanced/multithreading/README.md)<br>[Capstone Projects](advanced/advanced_projects/README.md) |
+

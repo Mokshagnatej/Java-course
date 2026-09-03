@@ -1,6 +1,8 @@
-# 🛠️ Module 10: Practice Mini-Projects & Real-World Logic
+# 🛠️ Module 09: Practice Mini-Projects & Real-World Logic
 
 > **Putting It All Together: Hands-on Problem Solving in Java.** Learn how to combine inputs, variables, formulas, loops, and conditions to build working command-line applications and solve real problems from scratch.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Math & Random](../../beginner/math_and_random/README.md) &nbsp;|&nbsp; [➡️ Next: Arrays](../arrays/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -60,7 +62,7 @@ flowchart TD
 
 ## 4. Mini-Project 1: Interactive Shopping Cart
 
-- **File**: [`shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/shoppingcart.java)
+- **File**: [`shoppingcart.java`](./shoppingcart.java)
 - **Goal**: Read item name, price per unit, and quantity; compute bill; display a formatted invoice with currency symbol `₹`.
 - **How to Run**:
   ```bash
@@ -82,7 +84,7 @@ flowchart TD
 
 ## 5. Mini-Project 2: Rectangle Geometry Engine
 
-- **File**: [`calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/calculaterectangle.java)
+- **File**: [`calculaterectangle.java`](./calculaterectangle.java)
 - **Goal**: Read rectangle dimensions ($w, h$) as double-precision values, compute Area ($w \times h$) and Perimeter ($2 \times (w + h)$), format to 2 decimal places.
 - **How to Run**:
   ```bash
@@ -102,7 +104,7 @@ flowchart TD
 
 ## 6. Mini-Project 3: Dynamic Multiplication Table Generator
 
-- **File**: [`for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/for_loop.java)
+- **File**: [`for_loop.java`](./for_loop.java)
 - **Goal**: Generate and display the mathematical multiplication table for the number 17 from $17 \times 1$ to $17 \times 10$ with column alignment.
 - **How to Run**:
   ```bash
@@ -146,3 +148,12 @@ Test your skills by building these additional mini-projects from scratch:
 | **3. BMI Health Classifier** | Read weight (kg) and height (m), compute $\text{BMI} = \frac{\text{weight}}{\text{height}^2}$, and classify as Underweight/Normal/Overweight. | `if-else if`, `Math.pow()`, formulas | ⭐⭐ Medium |
 | **4. ATM PIN & Balance Simulator** | Prompt for 4-digit PIN (max 3 attempts with loop), show balance menu, allow deposit/withdrawal. | `while` loop, `switch`, `if-else` | ⭐⭐ Medium |
 | **5. Student Grade Report Generator** | Read 5 subject marks into an array, calculate total, average percentage, assign letter grade, and print report card. | Arrays, `for` loop, `if-else`, formatting | ⭐⭐⭐ Hard |
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Math & Random](../../beginner/math_and_random/README.md) | [Arrays ➡️](../arrays/README.md) | [📁 `practice_projects/`](./) |
+

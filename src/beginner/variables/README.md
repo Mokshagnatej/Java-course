@@ -1,6 +1,8 @@
-# 📦 Module 02: Java Variables & Data Types
+# 📦 Module 03: Java Variables & Data Types
 
 > **Mastering Memory & Data Storage in Java.** Learn how Java allocates memory for numbers, characters, booleans, and text strings — the foundation of every program you'll ever write.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Input & Output](../input_output/README.md) &nbsp;|&nbsp; [➡️ Next: Type Conversion](../type_conversion/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -231,7 +233,7 @@ int class = 10;        // ❌ Cannot use reserved keywords!
 
 | File | Key Concepts | Expected Console Output | Quick Run Command |
 | :--- | :--- | :--- | :--- |
-| [`variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/variables/variables.java) | `int`, `double`, `Boolean`, `String`, branching with boolean flags, string concatenation | Prints variable values with concatenated labels<br>(e.g., `"Age: 20"`, `"Height: 3.53"`, `"Name: sai"`) | `java -cp out beginner.variables.variables` |
+| [`variables.java`](./variables.java) | `int`, `double`, `Boolean`, `String`, branching with boolean flags, string concatenation | Prints variable values with concatenated labels<br>(e.g., `"Age: 20"`, `"Height: 3.53"`, `"Name: sai"`) | `java -cp out beginner.variables.variables` |
 
 ### Dry-Run Trace: `variables.java`
 Key operations from the source file:
@@ -284,3 +286,12 @@ Key operations from the source file:
 > System.out.println(1 + 2 + "3");  // "33" (1+2=3, then "3"+"3"="33")
 > System.out.println("1" + 2 + 3);  // "123" (all concatenation)
 > ```
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Input & Output](../input_output/README.md) | [Type Conversion ➡️](../type_conversion/README.md) | [📁 `variables/`](./) |
+

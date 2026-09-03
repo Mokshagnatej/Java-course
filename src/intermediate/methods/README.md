@@ -1,6 +1,8 @@
-# 🔧 Module 12: Methods & Method Overloading
+# 🔧 Module 11: Methods & Method Overloading
 
 > **Mastering Reusable Code Blocks in Java.** Learn how to define, invoke, and overload methods to write modular, maintainable, and DRY (Don't Repeat Yourself) code.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Arrays](../arrays/README.md) &nbsp;|&nbsp; [➡️ Next: Strings](../strings/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -228,8 +230,8 @@ The compiler matches the method call to the correct overloaded version by checki
 
 | File | Concepts Covered | Expected Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`Demo_class.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/Demo_class.java) | `void` method (`musicplaying`), value-returning method (`getflower`), conditional returns, object creation | `Music playing!!!`<br>`pay only 10 rupees` | `java -cp out intermediate.methods.Demo_class` |
-| [`MethodOverloading.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/MethodOverloading.java) | Three overloaded `add()` methods with different parameter counts and types | `Addition of three numbers is: 60`<br>`Addition of two numbers is: 30`<br>`Addition of two decimal numbers is: 30.7` | `java -cp out intermediate.methods.MethodOverloading` |
+| [`Demo_class.java`](./Demo_class.java) | `void` method (`musicplaying`), value-returning method (`getflower`), conditional returns, object creation | `Music playing!!!`<br>`pay only 10 rupees` | `java -cp out intermediate.methods.Demo_class` |
+| [`MethodOverloading.java`](./MethodOverloading.java) | Three overloaded `add()` methods with different parameter counts and types | `Addition of three numbers is: 60`<br>`Addition of two numbers is: 30`<br>`Addition of two decimal numbers is: 30.7` | `java -cp out intermediate.methods.MethodOverloading` |
 
 ### Dry-Run Trace: `Demo_class.java`
 
@@ -288,3 +290,11 @@ System.out.println(flowers);
 > cal.add(10, 20);  // ⚠️ The result 30 is computed but thrown away!
 > int result = cal.add(10, 20);  // ✅ Capture and use the result
 > ```
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Arrays](../arrays/README.md) | [Strings ➡️](../strings/README.md) | [📁 `methods/`](./) |

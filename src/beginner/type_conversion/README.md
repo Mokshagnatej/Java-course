@@ -1,6 +1,8 @@
-# 🔄 Module 03: Java Type Conversions & Casting
+# 🔄 Module 04: Java Type Conversions & Casting
 
 > **Mastering Type Conversions, Automatic Promotion & Casting in Java.** Understand how data moves between different sizes and shapes in memory — and what gets lost along the way.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Variables](../variables/README.md) &nbsp;|&nbsp; [➡️ Next: Operators](../operators/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -198,9 +200,9 @@ Here's what happens to data at each narrowing conversion step:
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/Typepromotions.java) | Automatic expression promotion (`byte * byte -> int`) | Shows that `byte * byte` produces an `int` result | `java -cp out beginner.type_conversion.Typepromotions` |
-| [`Floatconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/Floatconversion.java) | Explicit casting `(int)` from float and decimal truncation | Shows decimal values being truncated to whole numbers | `java -cp out beginner.type_conversion.Floatconversion` |
-| [`byteconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/byteconversion.java) | Int to byte narrowing, bits truncation & overflow wrap-around | Demonstrates value wrap-around (e.g., 130 → -126) | `java -cp out beginner.type_conversion.byteconversion` |
+| [`Typepromotions.java`](./Typepromotions.java) | Automatic expression promotion (`byte * byte -> int`) | Shows that `byte * byte` produces an `int` result | `java -cp out beginner.type_conversion.Typepromotions` |
+| [`Floatconversion.java`](./Floatconversion.java) | Explicit casting `(int)` from float and decimal truncation | Shows decimal values being truncated to whole numbers | `java -cp out beginner.type_conversion.Floatconversion` |
+| [`byteconversion.java`](./byteconversion.java) | Int to byte narrowing, bits truncation & overflow wrap-around | Demonstrates value wrap-around (e.g., 130 → -126) | `java -cp out beginner.type_conversion.byteconversion` |
 
 ### Dry-Run Trace: `Typepromotions.java`
 
@@ -282,3 +284,12 @@ byte wrapped = (byte) bigValue;
 >   double result = 5 / 2;     // 2.0 (int / int = int FIRST, then widened!)
 >   double correct = 5.0 / 2;  // 2.5 (double / int = double)
 >   ```
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Variables](../variables/README.md) | [Operators ➡️](../operators/README.md) | [📁 `type_conversion/`](./) |
+

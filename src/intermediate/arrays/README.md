@@ -1,6 +1,8 @@
-# 📊 Module 11: Arrays & Data Collections
+# 📊 Module 10: Arrays & Data Collections
 
 > **Mastering Fixed-Size Data Structures in Java.** Learn how to store, access, and traverse collections of elements using single-dimensional (1D), two-dimensional (2D grids), three-dimensional (3D cubes), and jagged arrays.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Mini-Projects](../practice_projects/README.md) &nbsp;|&nbsp; [➡️ Next: Methods](../methods/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -268,11 +270,11 @@ graph TD
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`demo_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/demo_array.java) | Inline array initialization, index-based access (`nums[3]`) | `4` | `java -cp out intermediate.arrays.demo_array` |
-| [`array_of_elments.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/array_of_elments.java) | `new int[4]` allocation, manual element assignment, `for` loop traversal | `18`<br>`32`<br>`42`<br>`13` | `java -cp out intermediate.arrays.array_of_elments` |
-| [`multi_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/multi_dimensional_array.java) | 2D `int[3][4]` grid, `Math.random()` fill, enhanced for-each & standard nested loops | 3×4 grid of random numbers (0–99) | `java -cp out intermediate.arrays.multi_dimensional_array` |
-| [`three_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/three_dimensional_array.java) | 3D `int[3][4][5]` layered array, 3-level nested loops, layer-by-layer matrix printing | 3 separate 4×5 grids of random digits | `java -cp out intermediate.arrays.three_dimensional_array` |
-| [`jagged_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/jagged_array.java) | Jagged `int[3][]` with varying row sizes (3, 6, 4), `.length` for safe bounds | 3 rows of random digits with different column lengths | `java -cp out intermediate.arrays.jagged_array` |
+| [`demo_array.java`](./demo_array.java) | Inline array initialization, index-based access (`nums[3]`) | `4` | `java -cp out intermediate.arrays.demo_array` |
+| [`array_of_elments.java`](./array_of_elments.java) | `new int[4]` allocation, manual element assignment, `for` loop traversal | `18`<br>`32`<br>`42`<br>`13` | `java -cp out intermediate.arrays.array_of_elments` |
+| [`multi_dimensional_array.java`](./multi_dimensional_array.java) | 2D `int[3][4]` grid, `Math.random()` fill, enhanced for-each & standard nested loops | 3×4 grid of random numbers (0–99) | `java -cp out intermediate.arrays.multi_dimensional_array` |
+| [`three_dimensional_array.java`](./three_dimensional_array.java) | 3D `int[3][4][5]` layered array, 3-level nested loops, layer-by-layer matrix printing | 3 separate 4×5 grids of random digits | `java -cp out intermediate.arrays.three_dimensional_array` |
+| [`jagged_array.java`](./jagged_array.java) | Jagged `int[3][]` with varying row sizes (3, 6, 4), `.length` for safe bounds | 3 rows of random digits with different column lengths | `java -cp out intermediate.arrays.jagged_array` |
 
 ---
 
@@ -329,3 +331,12 @@ System.out.println(nums[3]);
 > }
 > // nums is still { 1, 2, 3 } — unchanged!
 > ```
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Mini-Projects](../practice_projects/README.md) | [Methods ➡️](../methods/README.md) | [📁 `arrays/`](./) |
+

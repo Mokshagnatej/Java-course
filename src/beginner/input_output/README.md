@@ -1,6 +1,8 @@
-# ⌨️ Module 05: Java Terminal Input & Output
+# ⌨️ Module 02: Java Terminal Input & Output
 
 > **Mastering Standard Console I/O in Java.** Learn how to build interactive command-line interfaces using `java.util.Scanner`, manage keyboard input streams, format text cleanly, and prevent buffer bugs.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Getting Started](../getting_started/README.md) &nbsp;|&nbsp; [➡️ Next: Variables](../variables/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -148,7 +150,8 @@ String name = scanner.nextLine(); // ✅ Now waits properly for the name!
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`ScannerInput.java`](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/ScannerInput.java) | Interactive multi-type terminal reading pattern (`String`, `int`, `double`) | `Enter your name: Honey`<br>`Enter your age: 22`<br>`Your height (in feet): 5.9`<br>`The person name is Honey, his age is 22 years, and his height is 5.9 feet.` | `java -cp out input_output.ScannerInput` |
+| [`ScannerInput.java`](./ScannerInput.java) | Interactive multi-type terminal reading pattern (`String`, `int`, `double`) | `Enter your name: Honey`<br>`Enter your age: 22`<br>`Your height (in feet): 5.9`<br>`The person name is Honey, his age is 22 years, and his height is 5.9 feet.` | `java -cp out beginner.input_output.ScannerInput` |
+| [`scanner.java`](./scanner.java) | Reading variables, basic arithmetic & formatted output | Interactive user prompt and summary card | `java -cp out beginner.input_output.scanner` |
 
 ---
 
@@ -183,3 +186,12 @@ String name = scanner.nextLine(); // ✅ Now waits properly for the name!
 > [!NOTE]
 > ### 3. Prompting Before Reading
 > Always print a prompt before calling a `scanner.next*()` method. Without a prompt, the terminal will sit blank and blinking, making users think the program has frozen.
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Getting Started](../getting_started/README.md) | [Variables ➡️](../variables/README.md) | [📁 `input_output/`](./) |
+

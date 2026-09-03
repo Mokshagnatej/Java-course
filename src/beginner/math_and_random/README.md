@@ -1,6 +1,8 @@
-# 🎲 Module 08: Math & Random Number Utilities
+# 🎲 Module 06: Math & Random Number Utilities
 
 > **Mastering the Math API & Randomization in Java.** Learn how to perform complex mathematical formulas, powers, roots, trigonometry, rounding, and pseudo-random number generation using Java's built-in utilities.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Operators](../operators/README.md) &nbsp;|&nbsp; [➡️ Next: Conditionals](../conditional_statements/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -151,8 +153,8 @@ double area = Math.PI * Math.pow(radius, 2);
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`math.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/math.java) | `Math.PI`, `Math.E`, `sqrt`, `pow`, `abs`, `round`, `floor`, `ceil` | Prints values for all standard math functions and constants | `java -cp out beginner.math_and_random.math` |
-| [`randomnumbers.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/randomnumbers.java) | `Random.nextInt(origin, bound)`, dice rolls, booleans | Generates random numbers, simulated dice rolls, and flags | `java -cp out beginner.math_and_random.randomnumbers` |
+| [`math.java`](./math.java) | `Math.PI`, `Math.E`, `sqrt`, `pow`, `abs`, `round`, `floor`, `ceil` | Prints values for all standard math functions and constants | `java -cp out beginner.math_and_random.math` |
+| [`randomnumbers.java`](./randomnumbers.java) | `Random.nextInt(origin, bound)`, dice rolls, booleans | Generates random numbers, simulated dice rolls, and flags | `java -cp out beginner.math_and_random.randomnumbers` |
 
 ---
 
@@ -189,3 +191,12 @@ double area = Math.PI * Math.pow(radius, 2);
 > int result = Math.pow(2, 3);       // ❌ Compile error: double cannot fit into int
 > int result = (int) Math.pow(2, 3); // ✅ Explicit cast to int
 > ```
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Operators](../operators/README.md) | [Conditionals ➡️](../conditional_statements/README.md) | [📁 `math_and_random/`](./) |
+

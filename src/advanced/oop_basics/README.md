@@ -1,6 +1,8 @@
-# 🏛️ Module 09: Object-Oriented Programming (OOP) Kickstart
+# 🏛️ Module 14: Object-Oriented Programming (OOP) Kickstart
 
 > **Mastering Classes, Objects, Methods & Memory Models in Java.** Learn how Java models real-world entities into modular, reusable blueprints using classes, objects, and memory allocation across the Stack and Heap.
+
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Exception Handling](../../intermediate/exception_handling/README.md) &nbsp;|&nbsp; [➡️ Next: OOP Pillars](../oop_pillars/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
 
 ---
 
@@ -162,9 +164,8 @@ flowchart LR
 
 | File | Concepts Covered | Expected Console Output | Command to Run |
 | :--- | :--- | :--- | :--- |
-| [`Classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/Classes.java) | Class definition, object creation `new`, method execution with returns | `Result of addition via Calculator object: 1106.5`<br>`Result of multiplication via Calculator object: 42.0` | `java -cp out advanced.oop_basics.Classes` |
-| [`classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/Classes.java) | Root-level OOP demonstration | `Result of addition via Calculator object: 1106.5` | `java -cp out advanced.oop_basics.Classes` |
-| [`Stack_Heap_data.java`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/Stack_Heap_data.java) | Multiple object instances, independent state, method invocation | `Addition of two numbers is: 30`<br>`num value are:12` | `java -cp out advanced.oop_basics.Stack_Heap_data` |
+| [`Classes.java`](./Classes.java) | Class definition, object creation `new`, method execution with returns | `Result of addition via Calculator object: 1106.5`<br>`Result of multiplication via Calculator object: 42.0` | `java -cp out advanced.oop_basics.Classes` |
+| [`Stack_Heap_data.java`](./Stack_Heap_data.java) | Multiple object instances, independent state, method invocation | `Addition of two numbers is: 30`<br>`num value are:12` | `java -cp out advanced.oop_basics.Stack_Heap_data` |
 
 ---
 
@@ -198,3 +199,12 @@ flowchart LR
 > - `Calculator` is the **class** (type/blueprint).
 > - `cal` is the **object reference** (instance).
 > You cannot call instance methods directly on the class name: `Calculator.add()` ❌ (unless the method is marked `static`).
+
+---
+
+## 🧭 Fast Navigation
+
+| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Exception Handling](../../intermediate/exception_handling/README.md) | [OOP Pillars ➡️](../oop_pillars/README.md) | [📁 `oop_basics/`](./) |
+
