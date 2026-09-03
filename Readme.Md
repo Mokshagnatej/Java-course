@@ -137,64 +137,64 @@ javac -d out $(find src -name "*.java")
 ### 2. Run Any Program Directly:
 ```bash
 # Module 01: Basics
-java -cp out basics.startingstructure
-java -cp out basics.OrderDemo
-java -cp out basics.scanner
+java -cp out beginner.getting_started.startingstructure
+java -cp out beginner.operators.OrderDemo
+java -cp out beginner.input_output.scanner
 
 # Module 02: Variables
-java -cp out variables.variables
+java -cp out beginner.variables.variables
 
 # Module 03: Type Conversions
-java -cp out type_conversions.Typepromotions
-java -cp out type_conversions.Floatconversion
-java -cp out type_conversions.byteconversion
+java -cp out beginner.type_conversion.Typepromotions
+java -cp out beginner.type_conversion.Floatconversion
+java -cp out beginner.type_conversion.byteconversion
 
 # Module 04: Operators
-java -cp out operators.arithmeticoperator
-java -cp out operators.increment
-java -cp out operators.augmentedassigment
-java -cp out operators.Relationaloperator
-java -cp out operators.logicaloperator
+java -cp out beginner.operators.arithmeticoperator
+java -cp out beginner.operators.increment
+java -cp out beginner.operators.augmentedassigment
+java -cp out beginner.operators.Relationaloperator
+java -cp out beginner.operators.logicaloperator
 
 # Module 05: Input / Output
-java -cp out input_output.ScannerInput
+java -cp out beginner.input_output.ScannerInput
 
 # Module 06: Conditionals
-java -cp out conditional_statements.ifstatement
-java -cp out conditional_statements.ifelse_statement
-java -cp out conditional_statements.if_else_if
-java -cp out conditional_statements.Ternary_operator
-java -cp out conditional_statements.switch_operator
+java -cp out beginner.conditional_statements.ifstatement
+java -cp out beginner.conditional_statements.ifelse_statement
+java -cp out beginner.conditional_statements.if_else_if
+java -cp out beginner.conditional_statements.Ternary_operator
+java -cp out beginner.conditional_statements.switch_operator
 
 # Module 07: Loops
-java -cp out Loops.For_loop
-java -cp out Loops.while_loop
-java -cp out Loops.Do_while_loop
+java -cp out beginner.loops.For_loop
+java -cp out beginner.loops.while_loop
+java -cp out beginner.loops.Do_while_loop
 
 # Module 08: Math & Random
-java -cp out math_and_random.math
-java -cp out math_and_random.randomnumbers
+java -cp out beginner.math_and_random.math
+java -cp out beginner.math_and_random.randomnumbers
 
-# Module 09: OOP
-java -cp out oop.Classes
-java -cp out classes
-java -cp out Stack_Heap_data
+# Advanced Tier: OOP & Memory
+java -cp out advanced.oop_basics.Classes
+java -cp out advanced.oop_basics.Stack_Heap_data
 
-# Module 10: Practice Projects
-java -cp out practice_programs.shoppingcart
-java -cp out practice_programs.calculaterectangle
-java -cp out practice_programs.for_loop
+# Intermediate Tier: Practice Projects
+java -cp out intermediate.practice_projects.shoppingcart
+java -cp out intermediate.practice_projects.calculaterectangle
+java -cp out intermediate.practice_projects.for_loop
 
-# Module 11: Arrays
-java -cp out Arrays.demo_array
-java -cp out Arrays.array_of_elments
-java -cp out Arrays.multi_dimensional_array
-java -cp out Arrays.three_dimensional_array
-java -cp out Arrays.jagged_array
+# Intermediate Tier: Arrays
+java -cp out intermediate.arrays.demo_array
+java -cp out intermediate.arrays.array_of_elments
+java -cp out intermediate.arrays.multi_dimensional_array
+java -cp out intermediate.arrays.three_dimensional_array
+java -cp out intermediate.arrays.jagged_array
+java -cp out intermediate.arrays.Student_array_demo
 
-# Module 12: Methods
-java -cp out methods.Demo_class
-java -cp out methods.MethodOverloading
+# Intermediate Tier: Methods
+java -cp out intermediate.methods.Demo_class
+java -cp out intermediate.methods.MethodOverloading
 ```
 
 ---
@@ -203,44 +203,64 @@ java -cp out methods.MethodOverloading
 
 Click on any **Module Guide** for full explanations, analogies, diagrams, and gotchas, or click on any **Source File** to inspect the code:
 
+### 🟢 Beginner Tier (`src/beginner/`)
+
 | Module # | Topic Name | Module Guide Link | Source File | Core Concepts & Purpose | Quick Run Command |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Basics** | [📖 Module 01 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/basics/README.md) | [`startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/startingstructure.java) | `class`, `public static void main`, `System.out.println` entry point | `java -cp out basics.startingstructure` |
-| **01** | **Basics** | [📖 Module 01 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/basics/README.md) | [`OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/OrderDemo.java) | Operator precedence, BODMAS/PEMDAS, integer division | `java -cp out basics.OrderDemo` |
-| **01** | **Basics** | [📖 Module 01 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/basics/README.md) | [`scanner.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/scanner.java) | `Scanner` setup, terminal reading, buffer management | `java -cp out basics.scanner` |
-| **02** | **Variables** | [📖 Module 02 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/variables/README.md) | [`variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/variables/variables.java) | `int`, `double`, `Boolean`, `String`, concatenation `+` | `java -cp out variables.variables` |
-| **03** | **Conversions** | [📖 Module 03 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/README.md) | [`Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Typepromotions.java) | Byte multiplication promotion to `int` in expressions | `java -cp out type_conversions.Typepromotions` |
-| **03** | **Conversions** | [📖 Module 03 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/README.md) | [`Floatconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Floatconversion.java) | Narrowing `(int)` cast & decimal truncation | `java -cp out type_conversions.Floatconversion` |
-| **03** | **Conversions** | [📖 Module 03 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/README.md) | [`byteconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/byteconversion.java) | Explicit casting & 8-bit two's complement overflow wrap | `java -cp out type_conversions.byteconversion` |
-| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`arithmeticoperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/arithmeticoperator.java) | Arithmetic (`+`, `-`, `*`, `/`, `%`), quotient vs remainder | `java -cp out operators.arithmeticoperator` |
-| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/increment.java) | Postfix (`i++`) vs Prefix (`++i`) assignment timing | `java -cp out operators.increment` |
-| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`augmentedassigment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/augmentedassigment.java) | Compound updates (`+=`, `-=`, `*=`, `/=`, `%=`) & implicit cast | `java -cp out operators.augmentedassigment` |
-| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`Relationaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/Relationaloperator.java) | Comparison boolean results (`<`, `>`, `==`, `!=`, `<=`, `>=`) | `java -cp out operators.Relationaloperator` |
-| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/README.md) | [`logicaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/logicaloperator.java) | Logical AND (`&&`), OR (`\|\|`), NOT (`!`), short-circuiting | `java -cp out operators.logicaloperator` |
-| **05** | **Input/Output**| [📖 Module 05 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/README.md) | [`ScannerInput.java`](file:///Users/honeyreddy/Documents/Java%20course/src/input_output/ScannerInput.java) | Multi-type interactive input flow & memory cleanup | `java -cp out input_output.ScannerInput` |
-| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`ifstatement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifstatement.java) | Interactive input validation, `isEmpty()`, age branching | `java -cp out conditional_statements.ifstatement` |
-| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`ifelse_statement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/ifelse_statement.java) | Two-way decision branching (`if - else`) | `java -cp out conditional_statements.ifelse_statement` |
-| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`if_else_if.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/if_else_if.java) | Multi-condition ladder vs independent `if` statements | `java -cp out conditional_statements.if_else_if` |
-| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`Ternary_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/Ternary_operator.java) | Inline conditional expression `(cond) ? val1 : val2` | `java -cp out conditional_statements.Ternary_operator` |
-| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/README.md) | [`switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/switch_operator.java) | Classic `switch` with `break` vs modern Java 14+ arrow switch | `java -cp out conditional_statements.switch_operator` |
-| **07** | **Loops** | [📖 Module 07 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/README.md) | [`For_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/For_loop.java) | Counting `for` loop & nested schedule loop traversal | `java -cp out Loops.For_loop` |
-| **07** | **Loops** | [📖 Module 07 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/README.md) | [`while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/while_loop.java) | Pre-condition iteration & loop counter management | `java -cp out Loops.while_loop` |
-| **07** | **Loops** | [📖 Module 07 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/README.md) | [`Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/Do_while_loop.java) | Post-condition loop guaranteed to execute at least once | `java -cp out Loops.Do_while_loop` |
-| **08** | **Math & Random**| [📖 Module 08 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/README.md) | [`math.java`](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/math.java) | `Math.PI`, `Math.E`, `sqrt`, `pow`, `abs`, `round`, `ceil` | `java -cp out math_and_random.math` |
-| **08** | **Math & Random**| [📖 Module 08 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/README.md) | [`randomnumbers.java`](file:///Users/honeyreddy/Documents/Java%20course/src/math_and_random/randomnumbers.java) | `Random.nextInt(origin, bound)`, dice rolls, booleans | `java -cp out math_and_random.randomnumbers` |
-| **09** | **OOP** | [📖 Module 09 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/oop/README.md) | [`Classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/oop/Classes.java) | Blueprint `class`, object instantiation `new`, method calls | `java -cp out oop.Classes` |
-| **09** | **OOP** | [📖 Module 09 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/oop/README.md) | [`classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/classes.java) | Root-level OOP demonstration | `java -cp out classes` |
-| **09** | **OOP** | [📖 Module 09 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/oop/README.md) | [`Stack_Heap_data.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Stack_Heap_data.java) | Multiple object instances, independent state, method invocation | `java -cp out Stack_Heap_data` |
-| **10** | **Practice** | [📖 Module 10 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/README.md) | [`shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/shoppingcart.java) | Interactive retail billing simulation with currency formatting | `java -cp out practice_programs.shoppingcart` |
-| **10** | **Practice** | [📖 Module 10 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/README.md) | [`calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/calculaterectangle.java) | Rectangle geometry computation ($Area = w \times h$) | `java -cp out practice_programs.calculaterectangle` |
-| **10** | **Practice** | [📖 Module 10 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/README.md) | [`for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/for_loop.java) | Dynamic multiplication table generator (Table of 17) | `java -cp out practice_programs.for_loop` |
-| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`demo_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/demo_array.java) | Inline array initialization, index-based access | `java -cp out Arrays.demo_array` |
-| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`array_of_elments.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/array_of_elments.java) | `new int[4]` allocation, manual element assignment, `for` loop | `java -cp out Arrays.array_of_elments` |
-| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`multi_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/multi_dimensional_array.java) | 2D `int[3][4]` grid, `Math.random()` fill, enhanced for-each | `java -cp out Arrays.multi_dimensional_array` |
-| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`three_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/three_dimensional_array.java) | 3D `int[3][4][5]` layered array, 3-level nested loops | `java -cp out Arrays.three_dimensional_array` |
-| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/README.md) | [`jagged_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/jagged_array.java) | Jagged `int[3][]` with irregular rows (3, 6, 4), `.length` bounds | `java -cp out Arrays.jagged_array` |
-| **12** | **Methods** | [📖 Module 12 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/methods/README.md) | [`Demo_class.java`](file:///Users/honeyreddy/Documents/Java%20course/src/methods/Demo_class.java) | `void` vs return methods, conditional returns, method calls | `java -cp out methods.Demo_class` |
-| **12** | **Methods** | [📖 Module 12 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/methods/README.md) | [`MethodOverloading.java`](file:///Users/honeyreddy/Documents/Java%20course/src/methods/MethodOverloading.java) | Compile-time polymorphism with overloaded parameter lists | `java -cp out methods.MethodOverloading` |
+| **01** | **Basics** | [📖 Module 01 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/README.md) | [`startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/startingstructure.java) | `class`, `public static void main`, `System.out.println` entry point | `java -cp out beginner.getting_started.startingstructure` |
+| **01** | **Basics** | [📖 Module 01 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/README.md) | [`OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/OrderDemo.java) | Operator precedence, BODMAS/PEMDAS, integer division | `java -cp out beginner.operators.OrderDemo` |
+| **01** | **Basics** | [📖 Module 01 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/README.md) | [`scanner.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/input_output/scanner.java) | `Scanner` setup, terminal reading, buffer management | `java -cp out beginner.input_output.scanner` |
+| **02** | **Variables** | [📖 Module 02 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/variables/README.md) | [`variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/variables/variables.java) | `int`, `double`, `Boolean`, `String`, concatenation `+` | `java -cp out beginner.variables.variables` |
+| **03** | **Conversions** | [📖 Module 03 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/README.md) | [`Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/Typepromotions.java) | Byte multiplication promotion to `int` in expressions | `java -cp out beginner.type_conversion.Typepromotions` |
+| **03** | **Conversions** | [📖 Module 03 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/README.md) | [`Floatconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/Floatconversion.java) | Narrowing `(int)` cast & decimal truncation | `java -cp out beginner.type_conversion.Floatconversion` |
+| **03** | **Conversions** | [📖 Module 03 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/README.md) | [`byteconversion.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/byteconversion.java) | Explicit casting & 8-bit two's complement overflow wrap | `java -cp out beginner.type_conversion.byteconversion` |
+| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/README.md) | [`arithmeticoperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/arithmeticoperator.java) | Arithmetic (`+`, `-`, `*`, `/`, `%`), quotient vs remainder | `java -cp out beginner.operators.arithmeticoperator` |
+| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/README.md) | [`increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/increment.java) | Postfix (`i++`) vs Prefix (`++i`) assignment timing | `java -cp out beginner.operators.increment` |
+| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/README.md) | [`augmentedassigment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/augmentedassigment.java) | Compound updates (`+=`, `-=`, `*=`, `/=`, `%=`) & implicit cast | `java -cp out beginner.operators.augmentedassigment` |
+| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/README.md) | [`Relationaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/Relationaloperator.java) | Comparison boolean results (`<`, `>`, `==`, `!=`, `<=`, `>=`) | `java -cp out beginner.operators.Relationaloperator` |
+| **04** | **Operators** | [📖 Module 04 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/README.md) | [`logicaloperator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/logicaloperator.java) | Logical AND (`&&`), OR (`\|\|`), NOT (`!`), short-circuiting | `java -cp out beginner.operators.logicaloperator` |
+| **05** | **Input/Output**| [📖 Module 05 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/input_output/README.md) | [`ScannerInput.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/input_output/ScannerInput.java) | Multi-type interactive input flow & memory cleanup | `java -cp out beginner.input_output.ScannerInput` |
+| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/README.md) | [`ifstatement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/ifstatement.java) | Interactive input validation, `isEmpty()`, age branching | `java -cp out beginner.conditional_statements.ifstatement` |
+| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/README.md) | [`ifelse_statement.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/ifelse_statement.java) | Two-way decision branching (`if - else`) | `java -cp out beginner.conditional_statements.ifelse_statement` |
+| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/README.md) | [`if_else_if.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/if_else_if.java) | Multi-condition ladder vs independent `if` statements | `java -cp out beginner.conditional_statements.if_else_if` |
+| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/README.md) | [`Ternary_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/Ternary_operator.java) | Inline conditional expression `(cond) ? val1 : val2` | `java -cp out beginner.conditional_statements.Ternary_operator` |
+| **06** | **Conditionals**| [📖 Module 06 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/README.md) | [`switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/switch_operator.java) | Classic `switch` with `break` vs modern Java 14+ arrow switch | `java -cp out beginner.conditional_statements.switch_operator` |
+| **07** | **Loops** | [📖 Module 07 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/README.md) | [`For_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/For_loop.java) | Counting `for` loop & nested schedule loop traversal | `java -cp out beginner.loops.For_loop` |
+| **07** | **Loops** | [📖 Module 07 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/README.md) | [`while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/while_loop.java) | Pre-condition iteration & loop counter management | `java -cp out beginner.loops.while_loop` |
+| **08** | **Loops** | [📖 Module 07 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/README.md) | [`Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/Do_while_loop.java) | Post-condition loop guaranteed to execute at least once | `java -cp out beginner.loops.Do_while_loop` |
+| **09** | **Math & Random**| [📖 Module 08 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/README.md) | [`math.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/math.java) | `Math.PI`, `Math.E`, `sqrt`, `pow`, `abs`, `round`, `ceil` | `java -cp out beginner.math_and_random.math` |
+| **09** | **Math & Random**| [📖 Module 08 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/README.md) | [`randomnumbers.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/math_and_random/randomnumbers.java) | `Random.nextInt(origin, bound)`, dice rolls, booleans | `java -cp out beginner.math_and_random.randomnumbers` |
+
+### 🟡 Intermediate Tier (`src/intermediate/`)
+
+| Module # | Topic Name | Module Guide Link | Source File | Core Concepts & Purpose | Quick Run Command |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| **10** | **Practice Projects** | [📖 Module 10 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/README.md) | [`shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/shoppingcart.java) | Interactive retail billing simulation with currency formatting | `java -cp out intermediate.practice_projects.shoppingcart` |
+| **10** | **Practice Projects** | [📖 Module 10 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/README.md) | [`calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/calculaterectangle.java) | Rectangle geometry computation ($Area = w \times h$) | `java -cp out intermediate.practice_projects.calculaterectangle` |
+| **10** | **Practice Projects** | [📖 Module 10 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/README.md) | [`for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/for_loop.java) | Dynamic multiplication table generator (Table of 17) | `java -cp out intermediate.practice_projects.for_loop` |
+| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/README.md) | [`demo_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/demo_array.java) | Inline array initialization, index-based access | `java -cp out intermediate.arrays.demo_array` |
+| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/README.md) | [`array_of_elments.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/array_of_elments.java) | `new int[4]` allocation, manual element assignment, `for` loop | `java -cp out intermediate.arrays.array_of_elments` |
+| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/README.md) | [`multi_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/multi_dimensional_array.java) | 2D `int[3][4]` grid, `Math.random()` fill, enhanced for-each | `java -cp out intermediate.arrays.multi_dimensional_array` |
+| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/README.md) | [`three_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/three_dimensional_array.java) | 3D `int[3][4][5]` layered array, 3-level nested loops | `java -cp out intermediate.arrays.three_dimensional_array` |
+| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/README.md) | [`jagged_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/jagged_array.java) | Jagged `int[3][]` with irregular rows (3, 6, 4), `.length` bounds | `java -cp out intermediate.arrays.jagged_array` |
+| **11** | **Arrays** | [📖 Module 11 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/README.md) | [`Student_array_demo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/Student_array_demo.java) | Object reference arrays (`Student[]`), instance attributes | `java -cp out intermediate.arrays.Student_array_demo` |
+| **12** | **Methods** | [📖 Module 12 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/README.md) | [`Demo_class.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/Demo_class.java) | `void` vs return methods, conditional returns, method calls | `java -cp out intermediate.methods.Demo_class` |
+| **12** | **Methods** | [📖 Module 12 Guide](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/README.md) | [`MethodOverloading.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/MethodOverloading.java) | Compile-time polymorphism with overloaded parameter lists | `java -cp out intermediate.methods.MethodOverloading` |
+| **--** | **Strings** | [📖 Strings Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/strings/README.md) | *(Roadmap)* | String Pool, immutability, `StringBuilder` vs `StringBuffer` | *(Roadmap)* |
+| **--** | **Exceptions** | [📖 Exceptions Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/exception_handling/README.md) | *(Roadmap)* | `try-catch-finally`, checked vs unchecked exceptions | *(Roadmap)* |
+
+### 🔴 Advanced Tier (`src/advanced/`)
+
+| Module # | Topic Name | Module Guide Link | Source File | Core Concepts & Purpose | Quick Run Command |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| **13** | **OOP Basics** | [📖 OOP Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/README.md) | [`Classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/Classes.java) | Blueprint `class`, object instantiation `new`, method calls | `java -cp out advanced.oop_basics.Classes` |
+| **13** | **OOP Basics** | [📖 OOP Guide](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/README.md) | [`Stack_Heap_data.java`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/Stack_Heap_data.java) | Multiple object instances, independent state, Stack vs Heap | `java -cp out advanced.oop_basics.Stack_Heap_data` |
+| **--** | **OOP Pillars** | [📖 Pillars Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_pillars/README.md) | *(Roadmap)* | Encapsulation, inheritance, polymorphism, abstraction | *(Roadmap)* |
+| **--** | **Collections** | [📖 Collections Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/collections/README.md) | *(Roadmap)* | `List`, `Set`, `Map`, `Queue`, iterators, Streams | *(Roadmap)* |
+| **--** | **Generics** | [📖 Generics Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/generics/README.md) | *(Roadmap)* | Generics, wildcards, type safety, type erasure | *(Roadmap)* |
+| **--** | **File I/O** | [📖 File I/O Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/file_io/README.md) | *(Roadmap)* | Byte/character streams, NIO.2 `Files`, serialization | *(Roadmap)* |
+| **--** | **Multithreading**| [📖 Concurrency Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/multithreading/README.md) | *(Roadmap)* | `Thread`, `Runnable`, synchronization, `ExecutorService` | *(Roadmap)* |
+| **--** | **Capstone** | [📖 Projects Roadmap](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/advanced_projects/README.md) | *(Roadmap)* | Integrated real-world CLI projects | *(Roadmap)* |
 
 ---
 
@@ -347,17 +367,17 @@ Each method call pushes a new **stack frame** onto the Call Stack. When the meth
 
 The repository contains three complete, real-world mini-applications combining all concepts:
 
-### 1. 🛒 Interactive Shopping Cart ([`shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/shoppingcart.java))
+### 1. 🛒 Interactive Shopping Cart ([`shoppingcart.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/shoppingcart.java))
 - Reads item name, unit price, and quantity.
 - Calculates bill using $\text{Total} = \text{Price} \times \text{Quantity}$.
 - Prints formatted receipt using Unicode currency symbol `₹`.
 
-### 2. 📐 Geometry Rectangle Engine ([`calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/calculaterectangle.java))
+### 2. 📐 Geometry Rectangle Engine ([`calculaterectangle.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/calculaterectangle.java))
 - Prompts for dimensions ($w$, $h$).
 - Calculates Area ($w \times h$) and Perimeter ($2 \times (w + h)$).
 - Formats floating-point output with `printf`.
 
-### 3. 🔢 Dynamic Multiplication Table ([`for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/practice_programs/for_loop.java))
+### 3. 🔢 Dynamic Multiplication Table ([`for_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/practice_projects/for_loop.java))
 - Uses a counting loop to generate the mathematical table of 17 from 1 to 10 with aligned column formatting.
 
 ---
@@ -406,16 +426,16 @@ The repository contains three complete, real-world mini-applications combining a
 
 Before your test or technical interview, quickly review these core anchors across the modules:
 
-- [ ] **Main Method Signature**: [`src/basics/startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/startingstructure.java)
-- [ ] **Primitive Types & Sizes**: [`src/variables/variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/variables/variables.java)
-- [ ] **Type Promotion Rules**: [`src/type_conversions/Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/type_conversions/Typepromotions.java)
-- [ ] **Increment Prefix vs Postfix**: [`src/Operators/increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Operators/increment.java)
-- [ ] **Order of Evaluation**: [`src/basics/OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/basics/OrderDemo.java)
-- [ ] **Switch Fall-Through & Arrow Syntax**: [`src/conditional_statements/switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/conditional_statements/switch_operator.java)
-- [ ] **Do-While Minimum Execution**: [`src/Loops/Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Loops/Do_while_loop.java)
-- [ ] **OOP Blueprint & Object Instantiation**: [`src/oop/Classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/oop/Classes.java)
-- [ ] **Array Memory & 2D Grids**: [`src/Arrays/multi_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/Arrays/multi_dimensional_array.java)
-- [ ] **Method Overloading Signatures**: [`src/methods/MethodOverloading.java`](file:///Users/honeyreddy/Documents/Java%20course/src/methods/MethodOverloading.java)
+- [ ] **Main Method Signature**: [`src/beginner/getting_started/startingstructure.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/getting_started/startingstructure.java)
+- [ ] **Primitive Types & Sizes**: [`src/beginner/variables/variables.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/variables/variables.java)
+- [ ] **Type Promotion Rules**: [`src/beginner/type_conversion/Typepromotions.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/type_conversion/Typepromotions.java)
+- [ ] **Increment Prefix vs Postfix**: [`src/beginner/operators/increment.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/increment.java)
+- [ ] **Order of Evaluation**: [`src/beginner/operators/OrderDemo.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/operators/OrderDemo.java)
+- [ ] **Switch Fall-Through & Arrow Syntax**: [`src/beginner/conditional_statements/switch_operator.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/conditional_statements/switch_operator.java)
+- [ ] **Do-While Minimum Execution**: [`src/beginner/loops/Do_while_loop.java`](file:///Users/honeyreddy/Documents/Java%20course/src/beginner/loops/Do_while_loop.java)
+- [ ] **OOP Blueprint & Object Instantiation**: [`src/advanced/oop_basics/Classes.java`](file:///Users/honeyreddy/Documents/Java%20course/src/advanced/oop_basics/Classes.java)
+- [ ] **Array Memory & 2D Grids**: [`src/intermediate/arrays/multi_dimensional_array.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/arrays/multi_dimensional_array.java)
+- [ ] **Method Overloading Signatures**: [`src/intermediate/methods/MethodOverloading.java`](file:///Users/honeyreddy/Documents/Java%20course/src/intermediate/methods/MethodOverloading.java)
 
 ---
 
