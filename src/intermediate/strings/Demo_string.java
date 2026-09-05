@@ -5,5 +5,6 @@ public class Demo_string {
         String name = "Honey";
         System.out.println( name.concat("Reddy"));
         System.out.println( name.concat("Reddy").toUpperCase());
+
     }
 }
