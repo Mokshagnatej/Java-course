@@ -160,6 +160,20 @@ for (int value : nums) {
 }
 ```
 
+### Enhanced `for-each` Loop on an Array of Objects
+```java
+Student[] students = new Student[3];
+students[0] = s1;
+students[1] = s2;
+students[2] = s3;
+
+for (Student stud : students) {
+    System.out.println(stud.rollno + " " + stud.name + ":" + stud.marks);
+}
+```
+
+This pattern is especially useful when each element is an object such as a `Student`, `Product`, or `Employee` record.
+
 ---
 
 ## 9. Multi-Dimensional Arrays (2D Grids)
@@ -272,6 +286,7 @@ graph TD
 | :--- | :--- | :--- | :--- |
 | [`demo_array.java`](./demo_array.java) | Inline array initialization, index-based access (`nums[3]`) | `4` | `java -cp out intermediate.arrays.demo_array` |
 | [`array_of_elments.java`](./array_of_elments.java) | `new int[4]` allocation, manual element assignment, `for` loop traversal | `18`<br>`32`<br>`42`<br>`13` | `java -cp out intermediate.arrays.array_of_elments` |
+| [`enchance_for_loop_for_array_string.java`](./enchance_for_loop_for_array_string.java) | Enhanced `for-each` traversal over `Student[]`, object attribute access in an array of objects | `21 Honey:76`<br>`22 Honvith:85`<br>`23 Gundu:95` | `java -cp out intermediate.arrays.enchance_for_loop_for_array_string` |
 | [`multi_dimensional_array.java`](./multi_dimensional_array.java) | 2D `int[3][4]` grid, `Math.random()` fill, enhanced for-each & standard nested loops | 3×4 grid of random numbers (0–99) | `java -cp out intermediate.arrays.multi_dimensional_array` |
 | [`three_dimensional_array.java`](./three_dimensional_array.java) | 3D `int[3][4][5]` layered array, 3-level nested loops, layer-by-layer matrix printing | 3 separate 4×5 grids of random digits | `java -cp out intermediate.arrays.three_dimensional_array` |
 | [`jagged_array.java`](./jagged_array.java) | Jagged `int[3][]` with varying row sizes (3, 6, 4), `.length` for safe bounds | 3 rows of random digits with different column lengths | `java -cp out intermediate.arrays.jagged_array` |
