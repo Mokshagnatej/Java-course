@@ -5,6 +5,9 @@ public class Demo_string {
         String name = "Honey";
         System.out.println( name.concat("Reddy"));
         System.out.println( name.concat("Reddy").toUpperCase());
+        System.out.println(name.length());
+        System.out.println(name.charAt(0));
+        System.out.println(name.indexOf('e'));
 
     }
 }
