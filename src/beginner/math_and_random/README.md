@@ -194,6 +194,114 @@ double area = Math.PI * Math.pow(radius, 2);
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/beginner/math_and_random/math.java`
+
+**Purpose:** Teaches the `Math` class — Java's built-in toolkit for mathematical operations like square roots, powers, rounding, and constants like PI.
+
+**▶️ Run:** `java -cp out beginner.math_and_random.math`
+
+```java
+package beginner.math_and_random;
+
+public class math {
+
+    public static void main(String[] args) {
+        System.out.println("--- 1. Math Constants ---");
+        System.out.println("Math.PI : " + Math.PI);
+        System.out.println("Math.E  : " + Math.E);
+
+        System.out.println("\n--- 2. Powers and Roots ---");
+        double power = Math.pow(2, 5);
+        System.out.println("Math.pow(2, 5)   : " + power);
+
+        double root = Math.sqrt(64.0);
+        System.out.println("Math.sqrt(64.0)  : " + root);
+
+        System.out.println("\n--- 3. Absolute Values & Extremes ---");
+        int negativeNumber = -45;
+        System.out.println("Math.abs(-45)    : " + Math.abs(negativeNumber));
+
+        System.out.println("Math.max(25, 80) : " + Math.max(25, 80));
+        System.out.println("Math.min(25, 80) : " + Math.min(25, 80));
+
+        System.out.println("\n--- 4. Rounding Utilities ---");
+        System.out.println("Math.round(5.6)  : " + Math.round(5.6));
+        System.out.println("Math.floor(5.9)  : " + Math.floor(5.9));
+        System.out.println("Math.ceil(5.1)   : " + Math.ceil(5.1));
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 7 | `Math.PI` | **`Math`** is a built-in class in `java.lang` (automatically imported — no `import` needed). **`PI`** is a constant (approximately 3.14159). Since `Math` methods are **`static`**, you call them directly on the class name — no need to create an object. |
+| 8 | `Math.E` | Euler's number (approximately 2.71828), used in natural logarithms. |
+| 11 | `Math.pow(2, 5)` | **`pow`** raises a number to a power: 2⁵ = 32.0. Takes two `double` arguments and returns a `double`. |
+| 14 | `Math.sqrt(64.0)` | **`sqrt`** calculates the square root: √64 = 8.0. |
+| 19 | `Math.abs(-45)` | **`abs`** returns the absolute value (removes the negative sign): |-45| = 45. |
+| 21 | `Math.max(25, 80)` | **`max`** returns the larger of two numbers: 80. |
+| 22 | `Math.min(25, 80)` | **`min`** returns the smaller of two numbers: 25. |
+| 25 | `Math.round(5.6)` | **`round`** rounds to the nearest whole number: 6. |
+| 26 | `Math.floor(5.9)` | **`floor`** rounds DOWN to the nearest whole number: 5.0 (always goes lower). |
+| 27 | `Math.ceil(5.1)` | **`ceil`** (ceiling) rounds UP to the nearest whole number: 6.0 (always goes higher). |
+
+> 🔑 **Concept:** The `Math` class provides ready-to-use math functions. All methods are `static`, so you call them as `Math.methodName()` — no object creation needed. Key methods: `pow`, `sqrt`, `abs`, `max`, `min`, `round`, `floor`, `ceil`.
+
+---
+
+### 📄 `src/beginner/math_and_random/randomnumbers.java`
+
+**Purpose:** Teaches how to generate random numbers using the `Random` class — useful for games, simulations, and dice rolls.
+
+**▶️ Run:** `java -cp out beginner.math_and_random.randomnumbers`
+
+```java
+package beginner.math_and_random;
+import java.util.Random;
+
+public class randomnumbers {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        int number = random.nextInt(10, 200);
+        System.out.println("Random integer between 10 and 199: " + number);
+
+        int diceRoll = random.nextInt(1, 7);
+        System.out.println("Simulated 6-sided dice roll: " + diceRoll);
+
+        boolean coinFlip = random.nextBoolean();
+        System.out.println("Coin flip (true = Heads, false = Tails): " + (coinFlip ? "Heads" : "Tails"));
+
+        double randomPercent = random.nextDouble();
+        System.out.printf("Random probability fraction: %.4f%n", randomPercent);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 2 | `import java.util.Random;` | Imports the `Random` class. Unlike `Math`, `Random` is NOT automatically available — you must import it. |
+| 7 | `Random random = new Random();` | Unlike `Math` (which is all static), `Random` requires creating an **object** using **`new`**. This object is your random number generator. |
+| 9 | `random.nextInt(10, 200)` | **`nextInt(origin, bound)`** generates a random integer where `origin` is **inclusive** (10 CAN appear) and `bound` is **exclusive** (200 CANNOT appear). So this gives a number from 10 to 199. |
+| 12 | `random.nextInt(1, 7)` | Simulates a dice roll: generates 1, 2, 3, 4, 5, or 6 (7 is excluded). |
+| 15 | `random.nextBoolean()` | **`nextBoolean()`** returns either `true` or `false` randomly — like flipping a coin. |
+| 16 | `(coinFlip ? "Heads" : "Tails")` | Uses the ternary operator to convert the boolean to a readable string. |
+| 18 | `random.nextDouble()` | **`nextDouble()`** returns a random decimal between 0.0 (inclusive) and 1.0 (exclusive). |
+| 19 | `System.out.printf("...%.4f%n", randomPercent);` | **`printf`** is formatted printing. **`%.4f`** means "print a decimal number with 4 digits after the decimal point." **`%n`** is a platform-independent newline. |
+
+> 🔑 **Concept:** `Random` generates pseudo-random values. Use `nextInt(min, max)` for integers (max is exclusive!), `nextBoolean()` for true/false, and `nextDouble()` for decimals. Unlike `Math`, you need to create a `Random` object with `new`.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

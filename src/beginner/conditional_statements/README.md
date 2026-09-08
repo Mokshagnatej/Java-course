@@ -236,6 +236,273 @@ flowchart LR
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/beginner/conditional_statements/ifstatement.java`
+
+**Purpose:** Teaches `if`, `else if`, and `else` with real input — validates a name, classifies age into categories, and checks student status.
+
+**▶️ Run:** `java -cp out beginner.conditional_statements.ifstatement`
+
+```java
+package beginner.conditional_statements;
+import java.util.Scanner;
+
+public class ifstatement {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Are you a student (true/false): ");
+        boolean isStudent = scanner.nextBoolean();
+
+        if (name.isEmpty()) {
+            System.out.println("You didn't enter your name!");
+        } else {
+            System.out.println("Hello " + name + "!");
+        }
+
+        if (age >= 60) {
+            System.out.println("your a senior citizen");
+        } else if (age >= 18) {
+            System.out.println("your adult");
+        } else {
+            System.out.println("your not an adult 👦🏻");
+        }
+
+        if (isStudent) {
+            System.out.println("Your are a student!");
+        } else {
+            System.out.println("Your not a student!");
+        }
+
+        scanner.close();
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 2 | `import java.util.Scanner;` | Imports the Scanner class for reading keyboard input. |
+| 10 | `String name = scanner.nextLine();` | Reads the user's name as a full line of text. |
+| 13 | `int age = scanner.nextInt();` | Reads the user's age as an integer. |
+| 16 | `boolean isStudent = scanner.nextBoolean();` | **`nextBoolean()`** reads either `true` or `false` from the keyboard. **`boolean`** (lowercase) is the primitive type that holds only `true` or `false`. |
+| 18 | `if (name.isEmpty()) {` | **`isEmpty()`** is a String method that returns `true` if the string has zero characters. This checks if the user pressed Enter without typing anything. |
+| 20 | `} else {` | The `else` block runs when the `if` condition is `false` — meaning the name is NOT empty. |
+| 24 | `if (age >= 60) {` | **`>=`** means "greater than or equal to." Checks if age is 60 or older. |
+| 26 | `} else if (age >= 18) {` | **`else if`** adds another condition to check — BUT only if the previous `if` was false. This creates a **ladder**: Java checks conditions from top to bottom, and the FIRST true condition wins. Since we already know `age < 60` (the first check failed), this checks if age is 18-59. |
+| 28 | `} else {` | If BOTH conditions above were false, the person is under 18. |
+| 32 | `if (isStudent) {` | You can use a `boolean` variable directly in an `if` — no need to write `if (isStudent == true)`. If `isStudent` holds `true`, this block runs. |
+
+> 🔑 **Concept:** `if-else if-else` creates a decision ladder. Conditions are checked top to bottom — the FIRST true condition runs, and all remaining branches are skipped. You can use `boolean` variables directly in `if` conditions without `== true`.
+
+---
+
+### 📄 `src/beginner/conditional_statements/ifelse_statement.java`
+
+**Purpose:** Teaches the simplest two-way decision — if one thing is true, do A; otherwise, do B.
+
+**▶️ Run:** `java -cp out beginner.conditional_statements.ifelse_statement`
+
+```java
+package beginner.conditional_statements;
+
+public class ifelse_statement {
+
+    public static void main(String[] args) {
+        int x = 12;
+        int y = 30;
+
+        if (x > y) {
+            System.out.println("x is greater than y");
+        } else {
+            System.out.println("x is less than y");
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6-7 | `int x = 12; int y = 30;` | Creates two integer variables. |
+| 9 | `if (x > y) {` | Checks if `x` (12) is greater than `y` (30). `12 > 30` is `false`, so Java skips this block. |
+| 11 | `} else {` | Since the `if` was false, Java runs the `else` block. |
+| 12 | `System.out.println("x is less than y");` | Prints this message. |
+
+> 🔑 **Concept:** `if-else` creates a **binary fork** — exactly ONE of the two blocks will always run. If the condition is true, the `if` block runs; if false, the `else` block runs.
+
+---
+
+### 📄 `src/beginner/conditional_statements/if_else_if.java`
+
+**Purpose:** Teaches the difference between a chained `if-else if` (only one branch runs) and independent `if` statements (each is checked separately).
+
+**▶️ Run:** `java -cp out beginner.conditional_statements.if_else_if`
+
+```java
+package beginner.conditional_statements;
+
+public class if_else_if {
+
+    public static void main(String[] args) {
+        int h = 49;
+        int b = 234;
+        double c = 134.0;
+
+        if (h > b) {
+            System.out.println("honey");
+            System.out.println("come in");
+        } else if (b > c) {
+            System.out.println("gundu");
+            System.out.println("come in");
+        }
+
+        if (c < h) {
+            System.out.println("complete");
+        }
+
+        System.out.println("complete");
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6-8 | Variable declarations | `h = 49` (int), `b = 234` (int), `c = 134.0` (double). |
+| 10 | `if (h > b)` | Checks `49 > 234` → `false`. Skips this block. |
+| 13 | `else if (b > c)` | Only checked because the first `if` was false. Checks `234 > 134.0` → `true`! Java automatically converts `b` (int 234) to double for comparison with `c`. Prints "gundu" and "come in". |
+| 18 | `if (c < h)` | This is a **separate, independent** `if` — NOT connected to the chain above. Checks `134.0 < 49` → `false`. Skips. |
+| 22 | `System.out.println("complete");` | This line is NOT inside any `if` — it always runs no matter what. |
+
+> 🔑 **Concept:** Chained `if-else if` blocks are **mutually exclusive** — only the first true branch executes. Independent `if` statements (without `else`) are evaluated separately — multiple can run.
+
+---
+
+### 📄 `src/beginner/conditional_statements/Ternary_operator.java`
+
+**Purpose:** Teaches the ternary operator `? :` — a shortcut for simple if-else decisions in one line.
+
+**▶️ Run:** `java -cp out beginner.conditional_statements.Ternary_operator`
+
+```java
+package beginner.conditional_statements;
+
+public class Ternary_operator {
+
+    public static void main(String[] args) {
+        int h = 3;
+
+        String parity = (h % 2 == 0) ? "even" : "odd";
+        System.out.println("The number " + h + " is: " + parity);
+
+        int marks = 75;
+        String examResult = (marks >= 40) ? "Passed" : "Failed";
+        System.out.println("Exam status: " + examResult);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `int h = 3;` | A number to test for even/odd. |
+| 8 | `String parity = (h % 2 == 0) ? "even" : "odd";` | This is the **ternary operator** — the syntax is: `(condition) ? valueIfTrue : valueIfFalse`. Breaking it down: `h % 2` gives the remainder when dividing by 2 (`3 % 2 = 1`). `1 == 0` is `false`. Since false, the value after the `:` is chosen → `"odd"`. |
+| 11-12 | `String examResult = (marks >= 40) ? "Passed" : "Failed";` | `75 >= 40` is `true`, so `"Passed"` is selected. |
+
+> 🔑 **Concept:** The ternary operator `(condition) ? valueIfTrue : valueIfFalse` is a compact one-line replacement for a simple if-else that assigns a value. The `?` means "then" and the `:` means "otherwise."
+
+---
+
+### 📄 `src/beginner/conditional_statements/switch_operator.java`
+
+**Purpose:** Teaches the `switch` statement — a cleaner way to handle multiple specific value checks instead of many `if-else if` chains.
+
+**▶️ Run:** `java -cp out beginner.conditional_statements.switch_operator`
+
+```java
+package beginner.conditional_statements;
+
+public class switch_operator {
+
+    public static void main(String[] args) {
+        int n = 3;
+
+        System.out.println("--- 1. Traditional Switch Statement ---");
+        switch (n) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break;
+        }
+
+        System.out.println("\n--- 2. Modern Enhanced Arrow Switch ---");
+        switch (n) {
+            case 1 -> System.out.println("Monday");
+            case 2 -> System.out.println("Tuesday");
+            case 3 -> System.out.println("Wednesday");
+            case 4 -> System.out.println("Thursday");
+            case 5 -> System.out.println("Friday");
+            case 6 -> System.out.println("Saturday");
+            case 7 -> System.out.println("Sunday");
+            default -> System.out.println("Invalid day");
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `int n = 3;` | The value to match against. |
+| 8 | `switch (n) {` | **`switch`** is a keyword that takes a variable and jumps directly to the matching `case`. It's cleaner than writing `if (n == 1) ... else if (n == 2) ...` over and over. |
+| 10 | `case 1:` | **`case`** defines a specific value to match. If `n` equals `1`, execution starts here. |
+| 12 | `break;` | **`break`** is crucial! It tells Java to EXIT the switch block immediately. Without `break`, Java would "fall through" and keep running the NEXT case's code too, even though it doesn't match! |
+| 31 | `default:` | **`default`** is like `else` — it runs when NO case matches. Here, it catches any number that isn't 1-7. |
+| 37 | `case 1 -> System.out.println("Monday");` | This is the **modern arrow switch** (Java 14+). The **`->`** arrow syntax automatically prevents fall-through — no `break` needed! Much cleaner. |
+
+> 🔑 **Concept:** `switch` matches a variable against specific values (cases). Traditional switch needs `break;` to prevent fall-through. Modern arrow switch (`->`) is cleaner and doesn't need `break`. Use `default` to handle unexpected values.
+
+**⚠️ Common beginner mistakes:**
+- Forgetting `break;` in traditional switch — this causes **fall-through** where multiple cases run when you only wanted one.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

@@ -288,6 +288,48 @@ System.out.println(mystery);
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/beginner/getting_started/startingstructure.java`
+
+**Purpose:** Teaches the minimum structure every Java program needs — a class, a main method, and how to print text to the screen.
+
+**▶️ Run:** `java -cp out beginner.getting_started.startingstructure`
+
+```java
+package beginner.getting_started;
+
+public class startingstructure {
+
+    public static void main(String[] args) {
+        System.out.println("jaffa is good boy");
+        System.out.println("really as a very great person!");
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 1 | `package beginner.getting_started;` | **`package`** is a keyword that tells Java which folder this file belongs to. Think of it like a file cabinet drawer label. Here it says "this file lives inside the `beginner/getting_started` folder." The semicolon `;` at the end is required — it tells Java "this instruction is complete." |
+| 3 | `public class startingstructure {` | **`public`** means this class can be seen and used by anyone (including the Java system itself). **`class`** is the keyword that creates a "blueprint" — in Java, ALL your code must live inside a class. **`startingstructure`** is the name we chose for this class (it must match the filename). The opening curly brace `{` starts the class body. |
+| 5 | `public static void main(String[] args) {` | This is the **entry point** — the exact line where Java starts running your program. Let's break down every word: **`public`** = accessible from anywhere (the Java system needs to call this). **`static`** = Java can run this method without creating an object first (don't worry about objects yet!). **`void`** = this method doesn't send back any value when it finishes. **`main`** = a special name that Java looks for — it's like the "Start" button. **`String[] args`** = a container that can hold text values passed from the command line (we'll learn about arrays later — for now just know it must be there). |
+| 6 | `System.out.println("jaffa is good boy");` | **`System`** = a built-in Java class that gives access to system features. **`out`** = the standard output stream (your terminal/screen). **`println`** = a method that **prints** a line of text and then moves the cursor to the **next line** ("print-line"). The text inside the double quotes `"..."` is a **String literal** — the exact text that gets displayed. |
+| 7 | `System.out.println("really as a very great person!");` | Same as above — prints the second message on a new line. |
+| 8 | `}` | Closes the `main` method. |
+| 9 | `}` | Closes the `startingstructure` class. |
+
+> 🔑 **Concept:** Every Java program needs at least one class and a `public static void main(String[] args)` method. This method is where Java starts running your code, line by line, top to bottom.
+
+**⚠️ Common beginner mistakes:**
+- Forgetting the semicolon `;` at the end of a statement — Java will show an error.
+- Spelling `main` wrong (e.g., `Main` or `mian`) — Java won't find the entry point and your program won't run.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

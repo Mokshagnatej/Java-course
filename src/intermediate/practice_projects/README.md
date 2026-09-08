@@ -151,6 +151,153 @@ Test your skills by building these additional mini-projects from scratch:
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/intermediate/practice_projects/shoppingcart.java`
+
+**Purpose:** A complete interactive shopping cart that reads an item name, price, and quantity from the user, then prints a formatted receipt with the total cost.
+
+**▶️ Run:** `java -cp out intermediate.practice_projects.shoppingcart`
+
+```java
+package intermediate.practice_projects;
+import java.util.Scanner;
+
+public class shoppingcart {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String item;
+        float price;
+        char currency = '₹';
+        double total;
+
+        System.out.print("What do you want to buy: ");
+        item = scanner.nextLine();
+
+        System.out.print("What is the price per item: ");
+        price = scanner.nextFloat();
+
+        System.out.print("How many " + item + " do you want: ");
+        int quantity = scanner.nextInt();
+
+        total = price * quantity;
+
+        System.out.println("\n--- Order Summary ---");
+        System.out.println("Item: " + item);
+        System.out.println("Quantity: " + quantity);
+        System.out.printf("Total Payable: %c%.2f%n", currency, total);
+
+        scanner.close();
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 9 | `String item;` | Declares a String variable without assigning a value yet — it will be filled later from user input. |
+| 10 | `float price;` | **`float`** is a 32-bit decimal type. Used here for the unit price. |
+| 11 | `char currency = '₹';` | **`char`** is a data type that holds a **single character** (16-bit Unicode). Notice single quotes `'...'` for chars vs double quotes `"..."` for strings. `₹` is the Indian Rupee symbol. |
+| 12 | `double total;` | Will hold the calculated total cost. |
+| 15 | `item = scanner.nextLine();` | Reads the item name from the user. |
+| 18 | `price = scanner.nextFloat();` | **`nextFloat()`** reads a 32-bit floating-point number from keyboard input. |
+| 21 | `int quantity = scanner.nextInt();` | Reads the quantity as an integer. |
+| 23 | `total = price * quantity;` | Calculates total. `float * int` → Java promotes `quantity` to float for the multiplication, then widens the result to `double` for assignment. |
+| 28 | `System.out.printf("Total Payable: %c%.2f%n", currency, total);` | **`printf`** uses format specifiers: **`%c`** = character (prints the ₹ symbol), **`%.2f`** = decimal number with 2 decimal places, **`%n`** = new line. The values after the format string fill in the `%` placeholders in order. |
+
+> 🔑 **Concept:** This program combines Scanner input, multiple data types (`String`, `float`, `char`, `int`, `double`), arithmetic, and formatted output (`printf`) into a real-world mini-application. `printf` with format specifiers gives you precise control over output formatting.
+
+---
+
+### 📄 `src/intermediate/practice_projects/calculaterectangle.java`
+
+**Purpose:** A geometry calculator that reads width and height from the user and computes the area and perimeter of a rectangle.
+
+**▶️ Run:** `java -cp out intermediate.practice_projects.calculaterectangle`
+
+```java
+package intermediate.practice_projects;
+import java.util.Scanner;
+
+public class calculaterectangle {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the width of the rectangle (in cm): ");
+        double width = scanner.nextDouble();
+
+        System.out.print("Enter the height of the rectangle (in cm): ");
+        double height = scanner.nextDouble();
+
+        double area = width * height;
+        double perimeter = 2 * (width + height);
+
+        System.out.println("\n--- Rectangle Metrics ---");
+        System.out.printf("Area: %.2f sq.cm%n", area);
+        System.out.printf("Perimeter: %.2f cm%n", perimeter);
+
+        scanner.close();
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 10 | `double width = scanner.nextDouble();` | Reads width as a double (allows decimal values like 12.5). |
+| 13 | `double height = scanner.nextDouble();` | Reads height as a double. |
+| 15 | `double area = width * height;` | Area formula: width × height. For width=12.5 and height=4.0, area = 50.0. |
+| 16 | `double perimeter = 2 * (width + height);` | Perimeter formula: 2 × (width + height). Parentheses ensure addition happens before multiplication. |
+| 19 | `System.out.printf("Area: %.2f sq.cm%n", area);` | **`%.2f`** formats the double to show exactly 2 decimal places (e.g., `50.00`). |
+
+> 🔑 **Concept:** Real programs combine input, formulas, and formatted output. `printf` with `%.2f` lets you control how many decimal places to show — perfect for measurements and money.
+
+---
+
+### 📄 `src/intermediate/practice_projects/for_loop.java`
+
+**Purpose:** Generates a multiplication table for the number 17 using a `for` loop with formatted output.
+
+**▶️ Run:** `java -cp out intermediate.practice_projects.for_loop`
+
+```java
+package intermediate.practice_projects;
+
+public class for_loop {
+
+    public static void main(String[] args) {
+        int number = 17;
+
+        System.out.println("--- Multiplication Table for " + number + " ---");
+
+        for (int i = 1; i <= 10; i++) {
+            int result = number * i;
+            System.out.printf("%2d x %2d = %3d%n", number, i, result);
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `int number = 17;` | The base number for the multiplication table. |
+| 10 | `for (int i = 1; i <= 10; i++) {` | Loops from 1 to 10 (the multipliers). |
+| 11 | `int result = number * i;` | Calculates `17 × i` for each iteration. |
+| 12 | `System.out.printf("%2d x %2d = %3d%n", ...);` | **`%2d`** means "print an integer using at least 2 character spaces" (right-aligned). **`%3d`** uses 3 spaces. This creates neatly aligned columns in the output. |
+
+> 🔑 **Concept:** `printf` format specifiers like `%2d` and `%3d` control column width, making output neatly aligned. This is useful for tables, receipts, and reports.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

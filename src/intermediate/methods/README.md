@@ -293,6 +293,113 @@ System.out.println(flowers);
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/intermediate/methods/Demo_class.java`
+
+**Purpose:** Teaches void methods (that perform an action but don't return a value) and methods that return different values based on conditions.
+
+**▶️ Run:** `java -cp out intermediate.methods.Demo_class`
+
+```java
+package intermediate.methods;
+class computer{
+    public void musicplaying(){
+        System.out.println("Music playing!!!");
+    }
+    public String getflower(double cost){
+      if(cost ==10)
+        return "flowers";
+      else if (cost <10 ) {
+          return "Flower were 10 rupees";
+      }
+      else
+          return "pay only 10 rupees";
+    }
+}
+public class Demo_class {
+
+    public static void main(String[]args){
+        computer work = new computer();
+
+        work.musicplaying();
+        String flowers = work.getflower(49);
+        System.out.println(flowers);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 2 | `class computer {` | Defines a class called `computer` — a blueprint with methods. |
+| 3 | `public void musicplaying(){` | **`void`** means this method does NOT return any value — it just performs an action (printing). When called, it prints the message and that's it. |
+| 6 | `public String getflower(double cost){` | This method **returns** a `String`. **`double cost`** is a **parameter** — a variable that receives a value when the method is called. The return type `String` means this method MUST send back a String value using `return`. |
+| 7-13 | `if/else if/else` with `return` | **`return`** exits the method immediately and sends back a value. Each branch returns a different string based on the cost. When `cost == 10`, returns "flowers". When `cost < 10`, returns a different message. Otherwise, returns "pay only 10 rupees". |
+| 19 | `computer work = new computer();` | Creates an object from the `computer` class. |
+| 21 | `work.musicplaying();` | Calls the void method — it prints "Music playing!!!" but doesn't return anything. |
+| 22 | `String flowers = work.getflower(49);` | Calls `getflower` with `49` as the argument. Since `49 != 10` and `49 is not < 10`, the `else` branch runs, returning `"pay only 10 rupees"`. This returned string is stored in `flowers`. |
+
+> 🔑 **Concept:** Methods are reusable blocks of code. **`void`** methods perform actions without returning values. Methods with a return type (like `String`, `int`, `double`) MUST use `return` to send a value back to the caller. **Parameters** let you pass data into methods.
+
+---
+
+### 📄 `src/intermediate/methods/MethodOverloading.java`
+
+**Purpose:** Teaches method overloading — having multiple methods with the SAME name but different parameters.
+
+**▶️ Run:** `java -cp out intermediate.methods.MethodOverloading`
+
+```java
+package intermediate.methods;
+
+class OverloadCalculator {
+    public int add(int n1,int n2,int n3)
+    {
+        return n1 + n2 + n3;
+    }
+    public int add(int n1,int n2)
+    {
+        return n1 + n2;
+    }
+    public double add(double n1,double n2)
+    {
+        return n1 + n2;
+    }
+}
+public class MethodOverloading {
+    public static void main(String[] args){
+
+        OverloadCalculator cal = new OverloadCalculator();
+        int r1 = cal.add(10, 20, 30);
+        System.out.println("Addition of three numbers is: " + r1);
+        int r2 = cal.add(10, 20);
+        System.out.println("Addition of two numbers is: " + r2);
+        double r3 = cal.add(10.2, 20.5);
+        System.out.println("Addition of two decimal numbers is: " + r3);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 3 | `class OverloadCalculator {` | A class with THREE methods all named `add` — this is **method overloading**. |
+| 4 | `public int add(int n1, int n2, int n3)` | Version 1: takes **3 int** parameters, returns their sum as an `int`. |
+| 8 | `public int add(int n1, int n2)` | Version 2: takes **2 int** parameters. Same name `add`, but a different **method signature** (different number of parameters). |
+| 12 | `public double add(double n1, double n2)` | Version 3: takes **2 double** parameters and returns a `double`. Different parameter types = different signature. |
+| 21 | `cal.add(10, 20, 30)` | Java sees 3 `int` arguments and automatically picks Version 1. |
+| 23 | `cal.add(10, 20)` | Java sees 2 `int` arguments and picks Version 2. |
+| 25 | `cal.add(10.2, 20.5)` | Java sees 2 `double` arguments and picks Version 3. |
+
+> 🔑 **Concept:** **Method overloading** means defining multiple methods with the same name but different parameter lists (different number of parameters, or different parameter types). Java automatically picks the right version based on the arguments you pass. This is a form of **compile-time polymorphism**.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

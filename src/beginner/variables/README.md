@@ -289,6 +289,81 @@ Key operations from the source file:
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/beginner/variables/variables.java`
+
+**Purpose:** Teaches how to create variables of different types — integers, decimals, booleans, and strings — and how to combine them with `+`.
+
+**▶️ Run:** `java -cp out beginner.variables.variables`
+
+```java
+package beginner.variables;
+
+public class variables {
+
+    public static void main(String[] args) {
+        int age = 20;
+        System.out.println(age);
+
+        double height = 3.53234;
+        System.out.println(height);
+
+        Boolean isMale = true;
+        System.out.println(isMale);
+
+        if (isMale) {
+            System.out.println("your male");
+        } else {
+            System.out.println("your not a male");
+        }
+
+        String name = "sai";
+        System.out.println(name);
+
+        String name2 = "nandini";
+        System.out.println(name2);
+
+        System.out.println(name + "love" + name2);
+
+        System.out.println("your name is " + name + " " + "your height is " + height + " " + " your age is " + age);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 1 | `package beginner.variables;` | Declares this file belongs to the `beginner.variables` folder/namespace. |
+| 3 | `public class variables {` | Creates a public class named `variables`. |
+| 5 | `public static void main(String[] args) {` | The program entry point (explained in Module 01). |
+| 6 | `int age = 20;` | **`int`** is a keyword for a data type that stores **whole numbers** (no decimals). It uses 32 bits of memory and can hold values from about -2 billion to +2 billion. **`age`** is the variable name we chose. **`=`** is the **assignment operator** — it puts the value on the right (`20`) into the variable on the left (`age`). |
+| 7 | `System.out.println(age);` | Prints the value stored in `age`, which is `20`. |
+| 9 | `double height = 3.53234;` | **`double`** is a data type for **decimal numbers** (floating-point). It uses 64 bits and can store very precise decimals. We use `double` instead of `int` because height has decimal places. |
+| 10 | `System.out.println(height);` | Prints `3.53234`. |
+| 12 | `Boolean isMale = true;` | **`Boolean`** (with a capital B) is the **wrapper class** version of the primitive `boolean` type. It stores either `true` or `false` — nothing else. Here it wraps `true` into an object. (The lowercase `boolean` would also work and is more common.) |
+| 13 | `System.out.println(isMale);` | Prints `true`. |
+| 15 | `if (isMale) {` | **`if`** is a keyword that checks a condition. If what's inside the parentheses is `true`, the code inside the curly braces runs. Since `isMale` is `true`, Java enters this block. |
+| 16 | `System.out.println("your male");` | Prints this message because the condition was `true`. |
+| 17 | `} else {` | **`else`** provides an alternative block that runs ONLY if the `if` condition was `false`. |
+| 18 | `System.out.println("your not a male");` | This line would run if `isMale` were `false`. |
+| 21 | `String name = "sai";` | **`String`** is a reference type (not a primitive like `int`) that holds a sequence of characters (text). The text must be enclosed in **double quotes** `"..."`. |
+| 22 | `System.out.println(name);` | Prints `sai`. |
+| 24 | `String name2 = "nandini";` | Another String variable holding different text. |
+| 27 | `System.out.println(name + "love" + name2);` | The **`+` operator** here acts as **string concatenation** — it joins (glues) pieces of text together. Result: `sailovenandini`. Notice there are no spaces unless you add them inside the quotes. |
+| 29 | `System.out.println("your name is " + name + " " + ...);` | Multiple concatenations that combine text and variable values into one long sentence. Java automatically converts `height` (double) and `age` (int) to text when joining them with a String using `+`. |
+
+> 🔑 **Concept:** Variables are named containers that hold data. Each variable has a **type** that tells Java what kind of data it can hold: `int` for whole numbers, `double` for decimals, `boolean` for true/false, and `String` for text. The `+` operator joins strings together (concatenation).
+
+**⚠️ Common beginner mistakes:**
+- Using `=` (assignment) when you mean `==` (comparison). `age = 20` stores 20 in age; `age == 20` checks if age equals 20.
+- Forgetting that `String` starts with a capital S — it's a class, not a primitive type.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

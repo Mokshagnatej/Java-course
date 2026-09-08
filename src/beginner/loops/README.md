@@ -213,6 +213,138 @@ for (int i = 1; i <= 5; i++) {
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/beginner/loops/For_loop.java`
+
+**Purpose:** Teaches the `for` loop — repeating code a set number of times — and nested loops (a loop inside a loop).
+
+**▶️ Run:** `java -cp out beginner.loops.For_loop`
+
+```java
+package beginner.loops;
+
+public class For_loop {
+
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Day " + i);
+
+            for (int j = 1; j <= 1; j++) {
+                System.out.println("  Task " + j + ": Review Java Notes");
+            }
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `for (int i = 1; i <= 5; i++) {` | The **`for`** loop has three parts separated by semicolons: **(1) Initialization** `int i = 1` — creates a counter variable `i` starting at 1, runs once. **(2) Condition** `i <= 5` — checked BEFORE each iteration; if `false`, the loop stops. **(3) Update** `i++` — runs AFTER each iteration, increases `i` by 1. So this loop runs 5 times with i = 1, 2, 3, 4, 5. |
+| 7 | `System.out.println("Day " + i);` | Prints the current day number. On the first pass, prints "Day 1". |
+| 9 | `for (int j = 1; j <= 1; j++) {` | A **nested loop** (loop inside a loop). This inner loop runs completely for EACH iteration of the outer loop. Here it only runs once (`j` goes from 1 to 1). Think of it like a clock: the outer loop is the hour hand, the inner loop is the minute hand — the minute hand completes a full cycle for every tick of the hour hand. |
+| 10 | `System.out.println("  Task " + j + ...);` | Prints the task for each day. The two spaces `"  "` at the start create indentation to visually show it's inside the day. |
+
+> 🔑 **Concept:** A `for` loop repeats code a known number of times. It has three parts: initialization, condition, and update. Nested loops run the inner loop completely for each iteration of the outer loop.
+
+**⚠️ Common beginner mistakes:**
+- Off-by-one errors: using `<` when you mean `<=`, or starting at 0 when you mean 1.
+- Forgetting that `i++` runs AFTER the body, not before.
+
+---
+
+### 📄 `src/beginner/loops/while_loop.java`
+
+**Purpose:** Teaches the `while` loop — repeating code as long as a condition remains true.
+
+**▶️ Run:** `java -cp out beginner.loops.while_loop`
+
+```java
+package beginner.loops;
+
+public class while_loop {
+
+    public static void main(String[] args) {
+        int i = 1;
+
+        while (i <= 5) {
+            System.out.println("Honey " + i);
+
+            int j = 1;
+            while (j <= 1) {
+                System.out.println("  Reddy " + j);
+                j++;
+            }
+
+            i++;
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `int i = 1;` | Initialize the counter OUTSIDE the loop (unlike `for` where it's in the header). |
+| 8 | `while (i <= 5) {` | **`while`** checks the condition BEFORE each iteration. If `i <= 5` is `true`, the loop body runs. If it's `false` from the start, the body runs **zero times**. |
+| 9 | `System.out.println("Honey " + i);` | Prints the current value of `i`. |
+| 11-14 | Inner while loop | Another while loop nested inside. `j` starts at 1, prints "Reddy 1", then `j++` makes `j = 2`, and `2 <= 1` is false so it stops. |
+| 17 | `i++;` | **CRITICAL:** You must manually increment the counter! If you forget this line, `i` stays at 1 forever and the loop runs infinitely — your program will freeze. |
+
+> 🔑 **Concept:** A `while` loop checks its condition FIRST. If the condition is false from the beginning, the loop body never runs (zero iterations). You must manually update the counter variable inside the loop body — forgetting this creates an infinite loop!
+
+**⚠️ Common beginner mistakes:**
+- Forgetting `i++` inside the loop body — this creates an infinite loop that never ends.
+
+---
+
+### 📄 `src/beginner/loops/Do_while_loop.java`
+
+**Purpose:** Teaches the `do-while` loop — runs the code at least once, then checks the condition.
+
+**▶️ Run:** `java -cp out beginner.loops.Do_while_loop`
+
+```java
+package beginner.loops;
+
+public class Do_while_loop {
+
+    public static void main(String[] args) {
+        int i = 6;
+
+        do {
+            System.out.println("Current value of i: " + i);
+            i++;
+        } while (i <= 5);
+
+        System.out.println("Loop terminated. Final i = " + i);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `int i = 6;` | Start at 6 — notice this is ALREADY greater than 5! |
+| 8 | `do {` | **`do`** starts a do-while loop. The body inside `{ }` runs FIRST, before any condition is checked. |
+| 9 | `System.out.println("Current value of i: " + i);` | Prints `6`. This line executes even though `i` is already past the limit! That's the whole point of do-while. |
+| 10 | `i++;` | Increments `i` from 6 to 7. |
+| 11 | `} while (i <= 5);` | NOW the condition is checked: `7 <= 5` is `false`, so the loop stops. **Important:** notice the semicolon `;` after the closing parenthesis — this is required for do-while (but not for regular while). |
+| 13 | `System.out.println("Loop terminated. Final i = " + i);` | Prints that `i` is now 7. The loop body ran exactly **once**. |
+
+> 🔑 **Concept:** A `do-while` loop runs the body FIRST, then checks the condition. This guarantees **at least one execution**, even if the condition is false from the start. Perfect for menus or "try at least once" scenarios.
+
+**⚠️ Common beginner mistakes:**
+- Forgetting the semicolon `;` after `while(condition);` — `do-while` requires it, unlike regular `while`.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

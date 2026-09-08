@@ -340,6 +340,283 @@ x %= 5;   // x = 6 % 5 = 1
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/beginner/operators/arithmeticoperator.java`
+
+**Purpose:** Teaches the five basic math operators: addition, subtraction, multiplication, division, and modulus (remainder).
+
+**▶️ Run:** `java -cp out beginner.operators.arithmeticoperator`
+
+```java
+package beginner.operators;
+
+public class arithmeticoperator {
+
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 4;
+
+        int sum = a + b;
+        System.out.println("Addition (10 + 4): " + sum);
+
+        int diff = a - b;
+        System.out.println("Subtraction (10 - 4): " + diff);
+
+        int prod = a * b;
+        System.out.println("Multiplication (10 * 4): " + prod);
+
+        int quotient = a / b;
+        System.out.println("Integer Division (10 / 4): " + quotient);
+
+        int remainder = a % b;
+        System.out.println("Modulus/Remainder (10 % 4): " + remainder);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6-7 | `int a = 10; int b = 4;` | Creates two integer variables to use in our calculations. |
+| 9 | `int sum = a + b;` | **`+`** (addition operator) adds the values of `a` and `b`. Result: `14`. |
+| 12 | `int diff = a - b;` | **`-`** (subtraction operator) subtracts `b` from `a`. Result: `6`. |
+| 15 | `int prod = a * b;` | **`*`** (multiplication operator) multiplies `a` by `b`. Result: `40`. |
+| 18 | `int quotient = a / b;` | **`/`** (division operator) divides `a` by `b`. **Critical:** when both sides are `int`, Java does **integer division** — it chops off the decimal. `10 / 4 = 2` (not 2.5!). The `.5` is gone forever. |
+| 21 | `int remainder = a % b;` | **`%`** (modulus/remainder operator) gives the **remainder** after dividing `a` by `b`. `10 ÷ 4 = 2 remainder 2`, so the result is `2`. This is very useful for checking if a number is even/odd: `n % 2 == 0` means even. |
+
+> 🔑 **Concept:** Java has five arithmetic operators: `+` (add), `-` (subtract), `*` (multiply), `/` (divide), `%` (remainder). When dividing two integers, Java **truncates** the decimal — use `double` if you need the full result.
+
+**⚠️ Common beginner mistakes:**
+- Expecting `10 / 4` to give `2.5` — with two ints, you get `2`. Use `10.0 / 4` to get `2.5`.
+- Confusing `/` (division/quotient) with `%` (remainder/modulus).
+
+---
+
+### 📄 `src/beginner/operators/increment.java`
+
+**Purpose:** Teaches the difference between `i++` (postfix: use then increase) and `++i` (prefix: increase then use).
+
+**▶️ Run:** `java -cp out beginner.operators.increment`
+
+```java
+package beginner.operators;
+
+public class increment {
+
+    public static void main(String[] args) {
+        int m = 5;
+        System.out.println("Initial m: " + m);
+
+        m++;
+        System.out.println("After m++: " + m);
+
+        m--;
+        System.out.println("After m--: " + m);
+
+        int a = 10;
+        int postResult = a++;
+        System.out.println("Postfix Assignment: postResult = " + postResult + ", a = " + a);
+
+        int b = 10;
+        int preResult = ++b;
+        System.out.println("Prefix Assignment: preResult = " + preResult + ", b = " + b);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `int m = 5;` | Starts `m` at 5. |
+| 9 | `m++;` | **`++`** is the **increment operator** — it adds 1 to the variable. `m` goes from 5 to 6. When used alone on a line, postfix (`m++`) and prefix (`++m`) do the same thing. |
+| 12 | `m--;` | **`--`** is the **decrement operator** — it subtracts 1. `m` goes from 6 back to 5. |
+| 15-16 | `int a = 10; int postResult = a++;` | Here's where it gets tricky! **Postfix `a++`** means: "Give me the current value of `a` FIRST (so `postResult` gets `10`), THEN increase `a` by 1 (so `a` becomes `11`)." |
+| 19-20 | `int b = 10; int preResult = ++b;` | **Prefix `++b`** means: "Increase `b` by 1 FIRST (so `b` becomes `11`), THEN give me the new value (so `preResult` gets `11`)." |
+
+> 🔑 **Concept:** `x++` (postfix) = use the value first, then increment. `++x` (prefix) = increment first, then use the value. This difference only matters when the expression is part of a larger statement (like an assignment).
+
+**⚠️ Common beginner mistakes:**
+- Thinking `y = x++` and `y = ++x` give the same result — they don't! With `x = 10`: postfix gives `y = 10`, prefix gives `y = 11`.
+
+---
+
+### 📄 `src/beginner/operators/augmentedassigment.java`
+
+**Purpose:** Teaches shortcut operators like `+=`, `-=`, `*=`, `/=`, `%=` that update a variable in one step.
+
+**▶️ Run:** `java -cp out beginner.operators.augmentedassigment`
+
+```java
+package beginner.operators;
+
+public class augmentedassigment {
+
+    public static void main(String[] args) {
+        int num = 100;
+        System.out.println("Starting value: " + num);
+
+        num += 20;
+        System.out.println("After num += 20: " + num);
+
+        num -= 10;
+        System.out.println("After num -= 10: " + num);
+
+        num *= 2;
+        System.out.println("After num *= 2:  " + num);
+
+        num /= 4;
+        System.out.println("After num /= 4:  " + num);
+
+        num %= 10;
+        System.out.println("After num %= 10: " + num);
+
+        byte b = 50;
+        b += 10;
+        System.out.println("Byte after b += 10: " + b);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `int num = 100;` | Starts with `100`. |
+| 9 | `num += 20;` | **`+=`** is the **compound addition operator**. It's a shortcut for `num = num + 20`. Result: `120`. |
+| 12 | `num -= 10;` | **`-=`** is shortcut for `num = num - 10`. `120 - 10 = 110`. |
+| 15 | `num *= 2;` | **`*=`** is shortcut for `num = num * 2`. `110 * 2 = 220`. |
+| 18 | `num /= 4;` | **`/=`** is shortcut for `num = num / 4`. `220 / 4 = 55` (integer division). |
+| 21 | `num %= 10;` | **`%=`** is shortcut for `num = num % 10`. `55 % 10 = 5` (remainder). |
+| 24-25 | `byte b = 50; b += 10;` | **Hidden superpower:** Compound operators include an **implicit cast**. Writing `b = b + 10` would fail (because `b + 10` becomes an `int`), but `b += 10` automatically casts the result back to `byte`! |
+
+> 🔑 **Concept:** Compound assignment operators (`+=`, `-=`, `*=`, `/=`, `%=`) are shortcuts that perform an operation AND assign the result back to the variable in one step. They also automatically handle type casting.
+
+---
+
+### 📄 `src/beginner/operators/Relationaloperator.java`
+
+**Purpose:** Teaches comparison operators that produce `true` or `false` results.
+
+**▶️ Run:** `java -cp out beginner.operators.Relationaloperator`
+
+```java
+package beginner.operators;
+
+public class Relationaloperator {
+
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 40;
+
+        System.out.println("Comparing a = " + a + " and b = " + b + ":");
+
+        System.out.println("a < b  (10 < 40)  : " + (a < b));
+        System.out.println("a > b  (10 > 40)  : " + (a > b));
+        System.out.println("a == b (10 == 40) : " + (a == b));
+        System.out.println("a != b (10 != 40) : " + (a != b));
+        System.out.println("a <= b (10 <= 40) : " + (a <= b));
+        System.out.println("a >= b (10 >= 40) : " + (a >= b));
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6-7 | `int a = 10; int b = 40;` | Two integers to compare. |
+| 11 | `(a < b)` | **`<`** (less than) checks if `a` is smaller than `b`. `10 < 40` is `true`. |
+| 12 | `(a > b)` | **`>`** (greater than) checks if `a` is bigger than `b`. `10 > 40` is `false`. |
+| 13 | `(a == b)` | **`==`** (equal to) checks if both values are the same. `10 == 40` is `false`. **WARNING:** This is NOT the same as `=` which is assignment! |
+| 14 | `(a != b)` | **`!=`** (not equal to) checks if the values are different. `10 != 40` is `true`. |
+| 15 | `(a <= b)` | **`<=`** (less than or equal to). `10 <= 40` is `true`. |
+| 16 | `(a >= b)` | **`>=`** (greater than or equal to). `10 >= 40` is `false`. |
+
+> 🔑 **Concept:** Relational (comparison) operators compare two values and always return a `boolean` result (`true` or `false`). They are essential for making decisions with `if` statements.
+
+**⚠️ Common beginner mistakes:**
+- Using `=` (assignment) instead of `==` (comparison): `if (x = 5)` is wrong, `if (x == 5)` is correct.
+
+---
+
+### 📄 `src/beginner/operators/logicaloperator.java`
+
+**Purpose:** Teaches how to combine multiple true/false conditions using AND (`&&`), OR (`||`), and NOT (`!`).
+
+**▶️ Run:** `java -cp out beginner.operators.logicaloperator`
+
+```java
+package beginner.operators;
+
+public class logicaloperator {
+
+    public static void main(String[] args) {
+        int a = 19;
+        int b = 23;
+
+        double c = 23.4;
+        double d = 32.3;
+
+        boolean orResult = (a < b || c > d);
+        System.out.println("(a < b || c > d): " + orResult);
+
+        boolean andResult = (a < b && c > d);
+        System.out.println("(a < b && c > d): " + andResult);
+
+        boolean notResult = !(a < b);
+        System.out.println("!(a < b): " + notResult);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6-9 | Variable declarations | Creates two `int` variables and two `double` variables to use in conditions. |
+| 12 | `(a < b \|\| c > d)` | **`\|\|`** is the **logical OR** operator. It returns `true` if **at least one** side is true. Here: `19 < 23` is `true`, so the whole thing is immediately `true` — Java doesn't even check the right side! This is called **short-circuit evaluation**. |
+| 15 | `(a < b && c > d)` | **`&&`** is the **logical AND** operator. It returns `true` ONLY if **both** sides are true. Here: `19 < 23` is `true` BUT `23.4 > 32.3` is `false`, so the result is `false`. |
+| 18 | `!(a < b)` | **`!`** is the **logical NOT** operator. It flips the boolean value. `a < b` is `true`, so `!true` becomes `false`. |
+
+> 🔑 **Concept:** Logical operators combine boolean conditions: `&&` (AND) needs both true, `||` (OR) needs at least one true, `!` (NOT) flips the value. Java uses **short-circuit evaluation** — if the answer is already determined from the left side, it skips checking the right side.
+
+---
+
+### 📄 `src/beginner/operators/OrderDemo.java`
+
+**Purpose:** Teaches operator precedence — the order in which Java evaluates math operations (PEMDAS/BODMAS).
+
+**▶️ Run:** `java -cp out beginner.operators.OrderDemo`
+
+```java
+package beginner.operators;
+
+public class OrderDemo {
+
+    public static void main(String[] args) {
+        double result = 10 + 3 * 2 / (8 - 3);
+
+        System.out.println("The result is: " + result);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 6 | `double result = 10 + 3 * 2 / (8 - 3);` | This line demonstrates **operator precedence**. Java evaluates in this order: **Step 1:** Parentheses first: `(8 - 3) = 5`. **Step 2:** Multiplication: `3 * 2 = 6`. **Step 3:** Division: `6 / 5 = 1` (integer division — both 6 and 5 are ints!). **Step 4:** Addition: `10 + 1 = 11`. **Step 5:** The int value `11` is widened to `double` → `11.0` and stored in `result`. |
+| 8 | `System.out.println(...)` | Prints `The result is: 11.0`. |
+
+> 🔑 **Concept:** Java follows PEMDAS/BODMAS: **P**arentheses first, then **M**ultiplication/**D**ivision (left to right), then **A**ddition/**S**ubtraction (left to right). Integer division truncates the result!
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

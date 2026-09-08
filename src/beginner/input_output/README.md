@@ -189,6 +189,107 @@ String name = scanner.nextLine(); // ✅ Now waits properly for the name!
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/beginner/input_output/scanner.java`
+
+**Purpose:** Teaches how to use the `Scanner` class to read a person's name, age, and height from the keyboard.
+
+**▶️ Run:** `java -cp out beginner.input_output.scanner`
+
+```java
+package beginner.input_output;
+import java.util.Scanner;
+
+public class scanner {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Your height (in feet): ");
+        double height = scanner.nextDouble();
+
+        System.out.println("The person name is " + name + ", age is " + age + " years, and height is " + height + " feet.");
+
+        scanner.close();
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 2 | `import java.util.Scanner;` | **`import`** is a keyword that brings in classes from other packages so you can use them. **`java.util.Scanner`** is a built-in class that lets you read input from the keyboard. Without this import, Java wouldn't know what `Scanner` is. |
+| 7 | `Scanner scanner = new Scanner(System.in);` | **`new`** is a keyword that creates a new object in memory (on the Heap). **`Scanner(System.in)`** creates a Scanner that is connected to **`System.in`** — the standard input stream (your keyboard). The variable `scanner` (lowercase) is a reference that points to this new Scanner object. |
+| 9 | `System.out.print("Enter your name: ");` | **`print`** (without `ln`) prints text WITHOUT moving to a new line — the cursor stays on the same line, so the user's input appears right after the colon. |
+| 10 | `String name = scanner.nextLine();` | **`nextLine()`** reads an entire line of text that the user types (everything until they press Enter). The text is stored in the `name` variable. |
+| 13 | `int age = scanner.nextInt();` | **`nextInt()`** reads the next integer number the user types. If the user types letters instead of a number, the program will crash with an error. |
+| 16 | `double height = scanner.nextDouble();` | **`nextDouble()`** reads the next decimal number. |
+| 18 | `System.out.println(...)` | Prints a formatted summary combining all the variables with text using `+` concatenation. |
+| 20 | `scanner.close();` | **`close()`** releases the input stream resource. It's good practice to close a Scanner when you're done with it to free up system resources. |
+
+> 🔑 **Concept:** The `Scanner` class reads user input from the keyboard. Use `nextLine()` for text, `nextInt()` for whole numbers, and `nextDouble()` for decimals. Always `import java.util.Scanner` at the top and `close()` the scanner when done.
+
+**⚠️ Common beginner mistakes:**
+- **The newline bug:** After calling `nextInt()` or `nextDouble()`, a hidden newline character `\n` is left in the buffer. If you call `nextLine()` right after, it reads that empty newline instead of waiting for input. Fix: add an extra `scanner.nextLine();` to flush the buffer after reading a number.
+
+---
+
+### 📄 `src/beginner/input_output/ScannerInput.java`
+
+**Purpose:** Another example of reading multiple types of input — reinforces the Scanner pattern.
+
+**▶️ Run:** `java -cp out beginner.input_output.ScannerInput`
+
+```java
+package beginner.input_output;
+import java.util.Scanner;
+
+public class ScannerInput {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Your height (in feet): ");
+        double height = scanner.nextDouble();
+
+        System.out.println("The person name is " + name + ", his age is " + age + " years, and his height is " + height + " feet.");
+
+        scanner.close();
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+This file follows the same pattern as `scanner.java` above. The key steps are:
+
+1. **Import** Scanner → **Create** a Scanner object → **Prompt** the user → **Read** the input → **Display** the result → **Close** the scanner.
+
+The important Scanner methods used here:
+- `scanner.nextLine()` → reads a full line of text (String)
+- `scanner.nextInt()` → reads a whole number (int)
+- `scanner.nextDouble()` → reads a decimal number (double)
+
+> 🔑 **Concept:** The 4-step input pattern: (1) Create Scanner, (2) Print a prompt, (3) Read input with the matching method, (4) Close the Scanner. Always read the String FIRST before numbers to avoid the newline buffer issue.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |

@@ -349,6 +349,328 @@ System.out.println(nums[3]);
 
 ---
 
+## 📝 Full Code Walkthrough
+
+### 📄 `src/intermediate/arrays/demo_array.java`
+
+**Purpose:** Teaches the simplest way to create an array with preset values and access a specific element by its index.
+
+**▶️ Run:** `java -cp out intermediate.arrays.demo_array`
+
+```java
+package intermediate.arrays;
+public class demo_array {
+    public static void main(String[]args){
+        int nums[] = {1, 2, 3, 4, 5,7};
+        System.out.println(nums[3]);
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 4 | `int nums[] = {1, 2, 3, 4, 5, 7};` | Creates an **array** — a fixed-size container that holds multiple values of the same type. **`int nums[]`** declares an array of integers (you can also write `int[] nums`). The `{1, 2, 3, 4, 5, 7}` is an **array initializer** that creates the array and fills it with these 6 values in one step. |
+| 5 | `System.out.println(nums[3]);` | **`nums[3]`** accesses the element at **index 3**. Arrays are **zero-indexed** in Java: the first element is `nums[0]`, the second is `nums[1]`, etc. So `nums[3]` is the FOURTH element, which is `4`. |
+
+> 🔑 **Concept:** Arrays store multiple values of the same type. Indexing starts at **0** (not 1!). So in an array of 6 elements, valid indexes are 0 through 5.
+
+**⚠️ Common beginner mistakes:**
+- Trying to access `nums[6]` in a 6-element array — valid indexes are 0 to 5. Index 6 causes `ArrayIndexOutOfBoundsException`.
+- Forgetting that arrays start at index 0, not 1.
+
+---
+
+### 📄 `src/intermediate/arrays/array_of_elments.java`
+
+**Purpose:** Teaches how to create an empty array with `new`, fill it manually, and loop through it.
+
+**▶️ Run:** `java -cp out intermediate.arrays.array_of_elments`
+
+```java
+package intermediate.arrays;
+public class array_of_elments {
+    public static void main(String[]args){
+        int nums[] = new int[4];
+        nums[0] = 18;
+        nums[1] = 32;
+        nums[2] = 42;
+        nums[3] = 13;
+
+        for(int i=0;i<4;i++){
+            System.out.println(nums[i]);
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 4 | `int nums[] = new int[4];` | **`new int[4]`** allocates memory for an array of 4 integers on the Heap. All values start as `0` (the default for `int`). The `[4]` specifies the size — once created, the size CANNOT change. |
+| 5-8 | `nums[0] = 18;` etc. | Fills each position individually using the **index** in square brackets. `nums[0]` is the first slot, `nums[3]` is the last. |
+| 10 | `for(int i=0; i<4; i++){` | Loops from `i=0` to `i=3` (4 iterations). Note: `i < 4` (not `<=`) because the last valid index is 3. |
+| 11 | `System.out.println(nums[i]);` | Prints each element using `i` as the index. When `i=0`, prints `nums[0]` (18); when `i=1`, prints `nums[1]` (32); etc. |
+
+> 🔑 **Concept:** `new int[size]` creates an empty array of a fixed size. You then fill it using indexes. Use a `for` loop with `i < array.length` to safely iterate through all elements.
+
+---
+
+### 📄 `src/intermediate/arrays/multi_dimensional_array.java`
+
+**Purpose:** Teaches 2D arrays (like a table/grid), random number filling, and the enhanced for-each loop.
+
+**▶️ Run:** `java -cp out intermediate.arrays.multi_dimensional_array`
+
+```java
+package intermediate.arrays;
+public class multi_dimensional_array {
+    public static void main(String[]args){
+        int nums[][]= new int [3][4];
+        for(int i=0;i<3;i++){
+            for(int j=0;j<4;j++){
+                nums [i][j] = (int) (Math.random() * 100);
+            }
+        }
+        for(int n[] : nums ){
+            for(int m:n){
+                System.out.print(m + "");
+            }
+            System.out.println();
+        }
+
+        for(int i=0;i<3;i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(nums[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 4 | `int nums[][] = new int[3][4];` | Creates a **2D array** — think of it as a table with 3 rows and 4 columns. `nums[0]` is the first row (an array of 4 ints), `nums[2][3]` is the element in row 2, column 3. |
+| 5-9 | Nested `for` loops | The outer loop goes through rows (0 to 2), the inner loop goes through columns (0 to 3). Each cell is filled with a random number. |
+| 8 | `(int) (Math.random() * 100)` | **`Math.random()`** returns a random `double` between 0.0 and 1.0. Multiplying by 100 gives 0.0 to 99.99..., and casting to `(int)` truncates to a whole number 0-99. |
+| 10 | `for(int n[] : nums)` | This is the **enhanced for-each loop**. The syntax `for(type variable : array)` reads as "for each element in the array." Here, `n` takes the value of each ROW (which is itself an `int[]` array) one at a time. No index variable needed! |
+| 11 | `for(int m : n)` | For each individual integer `m` in the current row `n`. |
+| 12 | `System.out.print(m + "");` | **`print`** (without `ln`) prints without a newline — values appear on the same line. |
+| 14 | `System.out.println();` | Prints an empty newline to start a new row in the output. |
+
+> 🔑 **Concept:** 2D arrays are arrays of arrays — like a table with rows and columns. The enhanced for-each loop (`for(type var : array)`) is a simpler way to iterate without managing index variables.
+
+---
+
+### 📄 `src/intermediate/arrays/three_dimensional_array.java`
+
+**Purpose:** Teaches 3D arrays — like multiple layers of 2D tables stacked together.
+
+**▶️ Run:** `java -cp out intermediate.arrays.three_dimensional_array`
+
+```java
+package intermediate.arrays;
+public class three_dimensional_array {
+    public static void main(String[]args){
+        int nums[][][] = new int[3][4][5];
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[i].length; j++) {
+                for (int k = 0; k < nums[i][j].length; k++) {
+                    nums[i][j][k] = (int) (Math.random() * 10);
+                }
+            }
+        }
+
+        for (int[][] layer : nums) {
+            for (int[] row : layer) {
+                for (int val : row) System.out.print(val + " ");
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 4 | `int nums[][][] = new int[3][4][5];` | Creates a **3D array** — 3 layers, each containing a 4×5 grid. Think of it as 3 pages, each with a 4-row, 5-column table. Total cells: 3 × 4 × 5 = 60. |
+| 6 | `nums.length` | **`.length`** is a property (not a method — no parentheses!) that returns the size of the array. For the outermost dimension, it's 3. |
+| 7 | `nums[i].length` | Returns the length of the second dimension (4). |
+| 8 | `nums[i][j].length` | Returns the length of the third dimension (5). |
+| 14 | `for (int[][] layer : nums)` | Each `layer` is a 2D array (`int[][]`). |
+| 15 | `for (int[] row : layer)` | Each `row` within a layer is a 1D array (`int[]`). |
+| 16 | `for (int val : row)` | Each `val` is a single integer in the row. |
+
+> 🔑 **Concept:** Multi-dimensional arrays can have as many dimensions as you need. Use `.length` to safely get the size of each dimension. The for-each loop handles nested arrays naturally.
+
+---
+
+### 📄 `src/intermediate/arrays/jagged_array.java`
+
+**Purpose:** Teaches jagged arrays — 2D arrays where each row can have a different number of columns.
+
+**▶️ Run:** `java -cp out intermediate.arrays.jagged_array`
+
+```java
+package intermediate.arrays;
+
+public class jagged_array {
+    public static void main(String[]args){
+        int nums [][] = new int[3] [];
+        nums[0] = new int [3];
+        nums[1] = new int [6];
+        nums[2] = new int [4];
+
+        for(int i =0;i<nums.length;i++){
+            for(int j =0;j<nums[i].length;j++){
+                nums[i][j]=(int)(Math.random()*10);
+            }
+        }
+        for(int n[]: nums){
+            for(int m:n){
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 5 | `int nums[][] = new int[3][];` | Creates a 2D array with 3 rows, but **leaves the columns undefined** (notice `[]` with no number). Each row will be assigned its own size separately. |
+| 6 | `nums[0] = new int[3];` | Row 0 gets 3 columns. |
+| 7 | `nums[1] = new int[6];` | Row 1 gets 6 columns — different from row 0! |
+| 8 | `nums[2] = new int[4];` | Row 2 gets 4 columns. This creates a "jagged" shape (not a perfect rectangle). |
+| 11 | `nums[i].length` | This is crucial for jagged arrays — each row has a DIFFERENT length, so you must use `nums[i].length` (not a hardcoded number) to avoid going out of bounds. |
+
+> 🔑 **Concept:** Jagged arrays have rows of different lengths. Always use `.length` to check each row's size individually. This is useful when data naturally has uneven rows (like a tournament bracket).
+
+---
+
+### 📄 `src/intermediate/arrays/Student_array_demo.java`
+
+**Purpose:** Teaches how to create an array of **objects** (not just numbers) — storing Student records in an array.
+
+**▶️ Run:** `java -cp out intermediate.arrays.Student_array_demo`
+
+```java
+package intermediate.arrays;
+class Student{
+    int rollno;
+    String name;
+    int marks;
+}
+public class Student_array_demo {
+    public static void main(String[]args){
+
+        Student s1 = new Student();
+        s1.rollno =1;
+        s1.name = "honey";
+        s1.marks = 90;
+
+        Student s2 = new Student();
+        s2.rollno =2;
+        s2.name = "Honvith";
+        s2.marks = 85;
+
+        Student s3 = new Student();
+        s3.rollno =3;
+        s3.name = "gundu";
+        s3.marks = 66;
+        Student students[] = new Student[3];
+        students[0] = s1;
+        students[1] = s2;
+        students[2] = s3;
+
+        for(int i =0;i<students.length;i++){
+            System.out.println(students[i].rollno +"."+ students[i].name +" :"+  students[i].marks);
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 2-6 | `class Student { ... }` | Defines a **class** (blueprint) called `Student` with three fields: `rollno` (int), `name` (String), `marks` (int). Each field is called an **instance variable** — every Student object will have its own copy. |
+| 10 | `Student s1 = new Student();` | Creates a new `Student` object on the Heap using **`new`**. The variable `s1` holds a **reference** (memory address) pointing to this object. |
+| 11-13 | `s1.rollno = 1;` etc. | The **dot operator `.`** accesses the fields of the object. `s1.rollno = 1` sets the rollno field of the s1 object to 1. |
+| 24 | `Student students[] = new Student[3];` | Creates an array that holds 3 **Student references** (not actual Student data — just pointers to Student objects). |
+| 25-27 | `students[0] = s1;` etc. | Puts references to the Student objects into the array slots. |
+| 30 | `students[i].rollno` | First `students[i]` gets the Student reference at index `i`, then `.rollno` accesses that student's roll number. |
+
+> 🔑 **Concept:** Arrays can hold objects, not just primitive numbers. An array of objects stores **references** (pointers) to objects on the Heap. Access object fields through the array using `array[index].field`.
+
+---
+
+### 📄 `src/intermediate/arrays/enchance_for_loop_for_array_string.java`
+
+**Purpose:** Teaches the enhanced for-each loop with an array of Student objects — a cleaner way to iterate.
+
+**▶️ Run:** `java -cp out intermediate.arrays.enchance_for_loop_for_array_string`
+
+```java
+package intermediate.arrays;
+
+public class enchance_for_loop_for_array_string {
+    public static void main(String[]args){
+        Student s1 = new Student();
+        s1.name = "Honey";
+        s1.rollno = 21;
+        s1.marks = 76;
+
+        Student s2 = new Student();
+        s2.rollno = 22;
+        s2.name = "Honvith";
+        s2.marks = 85;
+
+        Student s3 = new Student();
+        s3.rollno = 23;
+        s3.name = "Gundu";
+        s3.marks = 95;
+
+        Student students[] = new Student[3];
+        students[0] = s1;
+        students[1] = s2;
+        students[2] = s3;
+
+       System.out.println("no"+" "+"name"+" "+"marks");
+       System.out.println("￬"+ "    "+"￬"+"    "+"￬");
+        for(Student stud : students){
+            System.out.println(stud.rollno + " " + stud.name + ":" + stud.marks);
+        }
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 5-23 | Creating students and array | Same pattern as `Student_array_demo.java` — creates 3 Student objects and puts them in an array. |
+| 25-26 | Header printing | Prints a table header with column names and arrow symbols. |
+| 27 | `for(Student stud : students){` | **Enhanced for-each loop**: `stud` takes the value of each Student object in the array, one at a time. No need for an index variable `i` — this is cleaner when you just need to go through every element. The loop reads as: "for each Student `stud` in the `students` array." |
+| 28 | `stud.rollno + " " + stud.name + ":" + stud.marks` | Accesses each student's fields directly through the `stud` variable. |
+
+> 🔑 **Concept:** The enhanced for-each loop (`for(Type var : array)`) is the simplest way to iterate through every element in an array. It's cleaner than a traditional `for` loop when you don't need the index number.
+
+---
+
+---
+
 ## 🧭 Fast Navigation
 
 | 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
