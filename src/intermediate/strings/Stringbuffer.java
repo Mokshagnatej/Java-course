@@ -7,8 +7,8 @@ public class Stringbuffer {
         //System.out.println(buffer.length());
         //buffer.append(" Reddy");
        //buffer.deleteCharAt(4);
-        //buffer.insert(0,"Kalepalli ");
-        buffer.
+        buffer.insert(0,"Kalepalli ");
+        //buffer.reverse();
         System.out.println(buffer);
     }
 }
