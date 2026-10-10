@@ -308,6 +308,87 @@ public class Stack_Heap_data {
 
 ---
 
+### 📄 `src/advanced/oop_basics/static_keyword.java`
+
+**Purpose:** Demonstrates the `static` keyword for variables — showing how static variables are shared across ALL objects of a class rather than duplicated per instance.
+
+**▶️ Run:** `java -cp out advanced.oop_basics.static_keyword`
+
+```java
+package advanced.oop_basics;
+
+class Mobile{
+    String brand;
+    int price;
+    static String name;
+
+    public void show(){
+        System.out.println(brand + " " + price + " " + name);
+    }
+}
+
+public class static_keyword {
+    public static void main(String[] args){
+        Mobile m1 = new Mobile();
+        m1.brand = "Apple";
+        m1.price = 2000;
+        Mobile.name = "Iphone";
+
+        m1.show();
+
+        Mobile m2 = new Mobile();
+        m2.brand = "Samsung";
+        m2.price = 1700;
+        Mobile.name = "Android";
+
+        m2.show();
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 4 | `static String name;` | Declares a **static variable** (class variable). Unlike instance variables (`brand`, `price`) which are copied into every object, a static variable has **only ONE copy in memory**, shared across all instances of `Mobile`. |
+| 17 | `Mobile.name = "Iphone";` | Best practice: Access static variables using the **Class name** (`Mobile.name`), not the instance (`m1.name`). |
+| 23 | `Mobile.name = "Android";` | Reassigning the shared static variable changes it for **ALL** instances. |
+
+> 🔑 **Concept:** **Static variables belong to the Class, not the Object.** Instance variables live inside each individual object on the Heap. Static variables live in the Class area/Metaspace and are shared by all objects.
+
+---
+
+### 📄 `src/advanced/oop_basics/Static_method.java`
+
+**Purpose:** Teaches static methods — methods that can be invoked directly on the class without instantiating an object using `new`.
+
+**▶️ Run:** `java -cp out advanced.oop_basics.Static_method`
+
+```java
+package advanced.oop_basics;
+
+public class Static_method {
+    // Static method: can be called directly without creating an object instance
+    public static void displayMessage() {
+        System.out.println("Hello from static method! Executed without object instantiation.");
+    }
+
+    public static void main(String[] args) {
+        // Calling the static method without creating an object
+        Static_method.displayMessage();
+    }
+}
+```
+
+**Line-by-line explanation:**
+
+| Line | Code | What it does |
+| :--- | :--- | :--- |
+| 5 | `public static void displayMessage()` | The `static` modifier allows this method to be executed directly through the class. It does not require `new Static_method()`. |
+| 11 | `Static_method.displayMessage();` | Calls the static method using `ClassName.methodName()`. |
+
+> 🔑 **Concept:** **Static methods do not require object instantiation.** Because they belong to the class, static methods **cannot access `this`** or any non-static (instance) variables directly.
+
 ---
 
 ## 🧭 Fast Navigation

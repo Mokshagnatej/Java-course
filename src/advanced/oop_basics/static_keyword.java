@@ -1,3 +1,5 @@
+package advanced.oop_basics;
+
 class Mobile{
     String brand;
     int price;

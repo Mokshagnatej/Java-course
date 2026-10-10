@@ -1,7 +1,17 @@
-public class Static_method {
-    public static void main(String[] args) {
-        // Calling the static method without creating an object
-        Static_method.displayMessage();
+package advanced.oop_basics;
 
-    }
+class mobile{
+    String brand;
+    int price;
+    static String name;
+}
+static{
+    name = "Phone";
+    System.out.println("")
+}
+
+
+
+public class Static_method {
+
 }
