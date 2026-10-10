@@ -3,7 +3,7 @@
 > **The Definitive, Intensive Reference for Core & Advanced Java.**  
 > An end-to-end compendium spanning JVM internals, memory topography, language mechanics, data structures, concurrency, and real-world diagnostic patterns.
 
-> ⚡ **Quick Access**: [🏠 Course Master Readme](Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](src/README.md) &nbsp;|&nbsp; [🧶 Strings Deep-Dive Notes](JAVA_STRINGS_DEEP_DIVE_NOTES.md)
+> ⚡ **Quick Access**: [🏠 Course Master Readme](Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](src/README.md) &nbsp;|&nbsp; [🧶 Module 12: Strings](src/intermediate/strings/README.md)
 
 ---
 
@@ -533,6 +533,6 @@ A **Thread** is the smallest unit of execution within a process. Multiple thread
 
 ## 🧭 Course Roadmap Navigation
 
-| 🏠 Course Master | 📂 Source Code Hub | 🧶 Module 12: Strings | 📘 Strings Deep-Dive Notes |
+| 🏠 Course Master | 📂 Source Code Hub | 🧶 Module 12: Strings | 🛡️ Module 13: Exceptions |
 | :---: | :---: | :---: | :---: |
-| [Readme.Md](Readme.Md) | [src/README.md](src/README.md) | [Strings README](src/intermediate/strings/README.md) | [JAVA_STRINGS_DEEP_DIVE_NOTES.md](JAVA_STRINGS_DEEP_DIVE_NOTES.md) |
+| [Readme.Md](Readme.Md) | [src/README.md](src/README.md) | [Strings README](src/intermediate/strings/README.md) | [Exceptions README](src/intermediate/exception_handling/README.md) |
