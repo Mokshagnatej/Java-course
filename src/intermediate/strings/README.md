@@ -2,7 +2,9 @@
 
 > **Mastering Text Manipulation, Immutability & High-Performance Buffers.** Learn how Java handles textual data under the hood, why Strings are immutable, how the String Constant Pool optimizes memory, and when to use mutable buffers (`StringBuilder` and `StringBuffer`).
 
-> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [⬅️ Previous: Methods](../methods/README.md) &nbsp;|&nbsp; [➡️ Next: Exception Handling](../exception_handling/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
+> ⚡ **Fast Access**: [🏠 Course Master Readme](../../../Readme.Md) &nbsp;|&nbsp; [📂 Source Directory](../../README.md) &nbsp;|&nbsp; [📘 Master Java Notes](../../../JAVA_MASTER_NOTES_AND_EXPLANATIONS.md) &nbsp;|&nbsp; [⬅️ Previous: Methods](../methods/README.md) &nbsp;|&nbsp; [➡️ Next: Exception Handling](../exception_handling/README.md) &nbsp;|&nbsp; [📁 Folder Files](./)
+
+> 💡 **Master Reference**: Looking for comprehensive architectural explanations across the entire language? Read the course-wide [📘 Java Master Notes & Explanations](../../../JAVA_MASTER_NOTES_AND_EXPLANATIONS.md).
 
 ---
 
@@ -648,6 +650,6 @@ System.out.println(sb);
 
 ## 12. 🧭 Fast Navigation
 
-| 🏠 Course Master | 📂 Source Hub | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
-| :---: | :---: | :---: | :---: | :---: |
-| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [⬅️ Methods](../methods/README.md) | [Exception Handling ➡️](../exception_handling/README.md) | [📁 `strings/`](./) |
+| 🏠 Course Master | 📂 Source Hub | 📘 Master Notes | ⬅️ Previous Module | ➡️ Next Module | 📁 Browse Folder |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [Main Readme](../../../Readme.Md) | [src/ Overview](../../README.md) | [📘 Master Java Notes](../../../JAVA_MASTER_NOTES_AND_EXPLANATIONS.md) | [⬅️ Methods](../methods/README.md) | [Exception Handling ➡️](../exception_handling/README.md) | [📁 `strings/`](./) |

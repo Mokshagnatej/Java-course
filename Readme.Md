@@ -16,6 +16,7 @@
 
 | Tier | Module # | Topic & Focus Area | 📖 Module README Guide | 📁 Source Folder |
 | :---: | :---: | :--- | :--- | :--- |
+| 🗂️ **Global** | — | **Master Notes & Architecture Guide** | [📘 Complete Notes & Explanations](JAVA_MASTER_NOTES_AND_EXPLANATIONS.md) | [Root](.) |
 | 🗂️ **Global** | — | **Source Directory Hub** | [📖 `src/README.md`](src/README.md) | [`src/`](src/) |
 | 🟢 **Beginner** | **01** | Basics, Anatomy & JVM Flow | [📖 Getting Started Guide](src/beginner/getting_started/README.md) | [`src/beginner/getting_started/`](src/beginner/getting_started/) |
 | 🟢 **Beginner** | **02** | Variables, Data Types & Primitives | [📖 Variables Guide](src/beginner/variables/README.md) | [`src/beginner/variables/`](src/beginner/variables/) |
@@ -28,7 +29,7 @@
 | 🟡 **Intermediate** | **09** | Mini-Projects & Applied Logic | [📖 Practice Projects Guide](src/intermediate/practice_projects/README.md) | [`src/intermediate/practice_projects/`](src/intermediate/practice_projects/) |
 | 🟡 **Intermediate** | **10** | Arrays (1D, 2D, 3D, Jagged, Objects) | [📖 Arrays Guide](src/intermediate/arrays/README.md) | [`src/intermediate/arrays/`](src/intermediate/arrays/) |
 | 🟡 **Intermediate** | **11** | Methods & Method Overloading | [📖 Methods Guide](src/intermediate/methods/README.md) | [`src/intermediate/methods/`](src/intermediate/methods/) |
-| 🟡 **Intermediate** | **12** | Strings & String Constant Pool | [📖 Strings Roadmap](src/intermediate/strings/README.md) | [`src/intermediate/strings/`](src/intermediate/strings/) |
+| 🟡 **Intermediate** | **12** | Strings & String Constant Pool | [📖 Strings Roadmap](src/intermediate/strings/README.md) &bull; [📘 In-Depth Notes](JAVA_STRINGS_DEEP_DIVE_NOTES.md) | [`src/intermediate/strings/`](src/intermediate/strings/) |
 | 🟡 **Intermediate** | **13** | Exception Handling & Robust Systems | [📖 Exceptions Roadmap](src/intermediate/exception_handling/README.md) | [`src/intermediate/exception_handling/`](src/intermediate/exception_handling/) |
 | 🔴 **Advanced** | **14** | OOP Basics, Classes & Heap/Stack | [📖 OOP Basics Guide](src/advanced/oop_basics/README.md) | [`src/advanced/oop_basics/`](src/advanced/oop_basics/) |
 | 🔴 **Advanced** | **15** | Four Pillars of OOP | [📖 OOP Pillars Roadmap](src/advanced/oop_pillars/README.md) | [`src/advanced/oop_pillars/`](src/advanced/oop_pillars/) |
